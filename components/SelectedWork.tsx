@@ -20,8 +20,8 @@ const work = [
     tag: "Contributor",
     name: "Simbook",
     role: "Kiosk and VMS for sim venues",
-    body: "Independently operated kiosk and venue management product for simulator venues. I contribute as an outside operator, focused on kiosk behavior, session flow, and system improvements that come out of running real venues every day.",
-    meta: ["Contributor role", "Kiosk · Session flow"],
+    body: "Independently operated kiosk and venue management product for simulator venues. Martian Industries works closely with Simbook and implements it in simulator venues for booking, kiosk, and session systems. I contribute as an operator, focused on how these systems actually run in live venues.",
+    meta: ["Independently operated", "Kiosk · Session flow"],
   },
 ];
 
@@ -31,7 +31,7 @@ export function SelectedWork() {
       <SectionHeader
         eyebrow="Selected Work"
         title="Built, operated, and shipped. Not slides."
-        description="Three projects rooted in real venue operations: an operation I run, a system I'm building from it, and a product I contribute to as an operator."
+        description="Three projects rooted in real venue operations: an operation I run, a system I'm building from it, and a product I work closely with as an operator."
       />
 
       <div className="mt-12 grid gap-4 md:mt-16 lg:grid-cols-3">

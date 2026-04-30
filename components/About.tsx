@@ -29,9 +29,10 @@ export function About() {
               that. Kiosk software that locks and unlocks bays around session
               timers, booking and check-in flows that survive a busy Friday,
               session and operator workflows, and the internal tools my staff
-              actually use. I contribute to Simbook on the same basis: kiosk
-              behavior, session flow, and system improvements drawn from
-              running venues every day.
+              actually use. Martian Industries works closely with Simbook and
+              implements it in simulator venues for booking, kiosk, and
+              session systems. I contribute as an operator, focused on how
+              these systems actually run in live venues.
             </p>
             <p className="text-ink">
               None of this is theoretical. The systems I recommend are shaped

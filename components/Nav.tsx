@@ -3,10 +3,11 @@ import { Container } from "./ui/Container";
 import { Button } from "./ui/Button";
 
 const links = [
-  { href: "#capabilities", label: "Capabilities" },
-  { href: "#work", label: "Work" },
-  { href: "#audit", label: "Audit" },
-  { href: "#about", label: "About" },
+  { href: "/#capabilities", label: "Capabilities" },
+  { href: "/#work", label: "Work" },
+  { href: "/#audit", label: "Audit" },
+  { href: "/blog", label: "Articles" },
+  { href: "/#about", label: "About" },
 ];
 
 export function Nav() {
@@ -15,7 +16,7 @@ export function Nav() {
       <Container>
         <div className="flex h-16 items-center justify-between">
           <Link
-            href="#top"
+            href="/"
             className="flex items-center gap-2.5 text-sm font-semibold tracking-tightish text-white"
           >
             <Logo />
@@ -23,17 +24,21 @@ export function Nav() {
           </Link>
           <nav className="hidden items-center gap-7 md:flex">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="text-sm text-ink-muted transition-colors hover:text-white"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <Button href="#contact" variant="primary" className="px-3.5 py-2 text-[13px]">
+            <Button
+              href="/#contact"
+              variant="primary"
+              className="px-3.5 py-2 text-[13px]"
+            >
               Request audit
             </Button>
           </div>

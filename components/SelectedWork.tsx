@@ -6,7 +6,7 @@ const work = [
     tag: "Operator",
     name: "Hacktivist Sports",
     role: "3-location simulator operation",
-    body: "Active operations across three locations running TrackMan golf bays and sim racing rigs. I run the day-to-day stack: bookings, check-in, simulator software, integrations between systems, and remote management of bays at locations I'm not standing in.",
+    body: "Active operations across three locations running TrackMan golf bays and sim racing rigs. I run the day-to-day systems behind the venues, including booking, check-in, simulator software, integrations, and remote management across locations. This is live, ongoing operational work, not a one-time build.",
     meta: ["3 locations", "TrackMan · Sim racing", "Live ops · Remote support"],
   },
   {

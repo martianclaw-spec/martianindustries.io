@@ -95,7 +95,7 @@ export function DashboardPanel() {
           <span className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-ink-dim">
             ticker
           </span>
-          <div className="flex flex-1 items-center gap-5 overflow-hidden">
+          <div className="flex flex-1 items-center gap-5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <TickerItem ts="14:21" text="bay-04 session started · party of 3" />
             <TickerItem
               ts="14:18"

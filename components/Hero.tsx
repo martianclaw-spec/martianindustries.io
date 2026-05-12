@@ -18,12 +18,17 @@ export function Hero() {
       <Container className="relative">
         <div className="grid gap-14 pb-12 pt-16 md:gap-16 md:pb-16 md:pt-24 lg:grid-cols-12 lg:gap-12">
           <div className="flex flex-col lg:col-span-6">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
-              <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
-              Operations infrastructure for simulator venues
+            <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
+              <span
+                className="h-1.5 w-1.5 shrink-0 rounded-full bg-rust"
+                aria-hidden
+              />
+              <span className="min-w-0">
+                Operations infrastructure for simulator venues
+              </span>
             </div>
 
-            <h1 className="text-balance text-4xl font-semibold tracking-tighter2 text-white sm:text-5xl md:text-[56px] md:leading-[1.05]">
+            <h1 className="text-balance break-words text-[clamp(2rem,7.5vw,2.25rem)] font-semibold tracking-tighter2 text-white sm:text-5xl md:text-[56px] md:leading-[1.05]">
               We fix the systems
               <span className="text-ink-muted">
                 {" "}

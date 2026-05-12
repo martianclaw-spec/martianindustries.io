@@ -15,6 +15,14 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Prevent any descendant from triggering horizontal scroll on narrow viewports.
+   Sections already clip their decorative glows via overflow-hidden, but this
+   guarantees the page can never scroll sideways on mobile. */
+html,
+body {
+  overflow-x: hidden;
+}
+
 ::selection {
   background: rgba(194, 85, 45, 0.35);
   color: #ffffff;

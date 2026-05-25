@@ -7,29 +7,54 @@ type Status = "idle" | "submitting" | "submitted";
 
 export function AuditForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
     const payload = {
       name: String(data.get("name") ?? "").trim(),
       email: String(data.get("email") ?? "").trim(),
-      venue: String(data.get("venue") ?? "").trim() || null,
-      bays: String(data.get("bays") ?? "").trim() || null,
+      venue: String(data.get("venue") ?? "").trim(),
+      bays: String(data.get("bays") ?? "").trim(),
       message: String(data.get("message") ?? "").trim(),
     };
 
     setStatus("submitting");
-    // No backend yet. Log so it can be wired up later.
-    // eslint-disable-next-line no-console
-    console.log("Audit request:", payload);
+    setError(null);
 
-    // Tiny delay so the button state is visible.
-    window.setTimeout(() => {
+    try {
+      const res = await fetch("/api/audit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        let message =
+          "Could not send your request. Please try again or email hello@martianindustries.io.";
+        try {
+          const data = (await res.json()) as { error?: unknown };
+          if (typeof data?.error === "string" && data.error.length) {
+            message = data.error;
+          }
+        } catch {
+          /* fall through to default message */
+        }
+        setError(message);
+        setStatus("idle");
+        return;
+      }
+
       form.reset();
       setStatus("submitted");
-    }, 350);
+    } catch {
+      setError(
+        "Network error. Please try again or email hello@martianindustries.io.",
+      );
+      setStatus("idle");
+    }
   }
 
   if (status === "submitted") {
@@ -127,9 +152,18 @@ export function AuditForm() {
         <Button type="submit" variant="primary" disabled={isSubmitting}>
           {isSubmitting ? "Sending..." : "Request an audit"}
         </Button>
-        <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
-          No long-term commitment
-        </span>
+        {error ? (
+          <span
+            role="alert"
+            className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft"
+          >
+            {error}
+          </span>
+        ) : (
+          <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
+            No long-term commitment
+          </span>
+        )}
       </div>
     </form>
   );

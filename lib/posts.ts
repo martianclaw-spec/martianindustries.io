@@ -35,6 +35,26 @@ import {
   meta as simRacingLoungeMeta,
   default as SimRacingLoungeBody,
 } from "@/content/posts/building-a-sim-racing-lounge";
+import {
+  meta as softwareMeta,
+  default as SoftwareBody,
+} from "@/content/posts/gspro-vs-e6-connect-simulator-software-for-venues";
+import {
+  meta as howToStartMeta,
+  default as HowToStartBody,
+} from "@/content/posts/how-to-start-a-golf-simulator-business";
+import {
+  meta as insuranceMeta,
+  default as InsuranceBody,
+} from "@/content/posts/insurance-for-golf-simulator-venues";
+import {
+  meta as marketingMeta,
+  default as MarketingBody,
+} from "@/content/posts/marketing-a-golf-simulator-venue";
+import {
+  meta as staffingMeta,
+  default as StaffingBody,
+} from "@/content/posts/staffing-and-training-a-simulator-venue";
 
 export type PostMeta = {
   slug: string;
@@ -60,6 +80,11 @@ const all: Post[] = [
   { ...launchMonitorMeta, Body: LaunchMonitorBody },
   { ...pricingMeta, Body: PricingBody },
   { ...simRacingLoungeMeta, Body: SimRacingLoungeBody },
+  { ...softwareMeta, Body: SoftwareBody },
+  { ...howToStartMeta, Body: HowToStartBody },
+  { ...insuranceMeta, Body: InsuranceBody },
+  { ...marketingMeta, Body: MarketingBody },
+  { ...staffingMeta, Body: StaffingBody },
 ];
 
 /** Posts sorted newest first. */

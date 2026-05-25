@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { CardLabel } from "@/components/ui/Card";
 import { JsonLd } from "@/components/JsonLd";
 import { posts, formatPostDate } from "@/lib/posts";
+import { allTags } from "@/lib/tags";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -100,6 +101,22 @@ export default function BlogIndexPage() {
 
       <section className="py-16 md:py-20">
         <Container>
+          <div className="mb-12 flex flex-wrap items-center gap-2 border-b border-line pb-8">
+            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-dim">
+              Browse by topic:
+            </span>
+            {allTags().map((t) => (
+              <Link
+                key={t.slug}
+                href={`/blog/tag/${t.slug}`}
+                className="rounded border border-line bg-bg-panel px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted transition-colors hover:border-line-strong hover:text-white"
+              >
+                {t.tag}
+                <span className="ml-1.5 text-ink-dim">{t.count}</span>
+              </Link>
+            ))}
+          </div>
+
           <ul className="divide-y divide-line">
             {posts.map((p) => (
               <li key={p.slug}>

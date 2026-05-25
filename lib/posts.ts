@@ -15,6 +15,26 @@ import {
   meta as simRacingMeta,
   default as SimRacingBody,
 } from "@/content/posts/sim-racing-vs-golf-simulator-operations";
+import {
+  meta as costMeta,
+  default as CostBody,
+} from "@/content/posts/cost-to-open-a-golf-simulator-venue";
+import {
+  meta as layoutMeta,
+  default as LayoutBody,
+} from "@/content/posts/golf-simulator-lounge-layout-and-bay-design";
+import {
+  meta as launchMonitorMeta,
+  default as LaunchMonitorBody,
+} from "@/content/posts/launch-monitor-comparison-for-simulator-venues";
+import {
+  meta as pricingMeta,
+  default as PricingBody,
+} from "@/content/posts/pricing-strategy-for-simulator-venues";
+import {
+  meta as simRacingLoungeMeta,
+  default as SimRacingLoungeBody,
+} from "@/content/posts/building-a-sim-racing-lounge";
 
 export type PostMeta = {
   slug: string;
@@ -35,6 +55,11 @@ const all: Post[] = [
   { ...noShowsMeta, Body: NoShowsBody },
   { ...auditMeta, Body: AuditBody },
   { ...simRacingMeta, Body: SimRacingBody },
+  { ...costMeta, Body: CostBody },
+  { ...layoutMeta, Body: LayoutBody },
+  { ...launchMonitorMeta, Body: LaunchMonitorBody },
+  { ...pricingMeta, Body: PricingBody },
+  { ...simRacingLoungeMeta, Body: SimRacingLoungeBody },
 ];
 
 /** Posts sorted newest first. */

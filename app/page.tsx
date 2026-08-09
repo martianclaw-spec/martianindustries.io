@@ -19,6 +19,7 @@ const serviceSchema = {
     name: SITE_NAME,
     url: SITE_URL,
     email: CONTACT_EMAIL,
+    telephone: "+1-814-215-7925",
   },
   areaServed: "Worldwide",
   description:
@@ -44,6 +45,7 @@ const professionalServiceSchema = {
   name: SITE_NAME,
   url: SITE_URL,
   email: CONTACT_EMAIL,
+  telephone: "+1-814-215-7925",
   description:
     "Operations infrastructure for simulator venues. Booking, check-in, simulator software, remote support, and custom internal tools, built and operated by venue operators.",
   serviceArea: { "@type": "Place", name: "Worldwide" },

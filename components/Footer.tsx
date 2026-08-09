@@ -56,6 +56,14 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a
+                  href="tel:+18142157925"
+                  className="transition-colors hover:text-white"
+                >
+                  (814) 215-7925
+                </a>
+              </li>
+              <li>
                 <Link
                   href="/#contact"
                   className="transition-colors hover:text-white"

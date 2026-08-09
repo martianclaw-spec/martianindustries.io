@@ -30,6 +30,22 @@ export function Contact() {
             steps for an audit. You will get a clear answer on what to fix
             first.
           </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
+            <span className="text-ink-dim/70">Or reach me directly</span>
+            <a
+              href="tel:+18142157925"
+              className="transition-colors hover:text-white"
+            >
+              (814) 215-7925
+            </a>
+            <span aria-hidden>·</span>
+            <a
+              href="mailto:hello@martianindustries.io"
+              className="transition-colors hover:text-white"
+            >
+              hello@martianindustries.io
+            </a>
+          </div>
         </div>
 
         <div className="mx-auto mt-10 max-w-2xl md:mt-12">

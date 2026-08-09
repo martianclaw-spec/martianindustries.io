@@ -4,6 +4,7 @@ import { Container } from "./ui/Container";
 const footerLinks = [
   { href: "/#capabilities", label: "Capabilities" },
   { href: "/#work", label: "Work" },
+  { href: "/simcenter", label: "SimCenter" },
   { href: "/#audit", label: "Audit" },
   { href: "/blog", label: "Articles" },
   { href: "/#contact", label: "Contact" },

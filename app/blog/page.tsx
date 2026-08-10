@@ -68,11 +68,29 @@ const breadcrumbSchema = {
   ],
 };
 
+// ItemList schema for the article list. Helps Google understand that /blog
+// is a curated collection so it can render carousels / list-style rich
+// results and improve internal-link authority flow to individual posts.
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${SITE_NAME} Articles`,
+  itemListOrder: "https://schema.org/ItemListOrderDescending",
+  numberOfItems: posts.length,
+  itemListElement: posts.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${SITE_URL}/blog/${p.slug}`,
+    name: p.title,
+  })),
+};
+
 export default function BlogIndexPage() {
   return (
     <>
       <JsonLd data={blogSchema} />
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={itemListSchema} />
 
       <section className="relative overflow-hidden border-b border-line">
         <div

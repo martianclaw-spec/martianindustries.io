@@ -6,6 +6,45 @@ export const meta = {
   date: "2026-05-19",
   readingTime: "13 min read",
   tags: ["Startup", "Operations", "Build-out"],
+  howTo: {
+    name: "How to start a golf simulator business",
+    description:
+      "Sequenced steps to open a profitable indoor golf simulator venue, in the order operators wish they had followed.",
+    steps: [
+      {
+        name: "Validate the market before the build",
+        text: "Confirm the price point your local market will support. Count competitor venues within a 20-minute drive, check their weekend occupancy, and confirm the median household income in the 5-mile radius supports premium hourly rates.",
+      },
+      {
+        name: "Pick a site with the right ceiling height and layout",
+        text: "You need at least 10-11 feet of ceiling clearance per bay, enough width for the swing arc, and enough depth for the screen and projector throw. Retrofit costs on a wrong-shaped space kill the budget.",
+      },
+      {
+        name: "Choose the launch monitor before the software",
+        text: "The launch monitor is the single most expensive per-bay decision. TrackMan, Foresight GCQuad, and Uneekor are the serious commercial choices. Software (GSPro, E6 Connect, TGC 2019) plugs in after.",
+      },
+      {
+        name: "Build the booking and payment flow before opening",
+        text: "Guests want to book online, pay a deposit, and know what to expect when they arrive. Booking should tie to your kiosk or check-in system so staff is not manually confirming reservations.",
+      },
+      {
+        name: "Get permits, insurance, and inspections early",
+        text: "Certificate of occupancy, general liability insurance covering indoor recreation, and any local business licenses. This is the boring work that will delay you if you leave it to the end.",
+      },
+      {
+        name: "Hire and train staff or install self-serve systems",
+        text: "Decide up front whether you are running a staffed model or a self-serve/kiosk model. Each drives a completely different cost structure. Staffed venues need trained hosts. Self-serve venues need a kiosk layer that handles authorization and session timing.",
+      },
+      {
+        name: "Set up marketing before opening, not after",
+        text: "Google Business Profile, local sports and country club partnerships, and a launch event. Presale bookings before the doors open validate your pricing and cover the first month's rent.",
+      },
+      {
+        name: "Instrument the operation from day one",
+        text: "Track utilization per bay per hour, revenue per session, no-show rate, and hardware uptime. What you do not measure in the first 90 days becomes invisible for the next 12 months.",
+      },
+    ],
+  },
 };
 
 export default function Post() {

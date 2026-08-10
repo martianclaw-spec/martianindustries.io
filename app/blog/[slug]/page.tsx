@@ -5,9 +5,64 @@ import { Container } from "@/components/ui/Container";
 import { Prose } from "@/components/Prose";
 import { JsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/Button";
+import type { Post } from "@/lib/posts";
 import { posts, getPost, formatPostDate } from "@/lib/posts";
 import { relatedPosts, tagToSlug, allTags } from "@/lib/tags";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
+
+/**
+ * Pick a product to cross-link from a blog post based on tags.
+ * Racing-heavy tags → Sim-Pull. Ops/monitoring tags → SimCenter.
+ * Everything else defaults to the audit.
+ */
+type ProductCallout = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  href: string;
+  cta: string;
+};
+
+function pickProductCallout(post: Post): ProductCallout {
+  const tagSet = new Set(post.tags.map((t) => t.toLowerCase()));
+  const racingSignals = ["sim racing", "racing", "assetto corsa"];
+  const opsSignals = [
+    "monitoring",
+    "operations",
+    "remote support",
+    "reliability",
+    "hardware",
+    "equipment",
+  ];
+
+  if (racingSignals.some((s) => tagSet.has(s))) {
+    return {
+      eyebrow: "Related product",
+      title: "Running a sim racing venue?",
+      body: "Sim-Pull is the operating system for sim racing venues. Guests scan a QR, pay on their phone, and the rig launches itself. Live in three venues today.",
+      href: "/simpull",
+      cta: "See Sim-Pull",
+    };
+  }
+
+  if (opsSignals.some((s) => tagSet.has(s))) {
+    return {
+      eyebrow: "Related product",
+      title: "Know if every station is ready to take money.",
+      body: "SimCenter watches every station in your venue from the inside. Sport-agnostic. Works with any launch monitor or sim. Alerts land on your phone before a guest tells you.",
+      href: "/simcenter",
+      cta: "See SimCenter",
+    };
+  }
+
+  return {
+    eyebrow: "Working on this at your venue?",
+    title: "Get a Simulator Venue Systems Audit.",
+    body: "Martian Industries runs a focused audit covering booking, check-in, simulator software, remote support, staff workflows, and missed revenue. Operator-led, no long-term commitment.",
+    href: "/#contact",
+    cta: "Request an audit",
+  };
+}
 
 type Params = { slug: string };
 
@@ -62,6 +117,7 @@ export default async function PostPage(props: { params: Promise<Params> }) {
   const url = `${SITE_URL}/blog/${post.slug}`;
   const wordCount = estimateWordCount(post.readingTime);
   const related = relatedPosts(post, 3);
+  const productCallout = pickProductCallout(post);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -119,10 +175,35 @@ export default async function PostPage(props: { params: Promise<Params> }) {
     ],
   };
 
+  // Optional HowTo rich result. Google's HowTo carousel is a huge SERP feature
+  // for "how to X" queries. Only emitted when the post's meta declares one.
+  const howToSchema = post.howTo
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: post.howTo.name,
+        description: post.howTo.description ?? post.description,
+        inLanguage: "en-US",
+        totalTime: post.readingTime.match(/\d+/)?.[0]
+          ? `PT${post.readingTime.match(/\d+/)?.[0]}M`
+          : undefined,
+        supply: [],
+        tool: [],
+        step: post.howTo.steps.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.name,
+          text: s.text,
+          url: `${url}#step-${i + 1}`,
+        })),
+      }
+    : null;
+
   return (
     <>
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
+      {howToSchema ? <JsonLd data={howToSchema} /> : null}
 
       <article className="relative">
         <header className="relative overflow-hidden border-b border-line">
@@ -191,18 +272,26 @@ export default async function PostPage(props: { params: Promise<Params> }) {
 
             <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-line bg-bg-raised p-6 md:p-8">
               <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-rust-soft">
-                Working on this at your venue?
+                {productCallout.eyebrow}
               </div>
+              <h3 className="mt-2 text-xl font-semibold tracking-tightish text-white">
+                {productCallout.title}
+              </h3>
               <p className="mt-3 text-pretty text-[15px] text-ink-muted md:text-base">
-                Martian Industries runs a focused Simulator Venue Systems
-                Audit covering booking, check-in, simulator software, remote
-                support, staff workflows, and missed revenue. Operator-led,
-                no long-term commitment.
+                {productCallout.body}
               </p>
-              <div className="mt-5">
-                <Button href="/#contact" variant="primary">
-                  Request an audit
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <Button href={productCallout.href} variant="primary">
+                  {productCallout.cta}
                 </Button>
+                {productCallout.href !== "/#contact" ? (
+                  <Link
+                    href="/#contact"
+                    className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim transition-colors hover:text-white"
+                  >
+                    Or talk to Martian first
+                  </Link>
+                ) : null}
               </div>
             </div>
           </Container>

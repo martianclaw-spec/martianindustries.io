@@ -6,6 +6,7 @@ import { AuditOffer } from "@/components/AuditOffer";
 import { About } from "@/components/About";
 import { OtherProjects } from "@/components/OtherProjects";
 import { Contact } from "@/components/Contact";
+import { FAQ, type FAQItem } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL, SITE_NAME, CONTACT_EMAIL } from "@/lib/site";
 
@@ -93,6 +94,49 @@ const professionalServiceSchema = {
   },
 };
 
+const homeFaqs: FAQItem[] = [
+  {
+    q: "What does Martian Industries do?",
+    a: "Martian Industries builds and operates the systems that run simulator venues. That includes booking and check-in, simulator software integration, remote support and monitoring, kiosk flows, and the internal tools that connect everything. We ship two products (Sim-Pull for sim racing venues and SimCenter for station monitoring at any venue) and offer a hands-on operational audit for existing operators.",
+  },
+  {
+    q: "What is a Simulator Venue Systems Audit?",
+    a: "It is a focused operator-led review of how a simulator venue actually runs. We look at the booking flow, check-in and kiosk experience, simulator software and integrations, remote access and support setup, staff workflows and bottlenecks, and missed revenue opportunities. You get a written audit with prioritized fixes based on systems we run and maintain in live simulator venues, not theory.",
+  },
+  {
+    q: "Who is the audit for?",
+    a: "Operators of sim racing venues, indoor golf simulator studios, VR arcades, and other unstaffed or partially-staffed indoor entertainment venues. Especially useful if you have three or more rigs or bays, if staffing is the throughput ceiling, or if you are about to open a new location.",
+  },
+  {
+    q: "What is Sim-Pull?",
+    a: "Sim-Pull is the operating system for sim racing venues. Guests scan a QR on the rig, pay on their phone, and the rig launches itself, no front-desk staff in the loop. Stuck cars auto-recover. Cross-rig leaderboards. Optional AI coaching. Built by an operator and running in three live venues today. Full details and pricing at simpullsports.com.",
+  },
+  {
+    q: "What is SimCenter?",
+    a: "SimCenter watches every station in your venue from the inside, sim rigs, launch monitors, VR arcades, and answers one question continuously: is every station ready to take money? Per-station connector, cloud dashboard, phone alerts, remote wake and shutdown. Works with any launch monitor or sim software. <a href=\"/simcenter\">Learn more here</a>.",
+  },
+  {
+    q: "Do you work with golf simulator venues, not just sim racing?",
+    a: "Yes. The audit and SimCenter both apply to indoor golf simulator studios. Sim-Pull specifically targets sim racing on Assetto Corsa rigs, but golf operators benefit from every other capability we ship.",
+  },
+  {
+    q: "Do you support TrackMan, Foresight, GSPro, and other launch monitors?",
+    a: "SimCenter is sport-agnostic and hardware-agnostic. It monitors the station as a whole, regardless of which launch monitor or simulator software you run. For golf venues we regularly work with TrackMan, Foresight, GSPro, and Uneekor deployments.",
+  },
+  {
+    q: "How does the audit work and how long does it take?",
+    a: "You tell us about your venue via the contact form or a short call. We review your booking flow, on-site systems, remote support, and back-office setup. Typical turnaround is two weeks. You get a written report with a prioritized action list, quick wins, and longer-term system upgrades scoped and sequenced so you can act on it without us.",
+  },
+  {
+    q: "Do you require a long-term commitment?",
+    a: "No. The audit is a focused one-time engagement. Sim-Pull and SimCenter are month-to-month with no long-term commitment. Cancel anytime.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Fill out the form on the <a href=\"/#contact\">contact section</a>, email hello@martianindustries.io, or call (814) 215-7925. Include your venue name, how many rigs or bays you run, and one or two sentences on what is currently broken. I read every one personally.",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -105,6 +149,13 @@ export default function HomePage() {
       <AuditOffer />
       <About />
       <OtherProjects />
+      <FAQ
+        id="faq"
+        eyebrow="Straight answers"
+        title="Questions operators actually ask."
+        description="If the answer you need is not here, the contact section below routes straight to me."
+        items={homeFaqs}
+      />
       <Contact />
     </>
   );

@@ -6,8 +6,7 @@ import { Container } from "./ui/Container";
 import { Button } from "./ui/Button";
 
 const links = [
-  { href: "/#capabilities", label: "Capabilities" },
-  { href: "/#work", label: "Work" },
+  { href: "/simpull", label: "Sim-Pull" },
   { href: "/simcenter", label: "SimCenter" },
   { href: "/#audit", label: "Audit" },
   { href: "/blog", label: "Articles" },

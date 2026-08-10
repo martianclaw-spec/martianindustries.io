@@ -119,6 +119,44 @@ const websiteSchema = {
   },
 };
 
+// E-E-A-T signal: Google increasingly weights the human expertise behind a
+// site (Experience, Expertise, Authoritativeness, Trust). A Person node tied
+// to the Organization and to specific operational experience is one of the
+// strongest signals we can emit for a solo-operator-led business.
+const founderSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Matthew Myers",
+  jobTitle: "Founder, Operator-Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+  },
+  url: SITE_URL,
+  email: "hello@martianindustries.io",
+  telephone: "+1-814-215-7925",
+  knowsAbout: [
+    "Simulator venue operations",
+    "Sim racing venue management",
+    "Golf simulator venue management",
+    "TrackMan integration",
+    "Assetto Corsa commercial deployment",
+    "Kiosk software for indoor entertainment",
+    "Booking and check-in systems for simulator venues",
+    "Remote support for simulator hardware",
+    "Multi-location venue operations",
+    "Sim-Pull venue management system",
+    "SimCenter station monitoring",
+  ],
+  sameAs: [
+    "https://github.com/martianclaw-spec",
+    "https://simpullsports.com",
+  ],
+  description:
+    "Matthew Myers is the founder of Martian Industries and an operator-engineer running multi-location simulator venue operations day to day. He builds the same systems he uses to run real venues, including the Sim-Pull venue management system and the SimCenter station monitoring cloud.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -129,6 +167,7 @@ export default function RootLayout({
       <head>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
+        <JsonLd data={founderSchema} />
       </head>
       <body className="bg-bg text-ink font-sans antialiased">
         <Nav />

@@ -55,6 +55,37 @@ import {
   meta as staffingMeta,
   default as StaffingBody,
 } from "@/content/posts/staffing-and-training-a-simulator-venue";
+import {
+  meta as revenuePerBayMeta,
+  default as RevenuePerBayBody,
+} from "@/content/posts/increase-revenue-per-bay-golf-simulator";
+import {
+  meta as staffingRatiosMeta,
+  default as StaffingRatiosBody,
+} from "@/content/posts/staffing-ratios-simulator-venue";
+import {
+  meta as kioskCheckInMeta,
+  default as KioskCheckInBody,
+} from "@/content/posts/kiosk-vs-staff-check-in-simulator-venues";
+import {
+  meta as winterOpsMeta,
+  default as WinterOpsBody,
+} from "@/content/posts/winter-operations-indoor-golf-simulator";
+import {
+  meta as monitoringMeta,
+  default as MonitoringBody,
+} from "@/content/posts/monitor-simulator-bay-uptime";
+
+export type HowToStep = {
+  name: string;
+  text: string;
+};
+
+export type HowToMeta = {
+  name: string;
+  description?: string;
+  steps: HowToStep[];
+};
 
 export type PostMeta = {
   slug: string;
@@ -64,6 +95,13 @@ export type PostMeta = {
   date: string;
   readingTime: string;
   tags: readonly string[];
+  /**
+   * Optional HowTo structured data. When present the blog post page emits
+   * a schema.org/HowTo alongside the BlogPosting schema. Only add this to
+   * posts that are literally "how to do X" step-by-step — Google's HowTo
+   * rich result requires the page to actually be a how-to guide.
+   */
+  howTo?: HowToMeta;
 };
 
 export type Post = PostMeta & {
@@ -85,6 +123,11 @@ const all: Post[] = [
   { ...insuranceMeta, Body: InsuranceBody },
   { ...marketingMeta, Body: MarketingBody },
   { ...staffingMeta, Body: StaffingBody },
+  { ...revenuePerBayMeta, Body: RevenuePerBayBody },
+  { ...staffingRatiosMeta, Body: StaffingRatiosBody },
+  { ...kioskCheckInMeta, Body: KioskCheckInBody },
+  { ...winterOpsMeta, Body: WinterOpsBody },
+  { ...monitoringMeta, Body: MonitoringBody },
 ];
 
 /** Posts sorted newest first. */

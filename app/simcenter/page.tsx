@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Card, CardLabel } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { FAQ, type FAQItem } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
@@ -62,6 +63,41 @@ const howItWorks = [
     step: "03",
     title: "The board lights up",
     body: "Within one scan cycle, every station reports in. Alerts route to your phone, Discord, Slack, or email.",
+  },
+];
+
+const simCenterFaqs: FAQItem[] = [
+  {
+    q: "What is SimCenter?",
+    a: "SimCenter is station readiness monitoring for indoor entertainment venues. A small agent runs on each station PC, scans the equipment, software, and network from the inside, and reports to a cloud dashboard. It tells you continuously whether every station in every location is ready to take a paying customer.",
+  },
+  {
+    q: "What venues does it work with?",
+    a: "Any venue where expensive machines run without a person standing next to them. Sim racing venues on any sim, indoor golf studios on TrackMan, Foresight, GSPro, or Uneekor, VR arcades, esports lounges, unstaffed self-serve bays, multi-location operators. It is sport-agnostic and hardware-agnostic by design.",
+  },
+  {
+    q: "How does it get installed?",
+    a: "One PowerShell command per station PC. The connector is outbound HTTPS only, so there is nothing for IT to open on your firewall. Sign up, add a venue, get a one-time claim code, run the connector on each station, and the dashboard lights up within one scan cycle.",
+  },
+  {
+    q: "Does it work with launch monitors on a private network?",
+    a: "Yes. This is the reason SimCenter exists. Launch monitors like the TrackMan iO sit on a point-to-point link-local ethernet segment that is invisible to central scanning tools. Only a per-station agent can see them. SimCenter actively probes learned peer addresses on every scan so a silent-but-dead launch monitor gets caught.",
+  },
+  {
+    q: "How does alerting work? Will it wake me up for nothing?",
+    a: "No. Every alert requires two confirmation cycles before it fires, plus a 12-hour cooldown per item. Unknown devices are inventory-only, never alertable. Command chatter (wake, shutdown, scan) never pages anyone. When your phone buzzes, something is actually wrong.",
+  },
+  {
+    q: "What can I do remotely?",
+    a: "Four commands, all executed by the connector within about 30 seconds: wake a station over the LAN (Wake-on-LAN), graceful shutdown with a 20-second on-screen notice, force a fresh scan instead of waiting the cycle, and run a live input test that polls the game controllers so you can prove a wheelbase or pedal set is not dead without driving to the venue.",
+  },
+  {
+    q: "Where does it send alerts?",
+    a: "Phone push (via ntfy), Discord webhook, Slack webhook, Twilio SMS, and email through Resend. All keys stay on your account, never leave the server, and route through Node standard library HTTP with no third-party alerting dependency.",
+  },
+  {
+    q: "How much does SimCenter cost?",
+    a: "Pricing is being finalized. Early venues get a launch price and dedicated setup help. Sign in at simcenter-three.vercel.app/app to get started, or reach out first if you want to talk through fit.",
   },
 ];
 
@@ -225,6 +261,15 @@ export default function SimCenterPage() {
           </div>
         </div>
       </Section>
+
+      {/* FAQ */}
+      <FAQ
+        id="faq"
+        eyebrow="SimCenter FAQ"
+        title="Straight answers before you install."
+        description="Everything venue operators ask us before signing up. If yours is not here, hit contact and I will answer directly."
+        items={simCenterFaqs}
+      />
 
       {/* Final CTA */}
       <section className="relative overflow-hidden border-t border-line py-24 md:py-32">

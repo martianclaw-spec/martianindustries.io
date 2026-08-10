@@ -39,8 +39,15 @@ export function Hero() {
             <p className="mt-6 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
               Martian Industries helps simulator venue operators fix booking,
               check-in, simulator software, remote support, and the internal
-              tools that connect everything. Built from real venues, not
-              theory.
+              tools that connect everything. We also{" "}
+              <a
+                href="/build"
+                className="text-rust-soft underline-offset-4 transition-colors hover:text-white hover:underline"
+              >
+                build custom software
+              </a>{" "}
+              for venues that need something the shelf does not carry. Built
+              from real venues, not theory.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">

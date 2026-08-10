@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${SITE_URL}/build`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 
   const postEntries: MetadataRoute.Sitemap = posts.map((p) => ({

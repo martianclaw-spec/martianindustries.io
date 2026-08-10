@@ -120,6 +120,10 @@ const homeFaqs: FAQItem[] = [
     a: "Yes. The audit and SimCenter both apply to indoor golf simulator studios. Sim-Pull specifically targets sim racing on Assetto Corsa rigs, but golf operators benefit from every other capability we ship.",
   },
   {
+    q: "Do you build custom software from scratch for venues?",
+    a: "Yes. When a venue needs something Sim-Pull or SimCenter does not cover (24-hour unstaffed lounges, custom booking flows, kiosk integrations with existing hardware, operator dashboards) we build it. Fixed scope, milestone pricing, you own the code when we are done. Full details on the <a href=\"/build\">custom builds page</a>.",
+  },
+  {
     q: "Do you support TrackMan, Foresight, GSPro, and other launch monitors?",
     a: "SimCenter is sport-agnostic and hardware-agnostic. It monitors the station as a whole, regardless of which launch monitor or simulator software you run. For golf venues we regularly work with TrackMan, Foresight, GSPro, and Uneekor deployments.",
   },

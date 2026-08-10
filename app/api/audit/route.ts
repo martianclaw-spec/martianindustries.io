@@ -14,7 +14,19 @@ type AuditPayload = {
   message?: unknown;
 };
 
-const RECIPIENT = "hello@martianindustries.io";
+// Set RESEND_TO_EMAIL in the environment to control where audit submissions
+// land. Defaults to hello@martianindustries.io.
+//
+// IMPORTANT: while Resend is running in sandbox mode (i.e. RESEND_FROM_EMAIL
+// is not set and the FROM address is onboarding@resend.dev), Resend will
+// ONLY deliver mail to the email address that owns your Resend account.
+// If your Resend account is on martianclaw@gmail.com, set
+//   RESEND_TO_EMAIL=martianclaw@gmail.com
+// in Vercel so submissions actually get delivered. Once you verify your
+// domain in Resend and set RESEND_FROM_EMAIL to something on that domain,
+// you can point RESEND_TO_EMAIL back at hello@martianindustries.io (or any
+// other real inbox).
+const RECIPIENT = process.env.RESEND_TO_EMAIL ?? "hello@martianindustries.io";
 
 // Resend requires `from` to use a verified sending domain. Once
 // martianindustries.io is verified in Resend (Domains tab, add SPF/DKIM
@@ -115,9 +127,37 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("Resend send error:", error);
+      // Full error detail to Vercel logs so it's easy to diagnose from
+      // the Deployments → Logs tab.
+      console.error(
+        "Resend send error:",
+        JSON.stringify(error, null, 2),
+        "  from:",
+        from,
+        "  to:",
+        RECIPIENT,
+      );
+      const errString = JSON.stringify(error).toLowerCase();
+      if (
+        errString.includes("sandbox") ||
+        errString.includes("verify") ||
+        errString.includes("verified") ||
+        errString.includes("only send") ||
+        errString.includes("domain")
+      ) {
+        console.error(
+          "[audit-hint] Resend appears to be blocking due to sandbox / " +
+            "domain verification. Either verify your sending domain in " +
+            "Resend's Domains tab and set RESEND_FROM_EMAIL to an address " +
+            "on that domain, OR set RESEND_TO_EMAIL to the address that " +
+            "owns your Resend account (sandbox mode only delivers there).",
+        );
+      }
       return NextResponse.json(
-        { error: "Could not send your request. Please try again." },
+        {
+          error:
+            "Could not send your request. Please try again, or email hello@martianindustries.io directly.",
+        },
         { status: 502 },
       );
     }
@@ -126,7 +166,10 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error("Audit route exception:", err);
     return NextResponse.json(
-      { error: "Could not send your request. Please try again." },
+      {
+        error:
+          "Could not send your request. Please try again, or email hello@martianindustries.io directly.",
+      },
       { status: 500 },
     );
   }

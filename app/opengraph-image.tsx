@@ -51,7 +51,7 @@ export default async function Image() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 12,
+            gap: 14,
             fontSize: 22,
             color: "#d97a52",
             letterSpacing: 6,
@@ -60,15 +60,15 @@ export default async function Image() {
             zIndex: 1,
           }}
         >
-          <span
-            style={{
-              width: 8,
-              height: 8,
-              borderRadius: 999,
-              background: "#c2552d",
-              display: "block",
-            }}
-          />
+          <svg width="34" height="24" viewBox="6 24 84 58" fill="none">
+            <g transform="translate(9,0) skewX(-12)">
+              <rect x="16" y="26" width="12" height="54" rx="2" fill="#e6e8ee" />
+              <rect x="34" y="42" width="12" height="38" rx="2" fill="#c2552d" />
+              <rect x="52" y="42" width="12" height="38" rx="2" fill="#c2552d" />
+              <rect x="70" y="26" width="12" height="54" rx="2" fill="#e6e8ee" />
+            </g>
+            <circle cx="83" cy="75" r="5" fill="#c2552d" />
+          </svg>
           {SITE_NAME}
         </div>
 

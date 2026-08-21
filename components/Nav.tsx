@@ -248,15 +248,19 @@ function Logo() {
       className="relative inline-flex h-7 w-7 items-center justify-center rounded-md border border-line-strong bg-bg-raised"
     >
       <svg
-        width="14"
-        height="14"
-        viewBox="0 0 14 14"
+        width="17"
+        height="12"
+        viewBox="6 24 84 58"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="7" cy="7" r="3.25" stroke="#c2552d" strokeWidth="1.25" />
-        <circle cx="7" cy="7" r="6" stroke="#262b36" strokeWidth="1" />
-        <circle cx="13" cy="7" r="0.9" fill="#c2552d" />
+        <g transform="translate(9,0) skewX(-12)">
+          <rect x="16" y="26" width="12" height="54" rx="2" fill="#e6e8ee" />
+          <rect x="34" y="42" width="12" height="38" rx="2" fill="#c2552d" />
+          <rect x="52" y="42" width="12" height="38" rx="2" fill="#c2552d" />
+          <rect x="70" y="26" width="12" height="54" rx="2" fill="#e6e8ee" />
+        </g>
+        <circle cx="83" cy="75" r="5" fill="#c2552d" />
       </svg>
     </span>
   );

@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -173,6 +175,10 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
+        {/* Vercel Analytics + Speed Insights — cookie-free, GDPR-compliant.
+            Auto-enables on the Vercel deployment. */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

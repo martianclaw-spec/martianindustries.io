@@ -8,8 +8,8 @@ import { FAQ, type FAQItem } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
-const APP_URL = "https://simcenter-three.vercel.app/app";
-const MARKETING_URL = "https://simcenter-three.vercel.app";
+const APP_URL = "https://simcenter.io/app";
+const MARKETING_URL = "https://simcenter.io";
 
 export const metadata: Metadata = {
   title: "SimCenter — Station readiness monitoring for indoor venues",
@@ -97,7 +97,7 @@ const simCenterFaqs: FAQItem[] = [
   },
   {
     q: "How much does SimCenter cost?",
-    a: "Pricing is being finalized. Early venues get a launch price and dedicated setup help. Sign in at simcenter-three.vercel.app/app to get started, or reach out first if you want to talk through fit.",
+    a: "Pricing is being finalized. Early venues get a launch price and dedicated setup help. Sign in at simcenter.io/app to get started, or reach out first if you want to talk through fit.",
   },
 ];
 

@@ -18,7 +18,7 @@ const portfolio: PortfolioItem[] = [
   { label: "Sim-Pull", href: "https://simpullsports.com", external: true },
   { label: "SimCenter", href: "/simcenter" },
   { label: "DayPilot", href: "https://getjoe.io", external: true },
-  { label: "The Palace Pool", href: "#", external: true },
+  { label: "Palace Picks", href: "https://palacepicks.com", external: true },
 ];
 
 function PortfolioMark() {

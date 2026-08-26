@@ -9,6 +9,7 @@ const links = [
   { href: "/simpull", label: "Sim-Pull" },
   { href: "/simcenter", label: "SimCenter" },
   { href: "/build", label: "Build" },
+  { href: "/work", label: "Work" },
   { href: "/#audit", label: "Audit" },
   { href: "/blog", label: "Articles" },
   { href: "/#about", label: "About" },

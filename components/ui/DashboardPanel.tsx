@@ -74,7 +74,7 @@ export function DashboardPanel() {
                       {b.id}
                     </span>
                   </div>
-                  <span className="font-mono text-[10.5px] text-ink-muted">
+                  <span className="font-mono text-[10.5px] text-ink-muted sm:whitespace-nowrap">
                     {b.label}
                   </span>
                 </li>
@@ -138,7 +138,7 @@ function Metric({
         >
           {value}
         </span>
-        <span className="font-mono text-[10.5px] text-ink-muted">{sub}</span>
+        <span className="whitespace-nowrap font-mono text-[10.5px] text-ink-muted">{sub}</span>
       </div>
     </div>
   );

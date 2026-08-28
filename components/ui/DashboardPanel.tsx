@@ -63,7 +63,7 @@ export function DashboardPanel() {
               {bays.map((b) => (
                 <li
                   key={b.id}
-                  className="flex min-w-0 flex-col items-start gap-1 rounded-md border border-line bg-bg-raised/60 px-2.5 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-2 sm:px-3 sm:py-2.5"
+                  className="flex min-w-0 flex-col items-start gap-0.5 rounded-md border border-line bg-bg-raised/60 px-2.5 py-2 sm:py-2.5"
                 >
                   <div className="flex shrink-0 items-center gap-2.5">
                     <span
@@ -74,7 +74,7 @@ export function DashboardPanel() {
                       {b.id}
                     </span>
                   </div>
-                  <span className="font-mono text-[10.5px] text-ink-muted sm:whitespace-nowrap">
+                  <span className="font-mono text-[10px] leading-snug text-ink-muted">
                     {b.label}
                   </span>
                 </li>

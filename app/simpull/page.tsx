@@ -151,13 +151,13 @@ export default function SimPullPage() {
               </Button>
             </div>
 
-            <dl className="mx-auto mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-6">
+            <dl className="mx-auto mt-12 grid max-w-md grid-cols-3 gap-4 sm:gap-6 border-t border-line pt-6">
               {proof.map((p) => (
-                <div key={p.label}>
-                  <dt className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
+                <div key={p.label} className="flex flex-col">
+                  <dt className="font-mono text-[10px] uppercase leading-tight tracking-[0.1em] text-ink-dim sm:text-[11px] sm:tracking-[0.16em]">
                     {p.label}
                   </dt>
-                  <dd className="mt-1 text-2xl font-semibold tracking-tighter2 text-white">
+                  <dd className="mt-auto pt-1 text-xl font-semibold tracking-tighter2 text-white sm:text-2xl">
                     {p.k}
                   </dd>
                 </div>
@@ -194,7 +194,7 @@ export default function SimPullPage() {
       {/* Positioning against the alternative */}
       <Section id="fit" className="border-t border-line">
         <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <SectionHeader
               eyebrow="Fit"
               title="Sim-Pull is for the throughput model, not the immersion model."
@@ -205,7 +205,7 @@ export default function SimPullPage() {
               will say so up front and refer you elsewhere.
             </p>
           </div>
-          <div className="lg:col-span-7 space-y-4">
+          <div className="min-w-0 lg:col-span-7 space-y-4">
             <div className="rounded-lg border border-line bg-bg-raised p-6 md:p-7">
               <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft">
                 Throughput model · Sim-Pull ICP

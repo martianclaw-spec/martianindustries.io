@@ -226,13 +226,13 @@ export default function SimCenterPage() {
       {/* Who it is for */}
       <Section id="who" className="border-t border-line">
         <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <SectionHeader
               eyebrow="Who it is for"
               title="Any venue where expensive machines run without a person standing next to them."
             />
           </div>
-          <div className="lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <div className="rounded-lg border border-line bg-bg-raised p-6 md:p-8">
               <CardLabel>Fits</CardLabel>
               <ul className="mt-5 grid gap-3 text-[15px] text-ink-muted sm:grid-cols-2">

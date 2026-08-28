@@ -46,7 +46,7 @@ export function AuditOffer() {
   return (
     <Section id="audit" className="border-t border-line">
       <div className="grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-5">
+        <div className="min-w-0 lg:col-span-5">
           <SectionHeader
             eyebrow="Process · Audit"
             title="Simulator Venue Systems Audit"
@@ -84,7 +84,7 @@ export function AuditOffer() {
           </div>
         </div>
 
-        <div className="lg:col-span-7">
+        <div className="min-w-0 lg:col-span-7">
           <div className="overflow-hidden rounded-lg border border-line bg-bg-raised">
             <div className="flex items-center justify-between border-b border-line px-5 py-3">
               <CardLabel>What we review</CardLabel>

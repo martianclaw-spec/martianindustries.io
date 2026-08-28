@@ -247,7 +247,7 @@ export default function BuildPage() {
       {/* Recent builds */}
       <Section id="proof" className="border-t border-line">
         <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="min-w-0 lg:col-span-5">
             <SectionHeader
               eyebrow="Recent builds"
               title="Two products came out of custom engagements. Yours can too."
@@ -258,7 +258,7 @@ export default function BuildPage() {
               things every venue eventually wants.
             </p>
           </div>
-          <div className="lg:col-span-7 space-y-4">
+          <div className="min-w-0 lg:col-span-7 space-y-4">
             <div className="rounded-lg border border-line bg-bg-raised p-6 md:p-7">
               <div className="flex items-center justify-between">
                 <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft">

@@ -5,7 +5,7 @@ export function About() {
   return (
     <Section id="about" className="border-t border-line">
       <div className="grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-7">
+        <div className="min-w-0 lg:col-span-7">
           <SectionHeader
             eyebrow="About"
             title="I run simulator venues. I also build the systems they run on."
@@ -41,7 +41,7 @@ export function About() {
           </div>
         </div>
 
-        <aside className="lg:col-span-5">
+        <aside className="min-w-0 lg:col-span-5">
           <div className="rounded-lg border border-line bg-bg-raised p-6">
             <CardLabel>Operating principles</CardLabel>
             <ul className="mt-5 space-y-4">

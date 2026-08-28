@@ -31,8 +31,8 @@ export function DashboardPanel() {
         <div aria-hidden className="absolute inset-0 panel-vignette" />
 
         {/* Header bar */}
-        <div className="relative flex items-center justify-between border-b border-line px-5 py-3">
-          <div className="flex items-center gap-3">
+        <div className="relative flex items-center justify-between gap-3 border-b border-line px-4 py-3 sm:px-5">
+          <div className="flex shrink-0 items-center gap-3">
             <div className="flex items-center gap-1.5">
               <span className="h-2 w-2 rounded-full bg-line-strong" />
               <span className="h-2 w-2 rounded-full bg-line-strong" />
@@ -42,20 +42,20 @@ export function DashboardPanel() {
               ops · live
             </span>
           </div>
-          <span className="font-mono text-[11px] text-ink-dim">
+          <span className="truncate font-mono text-[11px] text-ink-dim">
             venue-01 · 14:22 local
           </span>
         </div>
 
         {/* Body */}
-        <div className="relative grid grid-cols-1 gap-5 p-5 md:grid-cols-3">
+        <div className="relative grid grid-cols-1 gap-4 p-4 sm:gap-5 sm:p-5 md:grid-cols-3">
           {/* Bay status grid */}
-          <div className="md:col-span-2">
+          <div className="min-w-0 md:col-span-2">
             <div className="mb-3 flex items-baseline justify-between">
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
                 bay status
               </span>
-              <span className="font-mono text-[11px] text-ink-dim">
+              <span className="truncate font-mono text-[11px] text-ink-dim">
                 5 / 6 active
               </span>
             </div>
@@ -63,7 +63,7 @@ export function DashboardPanel() {
               {bays.map((b) => (
                 <li
                   key={b.id}
-                  className="flex items-center justify-between rounded-md border border-line bg-bg-raised/60 px-3 py-2.5"
+                  className="flex min-w-0 flex-col items-start gap-1 rounded-md border border-line bg-bg-raised/60 px-2.5 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-2 sm:px-3 sm:py-2.5"
                 >
                   <div className="flex items-center gap-2.5">
                     <span
@@ -74,7 +74,7 @@ export function DashboardPanel() {
                       {b.id}
                     </span>
                   </div>
-                  <span className="font-mono text-[10.5px] text-ink-muted">
+                  <span className="max-w-full truncate font-mono text-[10.5px] text-ink-muted">
                     {b.label}
                   </span>
                 </li>
@@ -91,11 +91,11 @@ export function DashboardPanel() {
         </div>
 
         {/* Footer ticker */}
-        <div className="relative flex items-center gap-4 border-t border-line px-5 py-2.5">
+        <div className="relative flex items-center gap-3 border-t border-line px-4 py-2.5 sm:gap-4 sm:px-5">
           <span className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-ink-dim">
             ticker
           </span>
-          <div className="flex flex-1 items-center gap-5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex min-w-0 flex-1 items-center gap-5 overflow-x-auto [mask-image:linear-gradient(to_right,black_88%,transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <TickerItem ts="14:21" text="bay-04 session started · party of 3" />
             <TickerItem
               ts="14:18"
@@ -138,7 +138,7 @@ function Metric({
         >
           {value}
         </span>
-        <span className="font-mono text-[10.5px] text-ink-muted">{sub}</span>
+        <span className="max-w-full truncate font-mono text-[10.5px] text-ink-muted">{sub}</span>
       </div>
     </div>
   );

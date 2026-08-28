@@ -17,7 +17,7 @@ export function Hero() {
 
       <Container className="relative">
         <div className="grid gap-14 pb-12 pt-16 md:gap-16 md:pb-16 md:pt-24 lg:grid-cols-12 lg:gap-12">
-          <div className="flex flex-col lg:col-span-6">
+          <div className="flex min-w-0 flex-col lg:col-span-6">
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
               <span
                 className="h-1.5 w-1.5 shrink-0 rounded-full bg-rust"
@@ -60,14 +60,14 @@ export function Hero() {
               </Button>
             </div>
 
-            <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-6 lg:mt-auto">
+            <dl className="mt-12 grid max-w-md grid-cols-3 gap-4 sm:gap-6 border-t border-line pt-6 lg:mt-auto">
               <Stat k="3" label="Venues operated" />
               <Stat k="6+" label="Sim stacks integrated" />
               <Stat k="24/7" label="Remote coverage" />
             </dl>
           </div>
 
-          <div className="lg:col-span-6">
+          <div className="min-w-0 lg:col-span-6">
             <DashboardPanel />
           </div>
         </div>
@@ -78,11 +78,11 @@ export function Hero() {
 
 function Stat({ k, label }: { k: string; label: string }) {
   return (
-    <div>
-      <dt className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
+    <div className="flex flex-col">
+      <dt className="font-mono text-[10px] uppercase leading-tight tracking-[0.1em] text-ink-dim sm:text-[11px] sm:tracking-[0.16em]">
         {label}
       </dt>
-      <dd className="mt-1 text-2xl font-semibold tracking-tighter2 text-white">
+      <dd className="mt-auto pt-1 text-xl font-semibold tracking-tighter2 text-white sm:text-2xl">
         {k}
       </dd>
     </div>

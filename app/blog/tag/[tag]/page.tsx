@@ -141,7 +141,7 @@ export default async function TagPage(props: {
                   href={`/blog/${p.slug}`}
                   className="group grid gap-4 py-8 transition-colors md:grid-cols-12 md:gap-8 md:py-10"
                 >
-                  <div className="md:col-span-3">
+                  <div className="min-w-0 md:col-span-3">
                     <CardLabel>{formatPostDate(p.date)}</CardLabel>
                     <div className="mt-2 flex flex-wrap gap-1.5">
                       {p.tags.map((t) => (
@@ -154,7 +154,7 @@ export default async function TagPage(props: {
                       ))}
                     </div>
                   </div>
-                  <div className="md:col-span-9">
+                  <div className="min-w-0 md:col-span-9">
                     <h2 className="text-balance text-xl font-semibold tracking-tightish text-white transition-colors group-hover:text-rust-soft md:text-2xl">
                       {p.title}
                     </h2>

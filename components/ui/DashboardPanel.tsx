@@ -55,7 +55,7 @@ export function DashboardPanel() {
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
                 bay status
               </span>
-              <span className="truncate font-mono text-[11px] text-ink-dim">
+              <span className="font-mono text-[11px] text-ink-dim">
                 5 / 6 active
               </span>
             </div>
@@ -65,16 +65,16 @@ export function DashboardPanel() {
                   key={b.id}
                   className="flex min-w-0 flex-col items-start gap-1 rounded-md border border-line bg-bg-raised/60 px-2.5 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-2 sm:px-3 sm:py-2.5"
                 >
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex shrink-0 items-center gap-2.5">
                     <span
                       className={`h-1.5 w-1.5 rounded-full ${dot[b.state]}`}
                       aria-hidden
                     />
-                    <span className="font-mono text-[11px] text-ink">
+                    <span className="whitespace-nowrap font-mono text-[11px] text-ink">
                       {b.id}
                     </span>
                   </div>
-                  <span className="max-w-full truncate font-mono text-[10.5px] text-ink-muted">
+                  <span className="font-mono text-[10.5px] text-ink-muted">
                     {b.label}
                   </span>
                 </li>
@@ -138,7 +138,7 @@ function Metric({
         >
           {value}
         </span>
-        <span className="max-w-full truncate font-mono text-[10.5px] text-ink-muted">{sub}</span>
+        <span className="font-mono text-[10.5px] text-ink-muted">{sub}</span>
       </div>
     </div>
   );

@@ -101,6 +101,10 @@ const homeFaqs: FAQItem[] = [
     a: "Martian Industries is the software studio of Matthew Myers. We design, build, and ship production software for founders and operators: booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents that do real work. The people who scope your project build it, from the first call through deployment and handoff.",
   },
   {
+    q: "Do you only build for simulator and entertainment venues?",
+    a: "No, and this is worth being clear about. A lot of the shipped work happens to live there because that is the industry we came out of, but nothing about the engineering is specific to it. A booking and payments flow does not care whether it is selling a bay hour, a studio session, a class, or a rental. An unattended kiosk does not care what is behind the door. If you are building a music app, a marketplace, a scheduling tool, or an internal system for something we have never touched, the useful question is whether it has to take money, talk to hardware, run unattended, or replace a spreadsheet. Those are the problems, and they are industry agnostic.",
+  },
+  {
     q: "What kind of projects are a good fit?",
     a: "Software that has to survive contact with real users and real money. Systems that take payments, talk to physical hardware, run unattended, or replace a process currently held together by spreadsheets and group chats. The projects we do best are the ones where the interesting problem is reliability, not the interface.",
   },
@@ -110,7 +114,7 @@ const homeFaqs: FAQItem[] = [
   },
   {
     q: "How much does a project cost?",
-    a: "Projects are priced per milestone at a fixed price, not open-ended hourly. Smaller builds such as a booking flow tied to existing systems are shorter and cheaper. Larger builds such as a fully unattended venue with door access, payment, session control, and remote support are longer and priced accordingly. Exact numbers come out of the scoping call, in writing, before you commit.",
+    a: "Projects are priced per milestone at a fixed price, not open-ended hourly. Smaller builds such as a booking flow tied to existing systems are shorter and cheaper. Larger builds such as a fully unattended site with door access, payment, session control, and remote support are longer and priced accordingly. Exact numbers come out of the scoping call, in writing, before you commit.",
   },
   {
     q: "How long does a build take?",
@@ -134,7 +138,7 @@ const homeFaqs: FAQItem[] = [
   },
   {
     q: "What have you actually shipped?",
-    a: "Systems running in production today: a venue operating system driving physical hardware across three locations, a booking and payments backend, a station monitoring cloud with a per-machine agent, an autonomous AI outreach agent, a Model Context Protocol tool server, and a couple of consumer web products. The full list is on the <a href=\"/work\">work page</a>.",
+    a: "Systems running in production today: software that takes a payment on a phone and launches physical hardware, running across three locations; a booking and payments backend; a monitoring platform with a per-machine agent reporting from inside private networks; an autonomous AI outreach agent; a Model Context Protocol tool server; and a couple of consumer web products. The full list is on the <a href=\"/work\">work page</a>.",
   },
   {
     q: "How do I get started?",

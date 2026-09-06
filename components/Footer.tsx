@@ -145,7 +145,7 @@ export function Footer() {
                   href="/#contact"
                   className="transition-colors hover:text-white"
                 >
-                  Request a venue systems audit
+                  Start a project
                 </Link>
               </li>
             </ul>

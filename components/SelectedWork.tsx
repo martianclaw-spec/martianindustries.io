@@ -7,7 +7,7 @@ const work = [
   {
     tag: "Production",
     name: "Sim-Pull",
-    role: "Venue operating system",
+    role: "Unattended payments + hardware control",
     body: "A guest scans a code on the rig, pays on their phone, and the machine launches itself. Payments, session control, hardware launch, auto-recovery when something freezes, and cross-location leaderboards. Running in three venues on real hardware today.",
     meta: ["3 venues live", "Payments · Hardware", "Full stack"],
   },
@@ -41,7 +41,7 @@ export function SelectedWork() {
       <SectionHeader
         eyebrow="Selected work"
         title="Shipped, in production, still running."
-        description="Three builds that show the range: a full-stack system driving physical hardware, a payments and scheduling backend, and an AI agent that does real work unattended."
+        description="Three builds that show the range: a system that takes payment and drives physical hardware unattended, a payments and scheduling backend, and an AI agent that does real work on its own. The industries they happen to sit in are incidental. The engineering problems are the point."
       />
 
       <div className="mt-14 grid gap-4 md:mt-20 lg:grid-cols-12">

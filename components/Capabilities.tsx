@@ -57,7 +57,7 @@ export function Capabilities() {
       <SectionHeader
         eyebrow="What we build"
         title="Four kinds of software we get hired to build."
-        description="Most of our work sits in one of these four buckets, and the interesting projects touch more than one. If yours does not fit neatly, that is usually a good sign."
+        description="Most of our work sits in one of these four buckets, and the interesting projects touch more than one. What we do not care about is your industry: a checkout flow does not know whether it is selling a booking, a subscription, or a ticket."
       />
 
       <div className="mt-14 border-t border-line md:mt-20">

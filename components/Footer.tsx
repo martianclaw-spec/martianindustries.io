@@ -155,7 +155,9 @@ export function Footer() {
           <span>
             &copy; {year} Martian Industries. All rights reserved.
           </span>
-          <span>Designed, built, and shipped by one engineer.</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-dim">
+            Transmitting from Tharsis Region · 1.6°N 112.4°W
+          </span>
         </div>
       </Container>
     </footer>

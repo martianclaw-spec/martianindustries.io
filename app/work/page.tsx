@@ -5,6 +5,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { Card, CardLabel } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/JsonLd";
+import { Backdrop } from "@/components/atmos/Backdrop";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -195,14 +196,7 @@ export default function WorkPage() {
 
       {/* CTA */}
       <section className="relative overflow-hidden border-t border-line py-24 md:py-32">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-grid-faint bg-grid opacity-[0.35] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-rust/10 blur-[120px]"
-        />
+        <Backdrop gridMask="center" />
         <Container className="relative">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-5xl">

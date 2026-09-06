@@ -44,3 +44,78 @@ body {
     transparent
   );
 }
+
+/* ---------------------------------------------------------------------------
+   Atmosphere
+   Decorative only. Every one of these sits in a pointer-events-none layer
+   behind content and must never affect layout.
+   ------------------------------------------------------------------------ */
+
+/* The wash of a low Martian sun sitting just under the horizon. Warmer and
+   more directional than the neutral radial it replaces. */
+.mars-horizon {
+  background-image:
+    radial-gradient(
+      ellipse 120% 60% at 50% 100%,
+      rgba(194, 85, 45, 0.14),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 80% 50% at 70% 90%,
+      rgba(217, 122, 82, 0.08),
+      transparent 65%
+    );
+}
+
+/* Fine film grain. Breaks up the flat near-black so large empty areas read as
+   surface rather than void. Pure CSS, no image request. */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------------------------------------
+   Scroll reveal
+   Elements start slightly low and transparent, then settle when they enter the
+   viewport. The .is-in class is applied by the Reveal component's observer.
+   ------------------------------------------------------------------------ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Motion preferences
+   One place that disables every decorative animation on the site. The dust
+   canvas checks the same query in JavaScript and renders a single static
+   frame instead of running its loop.
+   ------------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

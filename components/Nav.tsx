@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Container } from "./ui/Container";
 import { Button } from "./ui/Button";
+import { SolClock } from "./atmos/SolClock";
 
 const links = [
   { href: "/work", label: "Work" },
@@ -65,8 +66,12 @@ export function Nav() {
               ))}
             </nav>
 
-            {/* Right side: desktop CTA + mobile hamburger */}
-            <div className="flex items-center gap-3">
+            {/* Right side: mission clock, desktop CTA, mobile hamburger */}
+            <div className="flex items-center gap-4">
+              <SolClock
+                showSeconds={false}
+                className="hidden font-mono text-[11px] uppercase tracking-[0.14em] text-ink-dim xl:inline"
+              />
               <Button
                 href="/#contact"
                 variant="primary"

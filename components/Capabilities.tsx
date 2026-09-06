@@ -1,5 +1,6 @@
 import { Section, SectionHeader } from "./ui/Section";
 import { Card, CardLabel } from "./ui/Card";
+import { Reveal } from "./atmos/Reveal";
 
 const capabilities = [
   {
@@ -54,8 +55,9 @@ export function Capabilities() {
       />
 
       <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-2">
-        {capabilities.map((c) => (
-          <Card key={c.code} className="flex flex-col">
+        {capabilities.map((c, i) => (
+          <Reveal key={c.code} delay={i * 70} className="h-full">
+          <Card className="flex h-full flex-col">
             <div className="flex items-center justify-between">
               <CardLabel>{c.code}</CardLabel>
               <CardLabel className="text-ink-dim">capability</CardLabel>
@@ -79,6 +81,7 @@ export function Capabilities() {
               ))}
             </ul>
           </Card>
+          </Reveal>
         ))}
       </div>
     </Section>

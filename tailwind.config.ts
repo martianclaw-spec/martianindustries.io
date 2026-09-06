@@ -24,6 +24,13 @@ const config: Config = {
           soft: "#d97a52",
           deep: "#8a3a1d",
         },
+        // Regolith tones. Used only for atmosphere: drifting dust, terrain
+        // contours, and the horizon wash. Never for text or interactive state.
+        dust: {
+          DEFAULT: "#8a6b52",
+          deep: "#3d2c22",
+          pale: "#c9a888",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
@@ -39,6 +46,28 @@ const config: Config = {
       },
       backgroundSize: {
         grid: "44px 44px",
+      },
+      keyframes: {
+        // Slow left-to-right light pass across a panel, like a sensor sweep.
+        sweep: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(200%)" },
+        },
+        // Gentle breathing for live status indicators.
+        breathe: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.45" },
+        },
+        // Vertical drift for the hero telemetry readout.
+        riseIn: {
+          "0%": { opacity: "0", transform: "translateY(6px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        sweep: "sweep 7s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        breathe: "breathe 3.2s ease-in-out infinite",
+        "rise-in": "riseIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
     },
   },

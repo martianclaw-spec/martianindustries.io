@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Section, SectionHeader } from "./ui/Section";
 import { Card, CardLabel } from "./ui/Card";
+import { Reveal } from "./atmos/Reveal";
 
 const work = [
   {
@@ -36,8 +37,9 @@ export function SelectedWork() {
       />
 
       <div className="mt-12 grid gap-4 md:mt-16 lg:grid-cols-3">
-        {work.map((w) => (
-          <Card key={w.name} className="flex flex-col">
+        {work.map((w, i) => (
+          <Reveal key={w.name} delay={i * 90} className="h-full">
+          <Card className="flex h-full flex-col">
             <div className="flex items-center justify-between">
               <CardLabel>{w.tag}</CardLabel>
               <CardLabel className="text-ink-dim">case</CardLabel>
@@ -58,6 +60,7 @@ export function SelectedWork() {
               ))}
             </ul>
           </Card>
+          </Reveal>
         ))}
       </div>
 

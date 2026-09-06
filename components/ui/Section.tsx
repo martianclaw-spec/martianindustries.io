@@ -1,5 +1,6 @@
 import { cn } from "@/lib/cn";
 import { Container } from "./Container";
+import { Reveal } from "../atmos/Reveal";
 
 type SectionProps = {
   id?: string;
@@ -48,18 +49,24 @@ export function SectionHeader({
       )}
     >
       {eyebrow ? (
-        <div className="mb-4 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-rust-soft">
-          <span className="inline-block h-px w-6 bg-rust" aria-hidden />
-          <span className="font-mono">{eyebrow}</span>
-        </div>
+        <Reveal>
+          <div className="mb-4 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-rust-soft">
+            <span className="inline-block h-px w-6 bg-rust" aria-hidden />
+            <span className="font-mono">{eyebrow}</span>
+          </div>
+        </Reveal>
       ) : null}
-      <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-4xl">
-        {title}
-      </h2>
+      <Reveal delay={60}>
+        <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-4xl">
+          {title}
+        </h2>
+      </Reveal>
       {description ? (
-        <p className="mt-4 text-pretty text-base text-ink-muted md:text-lg">
-          {description}
-        </p>
+        <Reveal delay={120}>
+          <p className="mt-4 text-pretty text-base text-ink-muted md:text-lg">
+            {description}
+          </p>
+        </Reveal>
       ) : null}
     </div>
   );

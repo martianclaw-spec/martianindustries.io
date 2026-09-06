@@ -1,3 +1,5 @@
+import { SolClock } from "@/components/atmos/SolClock";
+
 /**
  * Subtle "production status" panel used in the hero.
  * Pure CSS + inline SVG. No images, no animations beyond a slow opacity pulse.
@@ -15,7 +17,7 @@ const systems = [
 const dot: Record<string, string> = {
   live: "bg-emerald-400 shadow-[0_0_0_3px_rgba(52,211,153,0.12)]",
   idle: "bg-ink-dim shadow-[0_0_0_3px_rgba(107,114,128,0.12)]",
-  warn: "bg-rust shadow-[0_0_0_3px_rgba(194,85,45,0.18)]",
+  warn: "bg-rust shadow-[0_0_0_3px_rgba(194,85,45,0.18)] animate-breathe",
 };
 
 export function DashboardPanel() {
@@ -29,6 +31,13 @@ export function DashboardPanel() {
           className="absolute inset-0 bg-grid-faint bg-grid opacity-[0.55]"
         />
         <div aria-hidden className="absolute inset-0 panel-vignette" />
+        {/* Slow sensor sweep across the glass */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+        >
+          <div className="absolute inset-y-0 -left-1/3 w-1/3 animate-sweep bg-gradient-to-r from-transparent via-white/[0.035] to-transparent" />
+        </div>
 
         {/* Header bar */}
         <div className="relative flex items-center justify-between gap-3 border-b border-line px-4 py-3 sm:px-5">
@@ -42,9 +51,10 @@ export function DashboardPanel() {
               martian · build
             </span>
           </div>
-          <span className="truncate font-mono text-[11px] text-ink-dim">
-            prod · all systems
-          </span>
+          <SolClock
+            showSeconds
+            className="truncate font-mono text-[11px] text-ink-dim"
+          />
         </div>
 
         {/* Body */}

@@ -1,20 +1,14 @@
 import { Container } from "./ui/Container";
 import { AuditForm } from "./AuditForm";
+import { Backdrop } from "./atmos/Backdrop";
 
 export function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden border-t border-line py-24 md:py-32"
+      className="grain relative overflow-hidden border-t border-line py-24 md:py-32"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-grid-faint bg-grid opacity-[0.35] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-rust/10 blur-[120px]"
-      />
+      <Backdrop gridMask="center" />
 
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">

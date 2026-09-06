@@ -35,6 +35,15 @@ export function Reveal({
       return;
     }
 
+    // A page that loads in a hidden or zero-size window (a background tab, a
+    // minimised window, a screenshotter) has nothing for the observer to
+    // intersect, so it would never fire and the content would stay invisible.
+    // Skip the animation in that case and just show it.
+    if (document.visibilityState === "hidden" || window.innerHeight === 0) {
+      setShown(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

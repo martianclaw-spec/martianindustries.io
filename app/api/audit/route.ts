@@ -9,8 +9,8 @@ export const dynamic = "force-dynamic";
 type AuditPayload = {
   name?: unknown;
   email?: unknown;
-  venue?: unknown;
-  bays?: unknown;
+  company?: unknown;
+  budget?: unknown;
   message?: unknown;
 };
 
@@ -57,8 +57,8 @@ export async function POST(request: Request) {
 
   const name = asString(body.name);
   const email = asString(body.email);
-  const venue = asString(body.venue);
-  const bays = asString(body.bays);
+  const company = asString(body.company);
+  const budget = asString(body.budget);
   const message = asString(body.message);
 
   if (!name || !email || !message) {
@@ -86,15 +86,15 @@ export async function POST(request: Request) {
   const resend = new Resend(apiKey);
   const from = process.env.RESEND_FROM_EMAIL || FROM_FALLBACK;
 
-  const subject = `Audit request: ${name}${venue ? ` (${venue})` : ""}`;
+  const subject = `Project inquiry: ${name}${company ? ` (${company})` : ""}`;
 
   const text = [
     `New audit request from ${name}`,
     "",
     `Name:    ${name}`,
     `Email:   ${email}`,
-    `Venue:   ${venue || "(not provided)"}`,
-    `Bays:    ${bays || "(not provided)"}`,
+    `Company: ${company || "(not provided)"}`,
+    `Budget:  ${budget || "(not provided)"}`,
     "",
     "Message:",
     message,
@@ -107,8 +107,8 @@ export async function POST(request: Request) {
         <tbody>
           <tr><td style="padding:4px 16px 4px 0;color:#666;">Name</td><td>${escapeHtml(name)}</td></tr>
           <tr><td style="padding:4px 16px 4px 0;color:#666;">Email</td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
-          <tr><td style="padding:4px 16px 4px 0;color:#666;">Venue</td><td>${escapeHtml(venue || "(not provided)")}</td></tr>
-          <tr><td style="padding:4px 16px 4px 0;color:#666;">Bays</td><td>${escapeHtml(bays || "(not provided)")}</td></tr>
+          <tr><td style="padding:4px 16px 4px 0;color:#666;">Company</td><td>${escapeHtml(company || "(not provided)")}</td></tr>
+          <tr><td style="padding:4px 16px 4px 0;color:#666;">Budget</td><td>${escapeHtml(budget || "(not provided)")}</td></tr>
         </tbody>
       </table>
       <h3 style="margin:24px 0 8px;font-size:14px;color:#666;text-transform:uppercase;letter-spacing:0.08em;">Message</h3>

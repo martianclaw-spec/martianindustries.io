@@ -8,14 +8,14 @@ import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Work — everything Martian Industries has built and runs",
+  title: "Work — everything I have built",
   description:
-    "The full portfolio: Sim-Pull, SimCenter, DayPilot, Palace Picks, PA Iron Report, live venue operations, and open-source tooling. Built and operated by one operator-engineer.",
+    "The full portfolio: venue operating systems, booking and payments backends, monitoring platforms with per-machine agents, AI outreach agents, MCP tooling, and consumer web products. Designed and built by one engineer.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: "Work — Martian Industries",
     description:
-      "Products, live venue operations, and tools. Built and operated by one operator-engineer.",
+      "Production systems, products, and tools. Designed and built by one engineer.",
     url: `${SITE_URL}/work`,
     type: "website",
   },
@@ -70,7 +70,7 @@ const projects: Project[] = [
     tag: "Contributor",
     name: "Simbook",
     role: "Kiosk and VMS for sim venues",
-    body: "Independently operated kiosk and venue management product. Martian Industries works closely with Simbook and implements it in simulator venues for booking, kiosk, and session systems.",
+    body: "Booking, payments, and scheduling for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN check-in, and a multi-tenant model several levels deep. Independently operated. I contribute as a builder on the systems behind it.",
     meta: ["Independently operated", "Kiosk · Session flow"],
   },
   {
@@ -108,7 +108,7 @@ const collectionSchema = {
   name: "Work — Martian Industries",
   url: `${SITE_URL}/work`,
   description:
-    "Products, live venue operations, and tools built and operated by Martian Industries.",
+    "Production systems, products, and tools designed and built by Martian Industries.",
   isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
   mainEntity: {
     "@type": "ItemList",
@@ -140,12 +140,13 @@ export default function WorkPage() {
               Work
             </div>
             <h1 className="text-balance text-4xl font-semibold tracking-tighter2 text-white md:text-5xl">
-              Built, operated, and shipped. All of it.
+              Everything I have built and shipped.
             </h1>
             <p className="mt-5 max-w-2xl text-pretty text-base text-ink-muted md:text-lg">
-              Every product here started as a real problem inside a real
-              operation. Some grew into standalone products. Some run venues
-              every day. One person builds and operates all of it.
+              Every one of these started as a real problem for a real
+              business. Some grew into standalone products, some run
+              operations every day, and some are tools I needed and could not
+              find. One person designed, built, and shipped all of it.
             </p>
           </div>
         </Container>
@@ -205,7 +206,7 @@ export default function WorkPage() {
         <Container className="relative">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-5xl">
-              Need something like this built for your venue?
+              Need something like this built?
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
               Everything above came out of a custom engagement or a live

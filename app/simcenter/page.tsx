@@ -12,7 +12,7 @@ const APP_URL = "https://simcenter.io/app";
 const MARKETING_URL = "https://simcenter.io";
 
 export const metadata: Metadata = {
-  title: "SimCenter — Station readiness monitoring for indoor venues",
+  title: "SimCenter — Case study",
   description:
     "SimCenter watches every station in your venue — sim rigs, launch monitors, VR arcades — from the inside. Answers one question continuously: is every station ready to take money?",
   alternates: { canonical: "/simcenter" },
@@ -137,7 +137,7 @@ export default function SimCenterPage() {
           <div className="mx-auto max-w-3xl pb-16 pt-16 text-center md:pb-24 md:pt-24">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
-              SimCenter · A Martian Industries product
+              Case study · Built by Martian Industries
             </div>
 
             <h1 className="text-balance text-4xl font-semibold tracking-tighter2 text-white sm:text-5xl md:text-[56px] md:leading-[1.05]">
@@ -146,19 +146,20 @@ export default function SimCenterPage() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-ink-muted md:text-lg">
-              SimCenter watches every station in your venue, from the inside.
-              Sim rigs, launch monitors, VR arcades, esports lounges. It
-              answers one question continuously, across every location, and
-              lets you power stations on and off from anywhere.
+              A multi-tenant monitoring platform I designed and built: a
+              per-machine agent that reports from inside the network, a cloud
+              dashboard across every location, confirmed alerting that does
+              not cry wolf, and remote power control. A good example of
+              software that has to be trusted at three in the morning.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Button href={APP_URL} variant="primary" external>
-                Launch SimCenter
+              <Button href="/#contact" variant="primary">
+                Discuss a build like this
                 <Arrow />
               </Button>
               <Button href={MARKETING_URL} variant="secondary" external>
-                See how it works
+                Visit simcenter.io
               </Button>
             </div>
 
@@ -285,23 +286,23 @@ export default function SimCenterPage() {
         <Container className="relative">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-5xl">
-              Stop driving to the venue to find out.
+              Need a system you can trust unattended?
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
-              Sign in, create your first venue, install the connector on one
-              station. The board lights up in the next scan. Nothing else to
-              configure.
+              Agents on machines you do not control, alerting that has to be
+              right, and a dashboard someone checks at three in the morning.
+              That is the kind of build I take on.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Button href={APP_URL} variant="primary" external>
-                Launch SimCenter
+              <Button href="/#contact" variant="primary">
+                Start a scoping call
                 <Arrow />
               </Button>
               <Link
-                href="/#contact"
+                href="/work"
                 className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim transition-colors hover:text-white"
               >
-                Talk to Martian first
+                See other builds
               </Link>
             </div>
           </div>

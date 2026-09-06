@@ -16,8 +16,8 @@ export function AuditForm() {
     const payload = {
       name: String(data.get("name") ?? "").trim(),
       email: String(data.get("email") ?? "").trim(),
-      venue: String(data.get("venue") ?? "").trim(),
-      bays: String(data.get("bays") ?? "").trim(),
+      company: String(data.get("company") ?? "").trim(),
+      budget: String(data.get("budget") ?? "").trim(),
       message: String(data.get("message") ?? "").trim(),
     };
 
@@ -69,7 +69,7 @@ export function AuditForm() {
           Confirmed
         </div>
         <p className="mt-4 text-pretty text-lg text-white">
-          Request received. I will follow up soon.
+          Got it. I will follow up shortly.
         </p>
         <button
           type="button"
@@ -113,20 +113,20 @@ export function AuditForm() {
           />
         </Field>
 
-        <Field label="Venue name" htmlFor="audit-venue">
+        <Field label="Company or project" htmlFor="audit-company">
           <input
-            id="audit-venue"
-            name="venue"
+            id="audit-company"
+            name="company"
             type="text"
             autoComplete="organization"
             className={inputClass}
           />
         </Field>
 
-        <Field label="Number of simulators or bays" htmlFor="audit-bays">
+        <Field label="Budget range" htmlFor="audit-budget">
           <input
-            id="audit-bays"
-            name="bays"
+            id="audit-budget"
+            name="budget"
             type="number"
             min={0}
             inputMode="numeric"
@@ -142,7 +142,7 @@ export function AuditForm() {
             name="message"
             required
             rows={5}
-            placeholder="Tell me about your venue"
+            placeholder="What are you trying to build?"
             className={`${inputClass} resize-y`}
           />
         </Field>
@@ -150,7 +150,7 @@ export function AuditForm() {
 
       <div className="mt-7 flex flex-wrap items-center gap-3">
         <Button type="submit" variant="primary" disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Request an audit"}
+          {isSubmitting ? "Sending..." : "Send project details"}
         </Button>
         {error ? (
           <span

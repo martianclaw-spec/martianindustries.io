@@ -86,8 +86,8 @@ export default async function Image() {
             flexDirection: "column",
           }}
         >
-          <span>Operations infrastructure</span>
-          <span style={{ color: "#9aa1ad" }}>for simulator venues.</span>
+          <span>I build the software</span>
+          <span style={{ color: "#9aa1ad" }}>your operation runs on.</span>
         </div>
 
         {/* footer line */}

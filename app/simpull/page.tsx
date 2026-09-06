@@ -9,17 +9,16 @@ import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 const APP_URL = "https://simpullsports.com";
-const DEMO_URL = "https://simpullsports.com/contact";
 
 export const metadata: Metadata = {
-  title: "Sim-Pull — The operating system for sim racing venues",
+  title: "Sim-Pull — Case study",
   description:
-    "Sim-Pull is venue management software for sim racing operators. Guests scan, pay, and the rig launches itself. Live in three venues today. $100 per rig per month.",
+    "A venue operating system built by Martian Industries. Guests scan, pay, and the machine launches itself, unattended. Payments, hardware control, auto-recovery, and cross-location leaderboards. Live in three venues.",
   alternates: { canonical: "/simpull" },
   openGraph: {
-    title: "Sim-Pull — Sim racing venue operating system",
+    title: "Sim-Pull — Built by Martian Industries",
     description:
-      "Guests scan a QR, pay on their phone, and the rig launches itself. Cross-rig leaderboards. Optional AI coaching. Live in three venues today.",
+      "Unattended payments and hardware control, built end to end. Guests scan, pay, and the machine launches itself. Live in three venues today.",
     url: `${SITE_URL}/simpull`,
     type: "website",
   },
@@ -76,8 +75,8 @@ const simPullFaqs: FAQItem[] = [
     a: "No. Sim-Pull runs on the AC rigs you already have. The kiosk experience is on the guest's phone via a QR scan. No tablets, no card readers, no new PCs.",
   },
   {
-    q: "How do I try it?",
-    a: "See it live and book a 20-minute demo at <a href=\"https://simpullsports.com/contact\">simpullsports.com/contact</a>. You can also poke around the full site at <a href=\"https://simpullsports.com\">simpullsports.com</a> before you commit.",
+    q: "Can you build something like this for me?",
+    a: "Yes. The hard parts of Sim-Pull are the transferable ones: taking payment on a phone, driving physical hardware from that payment, recovering automatically when something freezes, and keeping it all running unattended. That pattern applies well beyond sim racing. <a href=\"/#contact\">Start a scoping call</a> and tell me what you are trying to run.",
   },
 ];
 
@@ -127,7 +126,7 @@ export default function SimPullPage() {
           <div className="mx-auto max-w-3xl pb-16 pt-16 text-center md:pb-24 md:pt-24">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
-              Sim-Pull · A Martian Industries product
+              Case study · Built by Martian Industries
             </div>
 
             <h1 className="text-balance text-4xl font-semibold tracking-tighter2 text-white sm:text-5xl md:text-[56px] md:leading-[1.05]">
@@ -136,14 +135,16 @@ export default function SimPullPage() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-ink-muted md:text-lg">
-              Guest scans a QR on the rig, pays on their phone, and the rig
-              launches itself. Staff runs the floor, not the software. Built
-              by an operator, running in three live venues today.
+              A guest scans a code on the machine, pays on their phone, and
+              the hardware launches itself with no staff in the loop. One of
+              the clearest examples of what I build: payments, physical
+              hardware control, and unattended recovery in one system. Running
+              in three venues today.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Button href={DEMO_URL} variant="primary" external>
-                Book a 20-min demo
+              <Button href="/#contact" variant="primary">
+                Discuss a build like this
                 <Arrow />
               </Button>
               <Button href={APP_URL} variant="secondary" external>
@@ -255,22 +256,23 @@ export default function SimPullPage() {
         <Container className="relative">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-5xl">
-              See it run on your rigs.
+              Need something like this built?
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
-              20-minute demo on Zoom. We show you a live venue, not a
-              slideshow. Bring the operational questions that matter.
+              Unattended payments, hardware control, and recovery are the
+              hardest parts of a build like this, and the parts I have already
+              shipped. Tell me what you are trying to run.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Button href={DEMO_URL} variant="primary" external>
-                Book the demo
+              <Button href="/#contact" variant="primary">
+                Start a scoping call
                 <Arrow />
               </Button>
               <Link
-                href="/#contact"
+                href="/work"
                 className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim transition-colors hover:text-white"
               >
-                Talk to Martian first
+                See other builds
               </Link>
             </div>
           </div>

@@ -8,35 +8,32 @@ export function About() {
         <div className="min-w-0 lg:col-span-7">
           <SectionHeader
             eyebrow="About"
-            title="I run simulator venues. I also build the systems they run on."
+            title="I ran the business first. That changes the software."
           />
           <div className="mt-6 space-y-5 text-pretty text-base text-ink-muted md:text-lg">
             <p>
-              Martian Industries is led by an operator-engineer. I&apos;m
-              hands-on inside real simulator venues every week, and the same
-              hands write the software those venues depend on.
+              Martian Industries is the software studio of Matthew Myers. One
+              engineer, start to finish. The person who scopes your project is
+              the person who writes the code.
             </p>
             <p>
-              Most days that means handling live customer issues, maintaining
-              simulator software across locations, keeping bays online, and
-              providing remote support when something breaks at a venue
-              I&apos;m not standing in. The hardware fails, the software
-              hiccups, guests show up, and the system has to keep running
-              anyway.
+              Before I built software for operations, I ran them. Live customer
+              problems, hardware dying mid-session, staff who need the system
+              to work when nobody technical is on site. I have been the person
+              a failure lands on at the worst possible hour.
             </p>
             <p>
-              The other half of the work is building the systems underneath
-              that. Kiosk software that locks and unlocks bays around session
-              timers, booking and check-in flows that survive a busy Friday,
-              session and operator workflows, and the internal tools my staff
-              actually use. Martian Industries works closely with Simbook and
-              implements it in simulator venues for booking, kiosk, and
-              session systems. I contribute as an operator, focused on how
-              these systems actually run in live venues.
+              That shows up in what I build. The failure paths get handled,
+              because I know what happens downstream when they are not. Sessions
+              recover on their own. Payments reconcile. The dashboard tells you
+              something is wrong before a customer does. That is the difference
+              between software that demos well and software you can actually
+              put in front of paying customers.
             </p>
             <p className="text-ink">
-              None of this is theoretical. The systems I recommend are shaped
-              by the ones I run every day.
+              Most of my work now is building that kind of system for other
+              people. Booking and payments, hardware integrations, internal
+              tools, and AI that does real work instead of talking about it.
             </p>
           </div>
         </div>
@@ -47,16 +44,16 @@ export function About() {
             <ul className="mt-5 space-y-4">
               {[
                 {
-                  k: "Operator first",
-                  v: "Every system gets evaluated from behind the counter, not behind a webcam.",
+                  k: "Build for the bad day",
+                  v: "A system is judged by what it does when something fails, not by the happy path.",
                 },
                 {
                   k: "Boring, then clever",
-                  v: "Reliable systems beat impressive ones. I earn complexity.",
+                  v: "Reliable beats impressive. I earn complexity before I spend it.",
                 },
                 {
-                  k: "Own the stack",
-                  v: "I work across booking, hardware, software, and back office, not one slice.",
+                  k: "Own the whole stack",
+                  v: "Frontend, backend, hardware, payments, deploy. No handoffs, no finger pointing.",
                 },
                 {
                   k: "Hand it back clean",

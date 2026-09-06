@@ -6,7 +6,12 @@ import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
-import { SITE_URL, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_DESCRIPTION,
+} from "@/lib/site";
 
 const sans = Inter({
   subsets: ["latin"],
@@ -26,27 +31,26 @@ export const metadata: Metadata = {
     default: `${SITE_NAME}. ${SITE_TAGLINE}`,
     template: `%s — ${SITE_NAME}`,
   },
-  description:
-    "Martian Industries helps simulator venue operators run cleaner, more reliable operations. We work on booking, check-in, simulator software, remote support, and the internal tools that connect everything.",
+  description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
   keywords: [
-    "simulator venue",
-    "golf simulator venue",
-    "sim racing venue",
-    "simulator venue operations",
-    "simulator booking software",
-    "simulator venue management",
-    "golf simulator booking",
-    "TrackMan venue",
-    "kiosk for simulator venues",
-    "simulator venue audit",
-    "sim racing venue management system",
-    "simulator venue automation",
+    "custom software development",
+    "freelance software engineer",
+    "software studio",
+    "booking and payment systems",
+    "hardware integration software",
+    "internal tools development",
+    "operator dashboards",
+    "AI agent development",
+    "MCP server development",
+    "Next.js developer",
+    "TypeScript developer",
+    "Supabase developer",
     "Martian Industries",
-    "Simbook",
+    "Matthew Myers",
   ],
   alternates: {
     canonical: "/",
@@ -56,7 +60,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME}. ${SITE_TAGLINE}`,
     description:
-      "Operations infrastructure for simulator venues. Booking, check-in, simulator software, remote support, and the internal tools that connect everything.",
+      "Custom software, built and shipped. Booking and payment flows, hardware integrations, internal tools, and AI tooling. One engineer, start to finish.",
     url: SITE_URL,
     locale: "en_US",
   },
@@ -64,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_NAME}. ${SITE_TAGLINE}`,
     description:
-      "Operations infrastructure for simulator venues. Built and operated by venue operators.",
+      "Custom software, built and shipped. One engineer, start to finish.",
   },
   robots: {
     index: true,
@@ -92,18 +96,18 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/icon`,
   description:
-    "Operations infrastructure for simulator venues. Booking, check-in, simulator software, remote support, and custom internal tools, built and operated by venue operators.",
+    "Custom software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI tooling. Designed, built, and shipped by one engineer.",
   email: "hello@martianindustries.io",
   areaServed: "Worldwide",
   knowsAbout: [
-    "Simulator venue operations",
-    "Golf simulator venue management",
-    "Sim racing venue management",
-    "TrackMan integration",
-    "Booking and check-in systems",
-    "Kiosk software for simulator venues",
-    "Remote support for simulator hardware",
-    "Operator tooling and automation",
+    "Custom software development",
+    "Booking and payment systems",
+    "Hardware and device integration",
+    "Internal tools and operator dashboards",
+    "AI agents and automation",
+    "Model Context Protocol tool servers",
+    "Full stack web application development",
+    "Multi-tenant SaaS architecture",
   ],
   sameAs: ["https://github.com/martianclaw-spec/martianindustries.io"],
 };
@@ -129,7 +133,7 @@ const founderSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Matthew Myers",
-  jobTitle: "Founder, Operator-Engineer",
+  jobTitle: "Founder, Software Engineer",
   worksFor: {
     "@type": "Organization",
     name: SITE_NAME,
@@ -139,24 +143,23 @@ const founderSchema = {
   email: "hello@martianindustries.io",
   telephone: "+1-814-215-7925",
   knowsAbout: [
-    "Simulator venue operations",
-    "Sim racing venue management",
-    "Golf simulator venue management",
-    "TrackMan integration",
-    "Assetto Corsa commercial deployment",
-    "Kiosk software for indoor entertainment",
-    "Booking and check-in systems for simulator venues",
-    "Remote support for simulator hardware",
-    "Multi-location venue operations",
-    "Sim-Pull venue management system",
-    "SimCenter station monitoring",
+    "Custom software development",
+    "Full stack web application development",
+    "Booking and payment systems",
+    "Hardware and device integration",
+    "Internal tools and operator dashboards",
+    "AI agents and automation",
+    "Model Context Protocol tool servers",
+    "Multi-tenant SaaS architecture",
+    "Next.js and TypeScript",
+    "Supabase and Postgres",
   ],
   sameAs: [
     "https://github.com/martianclaw-spec",
     "https://simpullsports.com",
   ],
   description:
-    "Matthew Myers is the founder of Martian Industries and an operator-engineer running multi-location simulator venue operations day to day. He builds the same systems he uses to run real venues, including the Sim-Pull venue management system and the SimCenter station monitoring cloud.",
+    "Matthew Myers is the founder of Martian Industries, a one-person software studio. He designs, builds, and ships production software: booking and payment flows, hardware integrations, operator dashboards, and AI tooling. He ran multi-location operations before building software for them, which shapes how he builds for failure cases.",
 };
 
 export default function RootLayout({

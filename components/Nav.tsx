@@ -6,11 +6,9 @@ import { Container } from "./ui/Container";
 import { Button } from "./ui/Button";
 
 const links = [
-  { href: "/simpull", label: "Sim-Pull" },
-  { href: "/simcenter", label: "SimCenter" },
-  { href: "/build", label: "Build" },
   { href: "/work", label: "Work" },
-  { href: "/#audit", label: "Audit" },
+  { href: "/build", label: "Services" },
+  { href: "/#process", label: "Process" },
   { href: "/blog", label: "Articles" },
   { href: "/#about", label: "About" },
 ];
@@ -74,7 +72,7 @@ export function Nav() {
                 variant="primary"
                 className="hidden px-3.5 py-2 text-[13px] md:inline-flex"
               >
-                Request audit
+                Start a project
               </Button>
 
               <button
@@ -164,10 +162,10 @@ export function Nav() {
               className="w-full text-base"
               onClick={close}
             >
-              Request audit
+              Start a project
             </Button>
             <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.18em] text-ink-dim">
-              Operations infrastructure for simulator venues
+              Custom software, built and shipped
             </p>
           </div>
         </div>

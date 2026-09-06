@@ -24,46 +24,40 @@ export function Hero() {
                 aria-hidden
               />
               <span className="min-w-0">
-                Operations infrastructure for simulator venues
+                Custom software, built and shipped
               </span>
             </div>
 
             <h1 className="text-balance break-words text-[clamp(2rem,7.5vw,2.25rem)] font-semibold tracking-tighter2 text-white sm:text-5xl md:text-[56px] md:leading-[1.05]">
-              We fix the systems
+              I build the software
               <span className="text-ink-muted">
                 {" "}
-                your simulator venue runs on.
+                your operation runs on.
               </span>
             </h1>
 
             <p className="mt-6 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
-              Martian Industries helps simulator venue operators fix booking,
-              check-in, simulator software, remote support, and the internal
-              tools that connect everything. We also{" "}
-              <a
-                href="/build"
-                className="text-rust-soft underline-offset-4 transition-colors hover:text-white hover:underline"
-              >
-                build custom software
-              </a>{" "}
-              for venues that need something the shelf does not carry. Built
-              from real venues, not theory.
+              Martian Industries is a one-person software studio. I design,
+              build, and ship production systems: booking and payment flows,
+              hardware integrations, operator dashboards, and AI tooling. I
+              have run the businesses these systems serve, so I build for the
+              messy version, not the demo.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Button href="#contact" variant="primary">
-                Request an audit
+                Start a project
                 <Arrow />
               </Button>
-              <Button href="#work" variant="secondary">
-                View selected work
+              <Button href="/work" variant="secondary">
+                See what I have built
               </Button>
             </div>
 
             <dl className="mt-12 grid max-w-md grid-cols-3 gap-4 sm:gap-6 border-t border-line pt-6 lg:mt-auto">
-              <Stat k="3" label="Venues operated" />
-              <Stat k="6+" label="Sim stacks integrated" />
-              <Stat k="24/7" label="Remote coverage" />
+              <Stat k="8" label="Projects shipped" />
+              <Stat k="3" label="Venues in production" />
+              <Stat k="1" label="Engineer on your build" />
             </dl>
           </div>
 

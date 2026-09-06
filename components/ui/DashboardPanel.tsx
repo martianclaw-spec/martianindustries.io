@@ -1,15 +1,15 @@
 /**
- * Subtle "venue ops" panel used in the hero.
+ * Subtle "production status" panel used in the hero.
  * Pure CSS + inline SVG. No images, no animations beyond a slow opacity pulse.
- * All copy here is illustrative and meant to read like a real ops console.
+ * All copy here is illustrative and meant to read like a real deploy console.
  */
-const bays = [
-  { id: "BAY-01", state: "live", label: "Session · 0:42 / 1:00" },
-  { id: "BAY-02", state: "live", label: "Session · 0:18 / 1:00" },
-  { id: "BAY-03", state: "idle", label: "Idle · ready" },
-  { id: "BAY-04", state: "live", label: "Session · 0:51 / 1:30" },
-  { id: "BAY-05", state: "warn", label: "Launch monitor lag" },
-  { id: "BAY-06", state: "live", label: "Session · 0:09 / 1:00" },
+const systems = [
+  { id: "SIM-PULL", state: "live", label: "3 venues · production" },
+  { id: "SIMCENTER", state: "live", label: "Monitoring · production" },
+  { id: "SIMBOOK", state: "live", label: "Bookings · production" },
+  { id: "DAYPILOT", state: "live", label: "Outreach · production" },
+  { id: "PALACE", state: "live", label: "Seasonal · live" },
+  { id: "VENUE-OPS", state: "warn", label: "MCP server · beta" },
 ];
 
 const dot: Record<string, string> = {
@@ -39,43 +39,43 @@ export function DashboardPanel() {
               <span className="h-2 w-2 rounded-full bg-line-strong" />
             </div>
             <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-dim">
-              ops · live
+              martian · build
             </span>
           </div>
           <span className="truncate font-mono text-[11px] text-ink-dim">
-            venue-01 · 14:22 local
+            prod · all systems
           </span>
         </div>
 
         {/* Body */}
         <div className="relative grid grid-cols-1 gap-4 p-4 sm:gap-5 sm:p-5 md:grid-cols-3">
-          {/* Bay status grid */}
+          {/* Systems grid */}
           <div className="min-w-0 md:col-span-2">
             <div className="mb-3 flex items-baseline justify-between">
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
-                bay status
+                systems
               </span>
               <span className="font-mono text-[11px] text-ink-dim">
-                5 / 6 active
+                5 live · 1 building
               </span>
             </div>
             <ul className="grid grid-cols-2 gap-2">
-              {bays.map((b) => (
+              {systems.map((s) => (
                 <li
-                  key={b.id}
+                  key={s.id}
                   className="flex min-w-0 flex-col items-start gap-0.5 rounded-md border border-line bg-bg-raised/60 px-2.5 py-2 sm:py-2.5"
                 >
                   <div className="flex shrink-0 items-center gap-2.5">
                     <span
-                      className={`h-1.5 w-1.5 rounded-full ${dot[b.state]}`}
+                      className={`h-1.5 w-1.5 rounded-full ${dot[s.state]}`}
                       aria-hidden
                     />
                     <span className="whitespace-nowrap font-mono text-[11px] text-ink">
-                      {b.id}
+                      {s.id}
                     </span>
                   </div>
                   <span className="font-mono text-[10px] leading-snug text-ink-muted">
-                    {b.label}
+                    {s.label}
                   </span>
                 </li>
               ))}
@@ -84,9 +84,9 @@ export function DashboardPanel() {
 
           {/* Side metrics */}
           <div className="flex flex-col gap-3">
-            <Metric label="Today" value="38" sub="bookings" />
-            <Metric label="Utilization" value="84%" sub="rolling 4h" />
-            <Metric label="Open issues" value="1" sub="bay-05 monitor" warn />
+            <Metric label="Shipped" value="8" sub="projects" />
+            <Metric label="Live" value="5" sub="in production" />
+            <Metric label="In build" value="1" sub="venue-ops mcp" warn />
           </div>
         </div>
 
@@ -96,13 +96,13 @@ export function DashboardPanel() {
             ticker
           </span>
           <div className="flex min-w-0 flex-1 items-center gap-5 overflow-x-auto [mask-image:linear-gradient(to_right,black_88%,transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <TickerItem ts="14:21" text="bay-04 session started · party of 3" />
+            <TickerItem ts="14:21" text="simcenter · deploy shipped to prod" />
             <TickerItem
-              ts="14:18"
-              text="bay-05 launch monitor reconnect issued"
+              ts="13:58"
+              text="venue-ops · mcp tool surface in review"
               warn
             />
-            <TickerItem ts="14:14" text="check-in · 4 guests · 60 min" />
+            <TickerItem ts="11:04" text="sim-pull · session recovery patched" />
           </div>
         </div>
       </div>
@@ -138,7 +138,9 @@ function Metric({
         >
           {value}
         </span>
-        <span className="whitespace-nowrap font-mono text-[10.5px] text-ink-muted">{sub}</span>
+        <span className="whitespace-nowrap font-mono text-[10.5px] text-ink-muted">
+          {sub}
+        </span>
       </div>
     </div>
   );

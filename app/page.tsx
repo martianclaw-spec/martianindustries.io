@@ -2,7 +2,7 @@ import { Hero } from "@/components/Hero";
 import { CredibilityStrip } from "@/components/CredibilityStrip";
 import { Capabilities } from "@/components/Capabilities";
 import { SelectedWork } from "@/components/SelectedWork";
-import { AuditOffer } from "@/components/AuditOffer";
+import { Engagement } from "@/components/Engagement";
 import { About } from "@/components/About";
 import { OtherProjects } from "@/components/OtherProjects";
 import { Contact } from "@/components/Contact";
@@ -13,8 +13,8 @@ import { SITE_URL, SITE_NAME, CONTACT_EMAIL } from "@/lib/site";
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Simulator Venue Systems Audit",
-  serviceType: "Operations and systems audit for simulator venues",
+  name: "Custom software development",
+  serviceType: "Custom software design, development, and deployment",
   provider: {
     "@type": "Organization",
     name: SITE_NAME,
@@ -24,10 +24,11 @@ const serviceSchema = {
   },
   areaServed: "Worldwide",
   description:
-    "A focused, operator-led review of how a simulator venue actually runs, covering booking, check-in, simulator software, remote support, staff workflows, and missed revenue. Delivers a written audit with prioritized fixes.",
+    "Fixed-scope custom software builds delivered by a single engineer. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents and automation. Milestone pricing, weekly working demos, full source and IP transfer on completion.",
   audience: {
     "@type": "BusinessAudience",
-    audienceType: "Simulator venue operators (golf, sim racing, mixed)",
+    audienceType:
+      "Founders and operators who need production software built and shipped",
   },
   offers: {
     "@type": "Offer",
@@ -36,7 +37,7 @@ const serviceSchema = {
     availability: "https://schema.org/InStock",
     url: `${SITE_URL}/#contact`,
     description:
-      "Initial scoping is free. Audit pricing is scoped per venue based on size and stack.",
+      "Scoping call is free. Projects are quoted at a fixed price per milestone before any commitment.",
   },
 };
 
@@ -48,46 +49,46 @@ const professionalServiceSchema = {
   email: CONTACT_EMAIL,
   telephone: "+1-814-215-7925",
   description:
-    "Operations infrastructure for simulator venues. Booking, check-in, simulator software, remote support, and custom internal tools, built and operated by venue operators.",
+    "One-person software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI tooling. Designed, built, and shipped end to end by a single engineer.",
   serviceArea: { "@type": "Place", name: "Worldwide" },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Capabilities",
+    name: "What I build",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Booking and check-in systems",
+          name: "Booking, payments and scheduling",
           description:
-            "Online booking conversion, deposits and policies, kiosk and host check-in flows for simulator venues.",
+            "Checkout, deposits and refunds, calendars and capacity, no-show policy, and self-serve kiosk and check-in flows.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Simulator stack integration",
+          name: "Hardware and third-party integrations",
           description:
-            "Integrating launch monitors, simulator software, scoring, payment, and POS into one operator-controllable workflow.",
+            "Device control and telemetry agents, vendor and platform API integration, and payments, POS, and back-office sync.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Remote support and reliability",
+          name: "Internal tools and dashboards",
           description:
-            "Bay health monitoring, remote restart and recovery tooling, and on-call coverage for live commercial venues.",
+            "Operations and multi-site dashboards, staff workflow and admin tooling, and reporting built around real questions.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Custom tools and automation",
+          name: "AI tooling and automation",
           description:
-            "Operator dashboards, staff workflow tooling, and back-office automation built for how each venue actually runs.",
+            "Agent workflows, Model Context Protocol tool servers, automated outreach and enrichment, and retrieval over your own systems.",
         },
       },
     ],
@@ -97,47 +98,47 @@ const professionalServiceSchema = {
 const homeFaqs: FAQItem[] = [
   {
     q: "What does Martian Industries do?",
-    a: "Martian Industries builds and operates the systems that run simulator venues. That includes booking and check-in, simulator software integration, remote support and monitoring, kiosk flows, and the internal tools that connect everything. We ship two products (Sim-Pull for sim racing venues and SimCenter for station monitoring at any venue) and offer a hands-on operational audit for existing operators.",
+    a: "Martian Industries is the software studio of Matthew Myers. I design, build, and ship production software for founders and operators: booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents that do real work. One engineer, start to finish, from the scoping call through deployment and handoff.",
   },
   {
-    q: "What is a Simulator Venue Systems Audit?",
-    a: "It is a focused operator-led review of how a simulator venue actually runs. We look at the booking flow, check-in and kiosk experience, simulator software and integrations, remote access and support setup, staff workflows and bottlenecks, and missed revenue opportunities. You get a written audit with prioritized fixes based on systems we run and maintain in live simulator venues, not theory.",
+    q: "What kind of projects are a good fit?",
+    a: "Software that has to survive contact with real users and real money. Systems that take payments, talk to physical hardware, run unattended, or replace a process currently held together by spreadsheets and group chats. The projects I do best are the ones where the interesting problem is reliability, not the interface.",
   },
   {
-    q: "Who is the audit for?",
-    a: "Operators of sim racing venues, indoor golf simulator studios, VR arcades, and other unstaffed or partially-staffed indoor entertainment venues. Especially useful if you have three or more rigs or bays, if staffing is the throughput ceiling, or if you are about to open a new location.",
+    q: "What is not a good fit?",
+    a: "Pure design work with no engineering, staffing a seat on an existing team, marketing sites, and anything that needs a team of five starting Monday. I am one person. That is a real constraint and I will tell you up front when a project needs more than I can give it.",
   },
   {
-    q: "What is Sim-Pull?",
-    a: "Sim-Pull is the operating system for sim racing venues. Guests scan a QR on the rig, pay on their phone, and the rig launches itself, no front-desk staff in the loop. Stuck cars auto-recover. Cross-rig leaderboards. Optional AI coaching. Built by an operator and running in three live venues today. Full details and pricing at simpullsports.com.",
+    q: "How much does a project cost?",
+    a: "Projects are priced per milestone at a fixed price, not open-ended hourly. Smaller builds such as a booking flow tied to existing systems are shorter and cheaper. Larger builds such as a fully unattended venue with door access, payment, session control, and remote support are longer and priced accordingly. Exact numbers come out of the scoping call, in writing, before you commit.",
   },
   {
-    q: "What is SimCenter?",
-    a: "SimCenter watches every station in your venue from the inside, sim rigs, launch monitors, VR arcades, and answers one question continuously: is every station ready to take money? Per-station connector, cloud dashboard, phone alerts, remote wake and shutdown. Works with any launch monitor or sim software. <a href=\"/simcenter\">Learn more here</a>.",
+    q: "How long does a build take?",
+    a: "Most engagements run four to eight weeks. You get a working demo every week, so you see the real thing take shape rather than waiting for a reveal at the end. Change requests get scoped as small additions to the next milestone instead of turning into surprise scope creep.",
   },
   {
-    q: "Do you work with golf simulator venues, not just sim racing?",
-    a: "Yes. The audit and SimCenter both apply to indoor golf simulator studios. Sim-Pull specifically targets sim racing on Assetto Corsa rigs, but golf operators benefit from every other capability we ship.",
+    q: "Who actually writes the code?",
+    a: "I do. Martian Industries is deliberately not a dev shop. The person who scopes your project is the person building it and the person you talk to when something breaks. The trade-off is honest: you get deep context and no handoff between sales and engineering, but capacity is limited, so I am selective about what I take on.",
   },
   {
-    q: "Do you build custom software from scratch for venues?",
-    a: "Yes. When a venue needs something Sim-Pull or SimCenter does not cover (24-hour unstaffed lounges, custom booking flows, kiosk integrations with existing hardware, operator dashboards) we build it. Fixed scope, milestone pricing, you own the code when we are done. Full details on the <a href=\"/build\">custom builds page</a>.",
+    q: "Do I own the code you write?",
+    a: "Yes. Custom builds are work-for-hire. When the engagement ends you own the source, the deployment, and the project-specific IP. The only exception is a reusable component I contribute back into my own products, which stays under my ownership so I can maintain it across every project that uses it.",
   },
   {
-    q: "Do you support TrackMan, Foresight, GSPro, and other launch monitors?",
-    a: "SimCenter is sport-agnostic and hardware-agnostic. It monitors the station as a whole, regardless of which launch monitor or simulator software you run. For golf venues we regularly work with TrackMan, Foresight, GSPro, and Uneekor deployments.",
+    q: "What do you build with?",
+    a: "Typically TypeScript end to end: Next.js and React on the front, Node or Deno edge functions on the back, Postgres via Supabase for data and auth, and Vercel for deployment. For hardware and device work, whatever the equipment actually speaks. I pick boring, well-supported tools so you are not stranded on something exotic after handoff.",
   },
   {
-    q: "How does the audit work and how long does it take?",
-    a: "You tell us about your venue via the contact form or a short call. We review your booking flow, on-site systems, remote support, and back-office setup. Typical turnaround is two weeks. You get a written report with a prioritized action list, quick wins, and longer-term system upgrades scoped and sequenced so you can act on it without us.",
+    q: "Do you work with clients outside the US?",
+    a: "Yes. Time zones just move the call. Most of the work is remote regardless of where you are, with on-site visits only when physical installation genuinely requires it.",
   },
   {
-    q: "Do you require a long-term commitment?",
-    a: "No. The audit is a focused one-time engagement. Sim-Pull and SimCenter are month-to-month with no long-term commitment. Cancel anytime.",
+    q: "What have you actually shipped?",
+    a: "Systems running in production today: a venue operating system driving physical hardware across three locations, a booking and payments backend, a station monitoring cloud with a per-machine agent, an autonomous AI outreach agent, a Model Context Protocol tool server, and a couple of consumer web products. The full list is on the <a href=\"/work\">work page</a>.",
   },
   {
     q: "How do I get started?",
-    a: "Fill out the form on the <a href=\"/#contact\">contact section</a>, email hello@martianindustries.io, or call (814) 215-7925. Include your venue name, how many rigs or bays you run, and one or two sentences on what is currently broken. I read every one personally.",
+    a: "Fill out the form in the <a href=\"/#contact\">contact section</a>, email hello@martianindustries.io, or call (814) 215-7925. One paragraph on what you have today, what is missing, and what it needs to do is plenty. The scoping call happens on Zoom within a few business days.",
   },
 ];
 
@@ -150,13 +151,13 @@ export default function HomePage() {
       <CredibilityStrip />
       <Capabilities />
       <SelectedWork />
-      <AuditOffer />
+      <Engagement />
       <About />
       <OtherProjects />
       <FAQ
         id="faq"
         eyebrow="Straight answers"
-        title="Questions operators actually ask."
+        title="Questions clients actually ask."
         description="If the answer you need is not here, the contact section below routes straight to me."
         items={homeFaqs}
       />

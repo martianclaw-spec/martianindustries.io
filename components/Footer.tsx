@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Container } from "./ui/Container";
 
 const footerLinks = [
+  { href: "/work", label: "Work" },
+  { href: "/build", label: "Services" },
+  { href: "/#process", label: "Process" },
   { href: "/simpull", label: "Sim-Pull" },
   { href: "/simcenter", label: "SimCenter" },
-  { href: "/build", label: "Build" },
-  { href: "/work", label: "Work" },
-  { href: "/#audit", label: "Audit" },
   { href: "/blog", label: "Articles" },
   { href: "/#about", label: "About" },
   { href: "/#contact", label: "Contact" },
@@ -97,9 +97,9 @@ export function Footer() {
               Martian Industries
             </div>
             <p className="mt-2 max-w-xs text-sm text-ink-muted">
-              Operations infrastructure for simulator venues. Booking,
-              check-in, simulator software, remote support, and the internal
-              tools that connect everything.
+              Custom software, built and shipped. Booking and payment
+              flows, hardware integrations, internal tools, and AI tooling.
+              One engineer, start to finish.
             </p>
           </div>
           <nav aria-label="Footer">
@@ -155,7 +155,7 @@ export function Footer() {
           <span>
             &copy; {year} Martian Industries. All rights reserved.
           </span>
-          <span>Built and operated by venue operators.</span>
+          <span>Designed, built, and shipped by one engineer.</span>
         </div>
       </Container>
     </footer>

@@ -1,27 +1,28 @@
+import Link from "next/link";
 import { Section, SectionHeader } from "./ui/Section";
 import { Card, CardLabel } from "./ui/Card";
 
 const work = [
   {
-    tag: "Operator",
-    name: "Hacktivist Sports",
-    role: "3-location simulator operation",
-    body: "Active operations across three locations running TrackMan golf bays and sim racing rigs. I run the day-to-day systems behind the venues, including booking, check-in, simulator software, integrations, and remote management across locations. This is live, ongoing operational work, not a one-time build.",
-    meta: ["3 locations", "TrackMan · Sim racing", "Live ops · Remote support"],
-  },
-  {
-    tag: "Product",
+    tag: "Production",
     name: "Sim-Pull",
-    role: "Sim racing VMS, in development",
-    body: "A venue management system pulled directly out of running sim racing operations. Built to reduce staff dependency for routine session control and give operators tighter, lower-friction control of bays, sessions, and bookings.",
-    meta: ["In development", "Sim racing", "Operator tooling"],
+    role: "Venue operating system",
+    body: "A guest scans a code on the rig, pays on their phone, and the machine launches itself. Payments, session control, hardware launch, auto-recovery when something freezes, and cross-location leaderboards. Running in three venues on real hardware today.",
+    meta: ["3 venues live", "Payments · Hardware", "Full stack"],
   },
   {
-    tag: "Contributor",
-    name: "Simbook",
-    role: "Kiosk and VMS for sim venues",
-    body: "Independently operated kiosk and venue management product for simulator venues. Martian Industries works closely with Simbook and implements it in simulator venues for booking, kiosk, and session systems. I contribute as an operator, focused on how these systems actually run in live venues.",
-    meta: ["Independently operated", "Kiosk · Session flow"],
+    tag: "Production",
+    name: "SimBook",
+    role: "Booking, payments & scheduling",
+    body: "The money path for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN-based check-in, and a multi-tenant model several levels deep. Independently operated. I contribute as a builder on the systems behind it.",
+    meta: ["Independently operated", "Supabase · Edge functions", "Multi-tenant"],
+  },
+  {
+    tag: "AI",
+    name: "DayPilot",
+    role: "Autonomous outreach agent",
+    body: "An AI system that researches prospects, decides who is actually worth contacting, writes the email in a specific voice, and runs the follow-up sequence on its own. Built to sell more than one product, and it qualifies people out as readily as in.",
+    meta: ["getjoe.io", "Agent workflows", "Research · Sequencing"],
   },
 ];
 
@@ -29,9 +30,9 @@ export function SelectedWork() {
   return (
     <Section id="work" className="border-t border-line">
       <SectionHeader
-        eyebrow="Selected Work"
-        title="Built, operated, and shipped. Not slides."
-        description="Three projects rooted in real venue operations: an operation I run, a system I'm building from it, and a product I work closely with as an operator."
+        eyebrow="Selected work"
+        title="Shipped, in production, still running."
+        description="Three builds that show the range: a full-stack system driving physical hardware, a payments and scheduling backend, and an AI agent that does real work unattended."
       />
 
       <div className="mt-12 grid gap-4 md:mt-16 lg:grid-cols-3">
@@ -58,6 +59,15 @@ export function SelectedWork() {
             </ul>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-8 text-center">
+        <Link
+          href="/work"
+          className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim transition-colors hover:text-white"
+        >
+          See all eight projects
+        </Link>
       </div>
     </Section>
   );

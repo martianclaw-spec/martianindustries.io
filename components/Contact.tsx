@@ -20,15 +20,15 @@ export function Contact() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
-            Now booking audits
+            Taking projects
           </div>
           <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-5xl">
-            Tighten up the systems your venue runs on.
+            Tell me what you need built.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
-            Tell me about your venue. I will review it and follow up with next
-            steps for an audit. You will get a clear answer on what to fix
-            first.
+            Tell me about the project. What you have today, what is missing, and
+            what it needs to do. I will come back with an honest read on scope
+            and whether I am the right person to build it.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
             <span className="text-ink-dim/70">Or reach me directly</span>

@@ -54,7 +54,7 @@ export function Hero() {
 
             <Reveal delay={140}>
               <p className="mt-6 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
-                Martian Industries is a software studio built around one idea. We design,
+                Martian Industries is a custom software studio. We design,
                 build, and ship production systems: booking and payment flows,
                 hardware integrations, operator dashboards, and AI tooling. We
                 have run the businesses these systems serve, so we build for the

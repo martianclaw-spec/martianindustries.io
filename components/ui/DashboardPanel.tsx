@@ -60,9 +60,9 @@ export function DashboardPanel() {
         </div>
 
         {/* Body */}
-        <div className="relative grid grid-cols-1 gap-4 p-4 sm:gap-5 sm:p-5 md:grid-cols-3">
+        <div className="relative grid grid-cols-1 gap-4 p-4 sm:gap-5 sm:p-5">
           {/* Systems grid */}
-          <div className="min-w-0 md:col-span-2">
+          <div className="min-w-0">
             <div className="mb-3 flex items-baseline justify-between">
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
                 systems
@@ -95,7 +95,7 @@ export function DashboardPanel() {
           </div>
 
           {/* Side metrics */}
-          <div className="flex flex-col gap-3">
+          <div className="grid grid-cols-3 gap-2">
             <Metric label="Shipped" value="8" sub="projects" />
             <Metric label="Live" value="5" sub="in production" />
             <Metric label="In build" value="1" sub="venue-ops mcp" warn />
@@ -140,19 +140,19 @@ function Metric({
   warn?: boolean;
 }) {
   return (
-    <div className="border border-line bg-bg-raised/60 px-3 py-3">
+    <div className="min-w-0 border border-line bg-bg-raised/60 px-3 py-3">
       <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-dim">
         {label}
       </div>
-      <div className="mt-1 flex items-baseline gap-2">
-        <span
-          className={`text-2xl font-semibold tracking-tighter2 ${warn ? "text-rust-soft" : "text-white"}`}
+      <div className="mt-1.5">
+        <div
+          className={`readout text-2xl font-semibold ${warn ? "text-rust-soft" : "text-white"}`}
         >
           {value}
-        </span>
-        <span className="whitespace-nowrap font-mono text-[10.5px] text-ink-muted">
+        </div>
+        <div className="mt-0.5 font-mono text-[10px] leading-snug text-ink-muted">
           {sub}
-        </span>
+        </div>
       </div>
     </div>
   );

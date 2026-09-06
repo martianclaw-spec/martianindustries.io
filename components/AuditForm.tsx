@@ -62,7 +62,7 @@ export function AuditForm() {
       <div
         role="status"
         aria-live="polite"
-        className="rounded-lg border border-line bg-bg-raised p-8 text-center md:p-10"
+        className="border border-line bg-bg-raised p-8 text-center md:p-10"
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-line bg-bg-panel px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-rust-soft">
           <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
@@ -88,7 +88,7 @@ export function AuditForm() {
     <form
       onSubmit={handleSubmit}
       noValidate={false}
-      className="rounded-lg border border-line bg-bg-raised p-6 text-left md:p-8"
+      className="border border-line bg-bg-raised p-6 text-left md:p-8"
     >
       <div className="grid gap-5 md:grid-cols-2">
         <Field label="Name" htmlFor="audit-name" required>
@@ -170,7 +170,7 @@ export function AuditForm() {
 }
 
 const inputClass =
-  "block w-full rounded-md border border-line bg-bg-panel px-3.5 py-2.5 text-[15px] text-ink placeholder:text-ink-dim transition-colors duration-150 focus:border-rust/70 focus:outline-none focus:ring-2 focus:ring-rust/30";
+  "block w-full border border-line bg-bg-panel px-3.5 py-2.5 text-[15px] text-ink placeholder:text-ink-dim transition-colors duration-150 focus:border-rust/70 focus:outline-none focus:ring-2 focus:ring-rust/30";
 
 function Field({
   label,

@@ -27,7 +27,7 @@ function PortfolioMark() {
   return (
     <span
       aria-hidden
-      className="relative inline-flex h-7 w-7 items-center justify-center rounded-md border border-line-strong bg-bg-raised"
+      className="relative inline-flex h-7 w-7 items-center justify-center border border-line-strong bg-bg-raised"
     >
       <svg
         width="17"

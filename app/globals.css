@@ -79,6 +79,51 @@ body {
 }
 
 /* ---------------------------------------------------------------------------
+   Instrument furniture
+   Borrowed from technical drawing rather than from web UI: registration marks,
+   measurement ticks, datum rules. This is the language that keeps the site from
+   defaulting to rounded cards on a dark gradient.
+   ------------------------------------------------------------------------ */
+
+/* Ruler edge. Sits on a 1px strip and repeats a hairline every 8px. */
+.tick-row {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(154, 161, 173, 0.3) 0 1px,
+    transparent 1px 8px
+  );
+}
+
+/* A brighter survey grid that only exists near the pointer. The Spotlight
+   component writes --mx and --my; without JavaScript the mask never resolves
+   to anything visible, which is the correct fallback. */
+.grid-bright {
+  background-image:
+    linear-gradient(to right, rgba(217, 122, 82, 0.34) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 122, 82, 0.34) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(
+    circle 260px at var(--mx, -999px) var(--my, -999px),
+    #000 0%,
+    rgba(0, 0, 0, 0.35) 45%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(
+    circle 260px at var(--mx, -999px) var(--my, -999px),
+    #000 0%,
+    rgba(0, 0, 0, 0.35) 45%,
+    transparent 72%
+  );
+}
+
+/* Numerals that read as an instrument readout rather than body copy. */
+.readout {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+  letter-spacing: -0.04em;
+}
+
+/* ---------------------------------------------------------------------------
    Scroll reveal
    Elements start slightly low and transparent, then settle when they enter the
    viewport. The .is-in class is applied by the Reveal component's observer.

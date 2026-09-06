@@ -67,7 +67,7 @@ export function FAQ({
           ) : null}
         </div>
 
-        <ul className="mt-12 divide-y divide-line rounded-lg border border-line bg-bg-raised md:mt-16">
+        <ul className="mt-12 divide-y divide-line border border-line bg-bg-raised md:mt-16">
           {items.map((it) => (
             <li key={it.q}>
               <details className="group px-5 py-4 md:px-7 md:py-5">

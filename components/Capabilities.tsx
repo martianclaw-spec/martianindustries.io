@@ -1,5 +1,4 @@
 import { Section, SectionHeader } from "./ui/Section";
-import { Card, CardLabel } from "./ui/Card";
 import { Reveal } from "./atmos/Reveal";
 
 const capabilities = [
@@ -45,6 +44,13 @@ const capabilities = [
   },
 ];
 
+/**
+ * Rendered as a specification sheet rather than a grid of cards: full-bleed
+ * numbered rows, one capability per line, with the detail column set apart on
+ * the right. The uniform card grid is the single most recognisable tell of a
+ * generated page, and a datasheet is both less common and closer to what this
+ * studio actually is.
+ */
 export function Capabilities() {
   return (
     <Section id="capabilities" className="border-t border-line">
@@ -54,33 +60,49 @@ export function Capabilities() {
         description="Most of our work sits in one of these four buckets, and the interesting projects touch more than one. If yours does not fit neatly, that is usually a good sign."
       />
 
-      <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-2">
+      <div className="mt-14 border-t border-line md:mt-20">
         {capabilities.map((c, i) => (
-          <Reveal key={c.code} delay={i * 70} className="h-full">
-          <Card className="flex h-full flex-col">
-            <div className="flex items-center justify-between">
-              <CardLabel>{c.code}</CardLabel>
-              <CardLabel className="text-ink-dim">capability</CardLabel>
+          <Reveal key={c.code} delay={i * 60}>
+            <div className="group relative grid gap-x-8 gap-y-5 border-b border-line py-9 transition-colors duration-300 hover:bg-bg-raised/40 md:grid-cols-12 md:py-11">
+              {/* Fill that draws down the left edge on hover */}
+              <span
+                aria-hidden
+                className="pointer-events-none absolute left-0 top-0 h-full w-px origin-top scale-y-0 bg-rust transition-transform duration-500 group-hover:scale-y-100"
+              />
+
+              <div className="flex items-baseline gap-4 md:col-span-3 md:block">
+                <span className="readout text-4xl font-semibold text-line-strong transition-colors duration-300 group-hover:text-rust md:text-6xl">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-dim md:mt-3 md:block">
+                  {c.code}
+                </span>
+              </div>
+
+              <div className="md:col-span-5">
+                <h3 className="text-xl font-semibold tracking-tightish text-white md:text-2xl">
+                  {c.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
+                  {c.body}
+                </p>
+              </div>
+
+              <ul className="space-y-2.5 md:col-span-4">
+                {c.bullets.map((b) => (
+                  <li
+                    key={b}
+                    className="flex items-start gap-3 font-mono text-[11px] uppercase leading-relaxed tracking-[0.08em] text-ink-dim"
+                  >
+                    <span
+                      aria-hidden
+                      className="mt-1.5 inline-block h-1 w-1 shrink-0 bg-rust/70"
+                    />
+                    {b}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h3 className="mt-5 text-xl font-semibold tracking-tightish text-white">
-              {c.title}
-            </h3>
-            <p className="mt-3 text-[15px] text-ink-muted">{c.body}</p>
-            <ul className="mt-6 space-y-2 border-t border-line pt-5">
-              {c.bullets.map((b) => (
-                <li
-                  key={b}
-                  className="flex items-start gap-2.5 text-sm text-ink-muted"
-                >
-                  <span
-                    aria-hidden
-                    className="mt-2 inline-block h-px w-3 shrink-0 bg-rust"
-                  />
-                  {b}
-                </li>
-              ))}
-            </ul>
-          </Card>
           </Reveal>
         ))}
       </div>

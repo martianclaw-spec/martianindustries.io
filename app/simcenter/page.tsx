@@ -130,7 +130,7 @@ export default function SimCenterPage() {
         <Container className="relative">
           <div className="mx-auto max-w-3xl pb-16 pt-16 text-center md:pb-24 md:pt-24">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
-              <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
+              <span className="h-1 w-1 shrink-0 bg-rust" aria-hidden />
               Case study · Built by Martian Industries
             </div>
 
@@ -204,7 +204,7 @@ export default function SimCenterPage() {
           {howItWorks.map((s) => (
             <li
               key={s.step}
-              className="rounded-lg border border-line bg-bg-raised p-6 md:p-7"
+              className="border border-line bg-bg-raised p-6 md:p-7"
             >
               <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft">
                 Step {s.step}
@@ -228,7 +228,7 @@ export default function SimCenterPage() {
             />
           </div>
           <div className="min-w-0 lg:col-span-7">
-            <div className="rounded-lg border border-line bg-bg-raised p-6 md:p-8">
+            <div className="border border-line bg-bg-raised p-6 md:p-8">
               <CardLabel>Fits</CardLabel>
               <ul className="mt-5 grid gap-3 text-[15px] text-ink-muted sm:grid-cols-2">
                 {[

@@ -40,7 +40,7 @@ export function About() {
         </div>
 
         <aside className="min-w-0 lg:col-span-5">
-          <div className="rounded-lg border border-line bg-bg-raised p-6">
+          <div className="border border-line bg-bg-raised p-6">
             <CardLabel>Operating principles</CardLabel>
             <ul className="mt-5 space-y-4">
               {[

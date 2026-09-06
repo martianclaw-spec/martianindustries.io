@@ -86,7 +86,7 @@ export function Nav() {
                 aria-expanded={open}
                 aria-controls="mobile-menu"
                 onClick={() => setOpen((o) => !o)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-line-strong bg-bg-raised text-ink-muted transition-colors hover:text-white md:hidden"
+                className="inline-flex h-9 w-9 items-center justify-center border border-line-strong bg-bg-raised text-ink-muted transition-colors hover:text-white md:hidden"
               >
                 <MenuIcon open={open} />
               </button>
@@ -139,7 +139,7 @@ export function Nav() {
               aria-label="Close menu"
               onClick={close}
               tabIndex={open ? 0 : -1}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-line-strong bg-bg-raised text-ink-muted transition-colors hover:text-white"
+              className="inline-flex h-9 w-9 items-center justify-center border border-line-strong bg-bg-raised text-ink-muted transition-colors hover:text-white"
             >
               <MenuIcon open />
             </button>
@@ -249,7 +249,7 @@ function Logo() {
   return (
     <span
       aria-hidden
-      className="relative inline-flex h-7 w-7 items-center justify-center rounded-md border border-line-strong bg-bg-raised"
+      className="relative inline-flex h-7 w-7 items-center justify-center border border-line-strong bg-bg-raised"
     >
       <svg
         width="17"

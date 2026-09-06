@@ -12,8 +12,8 @@ export function Contact() {
 
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
-            <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
+          <div className="mb-5 inline-flex items-center gap-2.5 border border-line bg-bg-raised/60 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted">
+            <span className="h-1 w-1 shrink-0 bg-rust" aria-hidden />
             Taking projects
           </div>
           <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-5xl">

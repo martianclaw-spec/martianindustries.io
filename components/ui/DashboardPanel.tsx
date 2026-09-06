@@ -1,4 +1,5 @@
 import { SolClock } from "@/components/atmos/SolClock";
+import { Brackets } from "@/components/ui/Frame";
 
 /**
  * Subtle "production status" panel used in the hero.
@@ -24,13 +25,14 @@ export function DashboardPanel() {
   return (
     <div className="relative">
       {/* Outer frame */}
-      <div className="relative overflow-hidden rounded-xl border border-line-strong bg-bg-panel">
+      <div className="relative overflow-hidden border border-line-strong bg-bg-panel">
         {/* Faint grid background */}
         <div
           aria-hidden
           className="absolute inset-0 bg-grid-faint bg-grid opacity-[0.55]"
         />
         <div aria-hidden className="absolute inset-0 panel-vignette" />
+        <Brackets className="border-rust/50" size="lg" />
         {/* Slow sensor sweep across the glass */}
         <div
           aria-hidden
@@ -73,7 +75,7 @@ export function DashboardPanel() {
               {systems.map((s) => (
                 <li
                   key={s.id}
-                  className="flex min-w-0 flex-col items-start gap-0.5 rounded-md border border-line bg-bg-raised/60 px-2.5 py-2 sm:py-2.5"
+                  className="flex min-w-0 flex-col items-start gap-0.5 border border-line bg-bg-raised/60 px-2.5 py-2 sm:py-2.5"
                 >
                   <div className="flex shrink-0 items-center gap-2.5">
                     <span
@@ -138,7 +140,7 @@ function Metric({
   warn?: boolean;
 }) {
   return (
-    <div className="rounded-md border border-line bg-bg-raised/60 px-3 py-3">
+    <div className="border border-line bg-bg-raised/60 px-3 py-3">
       <div className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-dim">
         {label}
       </div>

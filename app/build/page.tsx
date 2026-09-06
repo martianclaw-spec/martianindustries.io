@@ -150,7 +150,7 @@ export default function BuildPage() {
 
         <Container className="relative">
           <div className="mx-auto max-w-3xl pb-16 pt-16 text-center md:pb-24 md:pt-24">
-            <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
+            <div className="mb-6 inline-flex max-w-full items-center gap-2.5 border border-line bg-bg-raised/60 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted">
               <span
                 className="h-1.5 w-1.5 shrink-0 rounded-full bg-rust"
                 aria-hidden
@@ -231,7 +231,7 @@ export default function BuildPage() {
           {process.map((s) => (
             <li
               key={s.step}
-              className="rounded-lg border border-line bg-bg-raised p-6 md:p-7"
+              className="border border-line bg-bg-raised p-6 md:p-7"
             >
               <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft">
                 Step {s.step}
@@ -266,7 +266,7 @@ export default function BuildPage() {
             </p>
           </div>
           <div className="min-w-0 lg:col-span-7 space-y-4">
-            <div className="rounded-lg border border-line bg-bg-raised p-6 md:p-7">
+            <div className="border border-line bg-bg-raised p-6 md:p-7">
               <div className="flex items-center justify-between">
                 <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft">
                   Case · Sim-Pull
@@ -288,7 +288,7 @@ export default function BuildPage() {
                 cross-location leaderboards. Running across three locations.
               </p>
             </div>
-            <div className="rounded-lg border border-line bg-bg-raised p-6 md:p-7">
+            <div className="border border-line bg-bg-raised p-6 md:p-7">
               <div className="flex items-center justify-between">
                 <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft">
                   Case · SimCenter

@@ -28,7 +28,7 @@ export function OtherProjects() {
         {projects.map((p) => (
           <div
             key={p.title}
-            className="rounded-lg border border-line bg-bg-raised/60 p-5 transition-colors hover:border-line-strong"
+            className="border border-line bg-bg-raised/60 p-5 transition-colors hover:border-line-strong"
           >
             <h3 className="text-base font-medium tracking-tightish text-white">
               {p.title}

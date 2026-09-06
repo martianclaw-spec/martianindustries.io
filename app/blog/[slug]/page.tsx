@@ -270,7 +270,7 @@ export default async function PostPage(props: { params: Promise<Params> }) {
               </div>
             </div>
 
-            <div className="mx-auto mt-12 max-w-3xl rounded-lg border border-line bg-bg-raised p-6 md:p-8">
+            <div className="mx-auto mt-12 max-w-3xl border border-line bg-bg-raised p-6 md:p-8">
               <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-rust-soft">
                 {productCallout.eyebrow}
               </div>

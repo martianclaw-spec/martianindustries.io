@@ -11,14 +11,14 @@ export function Card({ children, className, as: Tag = "div" }: CardProps) {
   return (
     <Tag
       className={cn(
-        "group relative rounded-lg border border-line bg-bg-raised p-6 transition-[border-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[0_18px_40px_-28px_rgba(194,85,45,0.55)] md:p-7",
+        "group relative border border-line bg-bg-raised p-6 transition-[border-color,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[0_18px_40px_-28px_rgba(194,85,45,0.55)] md:p-7",
         className,
       )}
     >
       {/* Warm wash rising from the top edge on hover */}
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-lg bg-[radial-gradient(120%_80%_at_50%_0%,rgba(194,85,45,0.10),transparent_62%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(194,85,45,0.10),transparent_62%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       />
       {/* Top hairline accent */}
       <span

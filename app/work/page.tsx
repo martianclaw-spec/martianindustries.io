@@ -137,7 +137,7 @@ export default function WorkPage() {
         <Container className="relative">
           <div className="max-w-3xl py-20 md:py-24">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
-              <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
+              <span className="h-1 w-1 shrink-0 bg-rust" aria-hidden />
               Work
             </div>
             <h1 className="text-balance text-4xl font-semibold tracking-tighter2 text-white md:text-5xl">

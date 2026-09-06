@@ -43,7 +43,7 @@ export function Engagement() {
             description="Milestone pricing, not open-ended hourly. You know the total before you sign, and you own everything at the end."
           />
 
-          <div className="mt-8 rounded-lg border border-line bg-bg-raised p-6">
+          <div className="mt-8 border border-line bg-bg-raised p-6">
             <CardLabel>What you get</CardLabel>
             <ul className="mt-4 space-y-2.5">
               {deliverables.map((d) => (
@@ -75,7 +75,7 @@ export function Engagement() {
         </div>
 
         <div className="min-w-0 lg:col-span-7">
-          <div className="overflow-hidden rounded-lg border border-line bg-bg-raised">
+          <div className="overflow-hidden border border-line bg-bg-raised">
             <div className="flex items-center justify-between border-b border-line px-5 py-3">
               <CardLabel>Engagement</CardLabel>
               <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">

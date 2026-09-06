@@ -119,7 +119,7 @@ export default function SimPullPage() {
         <Container className="relative">
           <div className="mx-auto max-w-3xl pb-16 pt-16 text-center md:pb-24 md:pt-24">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-bg-raised/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
-              <span className="h-1.5 w-1.5 rounded-full bg-rust" aria-hidden />
+              <span className="h-1 w-1 shrink-0 bg-rust" aria-hidden />
               Case study · Built by Martian Industries
             </div>
 
@@ -201,7 +201,7 @@ export default function SimPullPage() {
             </p>
           </div>
           <div className="min-w-0 lg:col-span-7 space-y-4">
-            <div className="rounded-lg border border-line bg-bg-raised p-6 md:p-7">
+            <div className="border border-line bg-bg-raised p-6 md:p-7">
               <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft">
                 Throughput model · Sim-Pull ICP
               </div>
@@ -212,7 +212,7 @@ export default function SimPullPage() {
                 touching every launch. This is what Sim-Pull is built for.
               </p>
             </div>
-            <div className="rounded-lg border border-line bg-bg-panel p-6 md:p-7">
+            <div className="border border-line bg-bg-panel p-6 md:p-7">
               <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
                 Immersion model · Not a Sim-Pull ICP
               </div>

@@ -156,13 +156,24 @@ export default function WorkPage() {
       {/* Project grid */}
       <Section id="projects">
         <div className="grid gap-4 md:grid-cols-2">
-          {projects.map((p) => (
-            <Card key={p.name} className="flex flex-col">
+          {projects.map((p, i) => (
+            <Card
+              key={p.name}
+              className={`flex flex-col ${i === 0 ? "md:col-span-2 md:p-10" : ""}`}
+            >
               <div className="flex items-center justify-between">
                 <CardLabel>{p.tag}</CardLabel>
-                <CardLabel className="text-ink-dim">case</CardLabel>
+                <CardLabel className="text-ink-dim">
+                  {i === 0 ? "Lead build" : "Case"}
+                </CardLabel>
               </div>
-              <h2 className="mt-5 text-xl font-semibold tracking-tightish text-white">
+              <h2
+                className={
+                  i === 0
+                    ? "mt-6 text-3xl font-semibold tracking-tighter2 text-white md:text-4xl"
+                    : "mt-5 text-xl font-semibold tracking-tightish text-white"
+                }
+              >
                 {p.name}
               </h2>
               <p className="mt-1 text-sm text-rust-soft">{p.role}</p>
@@ -171,7 +182,7 @@ export default function WorkPage() {
                 {p.meta.map((m) => (
                   <li
                     key={m}
-                    className="rounded border border-line bg-bg-panel px-2 py-1 font-mono text-[10.5px] uppercase tracking-[0.14em] text-ink-muted"
+                    className="border border-line bg-bg-panel px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-muted"
                   >
                     {m}
                   </li>

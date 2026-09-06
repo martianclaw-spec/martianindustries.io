@@ -227,19 +227,27 @@ export default function BuildPage() {
           description="You know what you are getting before you sign, you watch it working while it is being built, and you own it when it ships."
         />
 
-        <ol className="mt-12 grid gap-4 md:mt-16 md:grid-cols-4">
+        <ol className="relative mt-14 grid gap-10 md:mt-20 md:grid-cols-4 md:gap-8">
+          {/* The line the whole engagement runs along */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute left-[5px] top-2 hidden h-[calc(100%-1rem)] w-px bg-line md:left-0 md:top-[5px] md:h-px md:w-full"
+          />
           {process.map((s) => (
-            <li
-              key={s.step}
-              className="border border-line bg-bg-raised p-6 md:p-7"
-            >
-              <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-rust-soft">
+            <li key={s.step} className="group relative pl-8 md:pl-0 md:pt-10">
+              <span
+                aria-hidden
+                className="absolute left-0 top-1.5 h-2.5 w-2.5 bg-rust transition-transform duration-300 group-hover:scale-125 md:top-0"
+              />
+              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-rust-soft">
                 Step {s.step}
               </div>
-              <h3 className="mt-4 text-lg font-semibold tracking-tightish text-white">
+              <h3 className="mt-3 text-lg font-semibold tracking-tightish text-white">
                 {s.title}
               </h3>
-              <p className="mt-3 text-[15px] text-ink-muted">{s.body}</p>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
+                {s.body}
+              </p>
             </li>
           ))}
         </ol>

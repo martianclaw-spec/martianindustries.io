@@ -64,10 +64,13 @@ export function SolClock({
 
   return (
     <span className={className} suppressHydrationWarning>
-      <span className="tabular-nums">
+      {/* The sol number is the first thing to go on a narrow screen: the
+          clock alone still carries the idea, and the full string will not
+          fit beside the panel label at 390px. */}
+      <span className="hidden tabular-nums sm:inline">
         SOL {t ? t.sol.toLocaleString("en-US") : "-----"}
       </span>
-      <span aria-hidden className="px-1.5 text-ink-dim/50">
+      <span aria-hidden className="hidden px-1.5 text-ink-dim/50 sm:inline">
         ·
       </span>
       <span className="tabular-nums">{clock} MTC</span>

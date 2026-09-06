@@ -84,7 +84,11 @@ body {
    viewport. The .is-in class is applied by the Reveal component's observer.
    ------------------------------------------------------------------------ */
 
-.reveal {
+/* Content is visible by default and only hidden once an inline script has
+   confirmed JavaScript is running. Without that guard a scripting failure
+   would leave every revealed element stuck at zero opacity, which is to say
+   a blank page. Progressive enhancement, not progressive disappearance. */
+.js-reveal .reveal {
   opacity: 0;
   transform: translateY(14px);
   transition:
@@ -93,7 +97,7 @@ body {
   transition-delay: var(--reveal-delay, 0ms);
 }
 
-.reveal.is-in {
+.js-reveal .reveal.is-in {
   opacity: 1;
   transform: none;
 }
@@ -114,7 +118,7 @@ body {
     transition-duration: 0.001ms !important;
   }
 
-  .reveal {
+  .js-reveal .reveal {
     opacity: 1;
     transform: none;
   }

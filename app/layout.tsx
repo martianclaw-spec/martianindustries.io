@@ -170,6 +170,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <head>
+        {/* Runs before paint. Elements only opt into the scroll-reveal
+            transition once we know scripting is available, so a no-JS or
+            broken-JS visit still renders the full page. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.classList.add('js-reveal')",
+          }}
+        />
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <JsonLd data={founderSchema} />

@@ -8,30 +8,31 @@ export function About() {
         <div className="min-w-0 lg:col-span-7">
           <SectionHeader
             eyebrow="About"
-            title="I ran the business first. That changes the software."
+            title="We ran the business first. That changes the software."
           />
           <div className="mt-6 space-y-5 text-pretty text-base text-ink-muted md:text-lg">
             <p>
-              Martian Industries is the software studio of Matthew Myers. One
-              engineer, start to finish. The person who scopes your project is
-              the person who writes the code.
+              Martian Industries is the software studio founded by Matthew
+              Myers. No account managers, no handoff to a junior team after the
+              sale. The people who scope your project are the people who write
+              the code.
             </p>
             <p>
-              Before I built software for operations, I ran them. Live customer
-              problems, hardware dying mid-session, staff who need the system
-              to work when nobody technical is on site. I have been the person
-              a failure lands on at the worst possible hour.
+              Before we built software for operations, we ran them. Live
+              customer problems, hardware dying mid-session, staff who need the
+              system to work when nobody technical is on site. We have been the
+              ones a failure lands on at the worst possible hour.
             </p>
             <p>
-              That shows up in what I build. The failure paths get handled,
-              because I know what happens downstream when they are not. Sessions
+              That shows up in what we build. The failure paths get handled,
+              because we know what happens downstream when they are not. Sessions
               recover on their own. Payments reconcile. The dashboard tells you
               something is wrong before a customer does. That is the difference
               between software that demos well and software you can actually
               put in front of paying customers.
             </p>
             <p className="text-ink">
-              Most of my work now is building that kind of system for other
+              Most of our work now is building that kind of system for other
               people. Booking and payments, hardware integrations, internal
               tools, and AI that does real work instead of talking about it.
             </p>
@@ -49,7 +50,7 @@ export function About() {
                 },
                 {
                   k: "Boring, then clever",
-                  v: "Reliable beats impressive. I earn complexity before I spend it.",
+                  v: "Reliable beats impressive. We earn complexity before we spend it.",
                 },
                 {
                   k: "Own the whole stack",
@@ -57,7 +58,7 @@ export function About() {
                 },
                 {
                   k: "Hand it back clean",
-                  v: "You should be able to run what I build without me in the room.",
+                  v: "You should be able to run what we build without us in the room.",
                 },
               ].map((p) => (
                 <li

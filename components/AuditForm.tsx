@@ -69,7 +69,7 @@ export function AuditForm() {
           Confirmed
         </div>
         <p className="mt-4 text-pretty text-lg text-white">
-          Got it. I will follow up shortly.
+          Got it. We will follow up shortly.
         </p>
         <button
           type="button"

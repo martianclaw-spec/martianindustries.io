@@ -15,7 +15,7 @@ const work = [
     tag: "Production",
     name: "SimBook",
     role: "Booking, payments & scheduling",
-    body: "The money path for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN-based check-in, and a multi-tenant model several levels deep. Independently operated. I contribute as a builder on the systems behind it.",
+    body: "The money path for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN-based check-in, and a multi-tenant model several levels deep. Independently operated. We contribute as builders on the systems behind it.",
     meta: ["Independently operated", "Supabase · Edge functions", "Multi-tenant"],
   },
   {

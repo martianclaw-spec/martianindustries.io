@@ -6,12 +6,12 @@ const steps = [
   {
     code: "01",
     title: "Scoping call",
-    note: "Thirty minutes. You describe the problem, I tell you honestly whether I am the right person to solve it.",
+    note: "Thirty minutes. You describe the problem, we tell you honestly whether we are the right team to solve it.",
   },
   {
     code: "02",
     title: "Fixed-scope proposal",
-    note: "In writing within a few days: what gets built, how long it takes, what it costs, what I need from you.",
+    note: "In writing within a few days: what gets built, how long it takes, what it costs, what we need from you.",
   },
   {
     code: "03",

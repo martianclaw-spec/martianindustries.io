@@ -61,7 +61,7 @@ const simPullFaqs: FAQItem[] = [
   },
   {
     q: "Who is Sim-Pull for?",
-    a: "Sim racing venue operators running three or more rigs where staffing is the throughput ceiling. If one person is jogging between rigs launching sessions and taking cards, Sim-Pull is the fix. Solo-operator immersion venues optimizing for high-touch coaching (not throughput) are not the target and we will say so up front.",
+    a: "Sim racing venue operators running three or more rigs where staffing is the throughput ceiling. If one person is jogging between rigs launching sessions and taking cards, Sim-Pull is the fix. Immersion venues optimizing for high-touch coaching rather than throughput are not the target, and we will say so up front.",
   },
   {
     q: "What sims does it work with?",
@@ -77,7 +77,7 @@ const simPullFaqs: FAQItem[] = [
   },
   {
     q: "Can you build something like this for me?",
-    a: "Yes. The hard parts of Sim-Pull are the transferable ones: taking payment on a phone, driving physical hardware from that payment, recovering automatically when something freezes, and keeping it all running unattended. That pattern applies well beyond sim racing. <a href=\"/#contact\">Start a scoping call</a> and tell me what you are trying to run.",
+    a: "Yes. The hard parts of Sim-Pull are the transferable ones: taking payment on a phone, driving physical hardware from that payment, recovering automatically when something freezes, and keeping it all running unattended. That pattern applies well beyond sim racing. <a href=\"/#contact\">Start a scoping call</a> and tell us what you are trying to run.",
   },
 ];
 
@@ -131,7 +131,7 @@ export default function SimPullPage() {
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-ink-muted md:text-lg">
               A guest scans a code on the machine, pays on their phone, and
               the hardware launches itself with no staff in the loop. One of
-              the clearest examples of what I build: payments, physical
+              the clearest examples of what we build: payments, physical
               hardware control, and unattended recovery in one system. Running
               in three venues today.
             </p>
@@ -247,8 +247,8 @@ export default function SimPullPage() {
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
               Unattended payments, hardware control, and recovery are the
-              hardest parts of a build like this, and the parts I have already
-              shipped. Tell me what you are trying to run.
+              hardest parts of a build like this, and the parts we have already
+              shipped. Tell us what you are trying to run.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Button href="/#contact" variant="primary">

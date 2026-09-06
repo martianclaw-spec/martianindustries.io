@@ -12,12 +12,12 @@ import { SITE_URL, SITE_NAME } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Custom software development",
   description:
-    "Fixed-scope custom software builds by a single engineer. Booking and payment flows, hardware and third-party integrations, internal tools and dashboards, and AI tooling. Milestone pricing, weekly demos, you own the code.",
+    "Fixed-scope custom software builds with no handoff after the sale. Booking and payment flows, hardware and third-party integrations, internal tools and dashboards, and AI tooling. Milestone pricing, weekly demos, you own the code.",
   alternates: { canonical: "/build" },
   openGraph: {
     title: "Custom software development — Martian Industries",
     description:
-      "Production software designed, built, and shipped by one engineer. Fixed scope, milestone pricing, full IP transfer.",
+      "Production software designed, built, and shipped by the people who scoped it. Fixed scope, milestone pricing, full IP transfer.",
     url: `${SITE_URL}/build`,
     type: "website",
   },
@@ -37,7 +37,7 @@ const scenarios = [
   {
     code: "S-03",
     title: "Software that touches the physical world",
-    body: "Machines, kiosks, door access, launch monitors, point of sale. Anything running unattended where a crash means a customer standing there with money in their hand. This is the work most shops quietly decline, and it is the work I like most.",
+    body: "Machines, kiosks, door access, launch monitors, point of sale. Anything running unattended where a crash means a customer standing there with money in their hand. This is the work most shops quietly decline, and it is the work we like most.",
   },
   {
     code: "S-04",
@@ -50,12 +50,12 @@ const process = [
   {
     step: "01",
     title: "Scoping call",
-    body: "Thirty minutes. You describe the problem and what you have today. I tell you honestly whether I am the right person for it. No cost, no obligation, no pitch in the first three minutes.",
+    body: "Thirty minutes. You describe the problem and what you have today. We tell you honestly whether we are the right team for it. No cost, no obligation, no pitch in the first three minutes.",
   },
   {
     step: "02",
     title: "Fixed-scope proposal",
-    body: "Within a few days you get it in writing: what gets built, how long it takes, what it costs, and what I need from you. Priced by milestone, not by hour. You know the total before you sign anything.",
+    body: "Within a few days you get it in writing: what gets built, how long it takes, what it costs, and what we need from you. Priced by milestone, not by hour. You know the total before you sign anything.",
   },
   {
     step: "03",
@@ -80,27 +80,27 @@ const buildFaqs: FAQItem[] = [
   },
   {
     q: "Why fixed scope instead of hourly?",
-    a: "Hourly pricing puts us on opposite sides of the table: every hour I spend is a cost to you and revenue to me. Milestone pricing means we both want the same thing, which is working software as quickly as possible. It also means you can plan around a number instead of watching a meter.",
+    a: "Hourly pricing puts us on opposite sides of the table: every hour we spend is a cost to you and revenue to us. Milestone pricing means we both want the same thing, which is working software as quickly as possible. It also means you can plan around a number instead of watching a meter.",
   },
   {
     q: "Do I own the code you write?",
-    a: "Yes. Custom builds are work-for-hire. When the engagement ends you own the source, the deployment, and the project-specific IP. The only exception is any reusable component I contribute back into my own products, which stays under my ownership so I can keep maintaining it across every project that uses it.",
+    a: "Yes. Custom builds are work-for-hire. When the engagement ends you own the source, the deployment, and the project-specific IP. The only exception is any reusable component we contribute back into our own products, which stays under our ownership so we can keep maintaining it across every project that uses it.",
   },
   {
     q: "What do you build with?",
-    a: "Usually TypeScript end to end: Next.js and React on the front, Node or Deno edge functions on the back, Postgres through Supabase for data and auth, deployed on Vercel. For device and hardware work, whatever the equipment actually speaks. I deliberately pick boring, well-supported tools so you are not stranded on something exotic after handoff.",
+    a: "Usually TypeScript end to end: Next.js and React on the front, Node or Deno edge functions on the back, Postgres through Supabase for data and auth, deployed on Vercel. For device and hardware work, whatever the equipment actually speaks. We deliberately pick boring, well-supported tools so you are not stranded on something exotic after handoff.",
   },
   {
     q: "Who actually writes the code?",
-    a: "I do. Martian Industries is deliberately not a dev shop. The person who scopes your project is the person building it and the person you call when something breaks. The trade-off is real: you get deep context and no handoff between sales and engineering, but capacity is limited, so I am selective about what I take on.",
+    a: "We do. Martian Industries is deliberately not a dev shop. The person who scopes your project is the person building it and the person you call when something breaks. The trade-off is real: you get deep context and no handoff between sales and engineering, but capacity is limited, so we are selective about what we take on.",
   },
   {
     q: "Do you work internationally?",
     a: "Yes. Time zones just move the call. Contracting is handled through standard international agreements. Almost all of the work is remote regardless of where you are, with on-site visits only when a physical installation genuinely requires one.",
   },
   {
-    q: "What happens if the project needs more than one engineer?",
-    a: "I will tell you before you sign, not halfway through. Some projects genuinely need a team, and pretending otherwise wastes your money and my reputation. In those cases I would rather scope down to the part I can own completely, or point you somewhere else.",
+    q: "What if the project is bigger than you can take on?",
+    a: "We will tell you before you sign, not halfway through. Some projects genuinely need a bigger team than we are, and pretending otherwise wastes your money and our reputation. In those cases we would rather scope down to the part we can own completely, or point you somewhere else.",
   },
   {
     q: "How do I start?",
@@ -122,7 +122,7 @@ const productSchema = {
   },
   areaServed: "Worldwide",
   description:
-    "Fixed-scope custom software builds delivered by a single engineer. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents and automation. Milestone pricing with full source and IP transfer on completion.",
+    "Fixed-scope custom software builds with no handoff between the people who scope the work and the people who build it. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents and automation. Milestone pricing with full source and IP transfer on completion.",
   audience: {
     "@type": "BusinessAudience",
     audienceType:
@@ -164,7 +164,7 @@ export default function BuildPage() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-ink-muted md:text-lg">
-              Anyone can build the happy path. I build the version that keeps
+              Anyone can build the happy path. We build the version that keeps
               taking money when the hardware drops offline, the payment
               provider times out, and there is nobody technical in the
               building. Fixed scope, milestone pricing, and you own everything
@@ -185,7 +185,7 @@ export default function BuildPage() {
             </div>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
-              <span>One engineer</span>
+              <span>No junior handoff</span>
               <span aria-hidden>·</span>
               <span>Fixed scope, milestone pricing</span>
               <span aria-hidden>·</span>
@@ -255,7 +255,7 @@ export default function BuildPage() {
             />
             <p className="mt-6 text-pretty text-base text-ink-muted md:text-lg">
               Both are running in production on real hardware, taking real
-              money, today. The full list of what I have shipped is on the{" "}
+              money, today. The full list of what we have shipped is on the{" "}
               <Link
                 href="/work"
                 className="text-rust-soft underline-offset-4 transition-colors hover:text-white hover:underline"
@@ -330,7 +330,7 @@ export default function BuildPage() {
         <Container className="relative">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-5xl">
-              Tell me about the project.
+              Tell us about the project.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
               One paragraph on what you have today and what specifically is

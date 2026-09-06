@@ -99,7 +99,7 @@ export function Footer() {
             <p className="mt-2 max-w-xs text-sm text-ink-muted">
               Custom software, built and shipped. Booking and payment
               flows, hardware integrations, internal tools, and AI tooling.
-              One engineer, start to finish.
+              Scoped and built by the same people.
             </p>
           </div>
           <nav aria-label="Footer">

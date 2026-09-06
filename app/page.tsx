@@ -24,7 +24,7 @@ const serviceSchema = {
   },
   areaServed: "Worldwide",
   description:
-    "Fixed-scope custom software builds delivered by a single engineer. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents and automation. Milestone pricing, weekly working demos, full source and IP transfer on completion.",
+    "Fixed-scope custom software builds with no handoff between the people who scope the work and the people who build it. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents and automation. Milestone pricing, weekly working demos, full source and IP transfer on completion.",
   audience: {
     "@type": "BusinessAudience",
     audienceType:
@@ -49,11 +49,11 @@ const professionalServiceSchema = {
   email: CONTACT_EMAIL,
   telephone: "+1-814-215-7925",
   description:
-    "One-person software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI tooling. Designed, built, and shipped end to end by a single engineer.",
+    "Software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI tooling. Designed, built, and shipped end to end by the same people who scoped it.",
   serviceArea: { "@type": "Place", name: "Worldwide" },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "What I build",
+    name: "What we build",
     itemListElement: [
       {
         "@type": "Offer",
@@ -98,15 +98,15 @@ const professionalServiceSchema = {
 const homeFaqs: FAQItem[] = [
   {
     q: "What does Martian Industries do?",
-    a: "Martian Industries is the software studio of Matthew Myers. I design, build, and ship production software for founders and operators: booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents that do real work. One engineer, start to finish, from the scoping call through deployment and handoff.",
+    a: "Martian Industries is the software studio of Matthew Myers. We design, build, and ship production software for founders and operators: booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents that do real work. The people who scope your project build it, from the first call through deployment and handoff.",
   },
   {
     q: "What kind of projects are a good fit?",
-    a: "Software that has to survive contact with real users and real money. Systems that take payments, talk to physical hardware, run unattended, or replace a process currently held together by spreadsheets and group chats. The projects I do best are the ones where the interesting problem is reliability, not the interface.",
+    a: "Software that has to survive contact with real users and real money. Systems that take payments, talk to physical hardware, run unattended, or replace a process currently held together by spreadsheets and group chats. The projects we do best are the ones where the interesting problem is reliability, not the interface.",
   },
   {
     q: "What is not a good fit?",
-    a: "Pure design work with no engineering, staffing a seat on an existing team, marketing sites, and anything that needs a team of five starting Monday. I am one person. That is a real constraint and I will tell you up front when a project needs more than I can give it.",
+    a: "Pure design work with no engineering, staffing a seat on an existing team, marketing sites, and anything that needs a large team starting Monday. We are deliberately small, which is a real constraint, and we will tell you up front when a project needs more than we can give it.",
   },
   {
     q: "How much does a project cost?",
@@ -118,15 +118,15 @@ const homeFaqs: FAQItem[] = [
   },
   {
     q: "Who actually writes the code?",
-    a: "I do. Martian Industries is deliberately not a dev shop. The person who scopes your project is the person building it and the person you talk to when something breaks. The trade-off is honest: you get deep context and no handoff between sales and engineering, but capacity is limited, so I am selective about what I take on.",
+    a: "We do. Martian Industries is deliberately not a dev shop, and nothing gets handed to a junior team after the sale. The people who scope your project build it and answer when something breaks. The trade-off is honest: you get deep context and no handoff between sales and engineering, but capacity is limited, so we are selective about what we take on.",
   },
   {
     q: "Do I own the code you write?",
-    a: "Yes. Custom builds are work-for-hire. When the engagement ends you own the source, the deployment, and the project-specific IP. The only exception is a reusable component I contribute back into my own products, which stays under my ownership so I can maintain it across every project that uses it.",
+    a: "Yes. Custom builds are work-for-hire. When the engagement ends you own the source, the deployment, and the project-specific IP. The only exception is a reusable component we contribute back into our own products, which stays under our ownership so we can maintain it across every project that uses it.",
   },
   {
     q: "What do you build with?",
-    a: "Typically TypeScript end to end: Next.js and React on the front, Node or Deno edge functions on the back, Postgres via Supabase for data and auth, and Vercel for deployment. For hardware and device work, whatever the equipment actually speaks. I pick boring, well-supported tools so you are not stranded on something exotic after handoff.",
+    a: "Typically TypeScript end to end: Next.js and React on the front, Node or Deno edge functions on the back, Postgres via Supabase for data and auth, and Vercel for deployment. For hardware and device work, whatever the equipment actually speaks. We pick boring, well-supported tools so you are not stranded on something exotic after handoff.",
   },
   {
     q: "Do you work with clients outside the US?",
@@ -158,7 +158,7 @@ export default function HomePage() {
         id="faq"
         eyebrow="Straight answers"
         title="Questions clients actually ask."
-        description="If the answer you need is not here, the contact section below routes straight to me."
+        description="If the answer you need is not here, the contact section below routes straight to us."
         items={homeFaqs}
       />
       <Contact />

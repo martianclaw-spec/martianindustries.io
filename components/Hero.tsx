@@ -44,7 +44,7 @@ export function Hero() {
 
             <Reveal delay={70}>
               <h1 className="text-balance break-words text-[clamp(2rem,7.5vw,2.25rem)] font-semibold tracking-tighter2 text-white sm:text-5xl md:text-[56px] md:leading-[1.05]">
-                I build the software
+                We build the software
                 <span className="text-ink-muted">
                   {" "}
                   your operation runs on.
@@ -54,10 +54,10 @@ export function Hero() {
 
             <Reveal delay={140}>
               <p className="mt-6 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
-                Martian Industries is a one-person software studio. I design,
+                Martian Industries is a software studio built around one idea. We design,
                 build, and ship production systems: booking and payment flows,
-                hardware integrations, operator dashboards, and AI tooling. I
-                have run the businesses these systems serve, so I build for the
+                hardware integrations, operator dashboards, and AI tooling. We
+                have run the businesses these systems serve, so we build for the
                 messy version, not the demo.
               </p>
             </Reveal>
@@ -69,7 +69,7 @@ export function Hero() {
                   <Arrow />
                 </Button>
                 <Button href="/work" variant="secondary">
-                  See what I have built
+                  See what we have built
                 </Button>
               </div>
             </Reveal>
@@ -78,7 +78,7 @@ export function Hero() {
               <dl className="mt-12 grid max-w-md grid-cols-3 gap-4 border-t border-line pt-6 sm:gap-6">
                 <Stat k="8" label="Projects shipped" />
                 <Stat k="3" label="Sites in production" />
-                <Stat k="1" label="Engineer on your build" />
+                <Stat k="0" label="Handoffs to a junior team" />
               </dl>
             </Reveal>
           </div>

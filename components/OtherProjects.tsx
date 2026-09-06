@@ -21,7 +21,7 @@ export function OtherProjects() {
       <SectionHeader
         eyebrow="Adjacent work"
         title="Other Systems & Projects"
-        description="Products and tools I have built outside of client work. Different domains, same standard for what counts as finished."
+        description="Products and tools we have built outside of client work. Different domains, same standard for what counts as finished."
       />
 
       <div className="mt-10 grid gap-4 md:mt-12 md:grid-cols-3">

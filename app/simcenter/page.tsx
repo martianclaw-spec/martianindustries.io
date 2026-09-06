@@ -140,7 +140,7 @@ export default function SimCenterPage() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-base text-ink-muted md:text-lg">
-              A multi-tenant monitoring platform I designed and built: a
+              A multi-tenant monitoring platform we designed and built: a
               per-machine agent that reports from inside the network, a cloud
               dashboard across every location, confirmed alerting that does
               not cry wolf, and remote power control. A good example of
@@ -262,7 +262,7 @@ export default function SimCenterPage() {
         id="faq"
         eyebrow="SimCenter FAQ"
         title="Straight answers before you install."
-        description="Everything venue operators ask us before signing up. If yours is not here, hit contact and I will answer directly."
+        description="Everything venue operators ask us before signing up. If yours is not here, hit contact and we will answer directly."
         items={simCenterFaqs}
       />
 
@@ -278,7 +278,7 @@ export default function SimCenterPage() {
             <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
               Agents on machines you do not control, alerting that has to be
               right, and a dashboard someone checks at three in the morning.
-              That is the kind of build I take on.
+              That is the kind of build we take on.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Button href="/#contact" variant="primary">

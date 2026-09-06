@@ -6,7 +6,7 @@ const capabilities = [
   {
     code: "C-01",
     title: "Booking, payments & scheduling",
-    body: "The money path. Customers pick a time, pay, and get what they paid for, without a person in the loop for every step. I have built this end to end and kept it running through real Friday nights.",
+    body: "The money path. Customers pick a time, pay, and get what they paid for, without a person in the loop for every step. We have built this end to end and kept it running through real Friday nights.",
     bullets: [
       "Checkout, deposits, and refunds",
       "Calendars, capacity, and no-show policy",
@@ -49,9 +49,9 @@ export function Capabilities() {
   return (
     <Section id="capabilities" className="border-t border-line">
       <SectionHeader
-        eyebrow="What I build"
-        title="Four kinds of software I get hired to build."
-        description="Most of my work sits in one of these four buckets, and the interesting projects touch more than one. If yours does not fit neatly, that is usually a good sign."
+        eyebrow="What we build"
+        title="Four kinds of software we get hired to build."
+        description="Most of our work sits in one of these four buckets, and the interesting projects touch more than one. If yours does not fit neatly, that is usually a good sign."
       />
 
       <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-2">

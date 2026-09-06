@@ -9,14 +9,14 @@ import { Backdrop } from "@/components/atmos/Backdrop";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Work — everything I have built",
+  title: "Work — everything we have built",
   description:
-    "The full portfolio: venue operating systems, booking and payments backends, monitoring platforms with per-machine agents, AI outreach agents, MCP tooling, and consumer web products. Designed and built by one engineer.",
+    "The full portfolio: venue operating systems, booking and payments backends, monitoring platforms with per-machine agents, AI outreach agents, MCP tooling, and consumer web products. Designed and built by the people who scoped it.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: "Work — Martian Industries",
     description:
-      "Production systems, products, and tools. Designed and built by one engineer.",
+      "Production systems, products, and tools. Designed and built by the people who scoped it.",
     url: `${SITE_URL}/work`,
     type: "website",
   },
@@ -71,7 +71,7 @@ const projects: Project[] = [
     tag: "Contributor",
     name: "Simbook",
     role: "Kiosk and VMS for sim venues",
-    body: "Booking, payments, and scheduling for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN check-in, and a multi-tenant model several levels deep. Independently operated. I contribute as a builder on the systems behind it.",
+    body: "Booking, payments, and scheduling for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN check-in, and a multi-tenant model several levels deep. Independently operated. We contribute as builders on the systems behind it.",
     meta: ["Independently operated", "Kiosk · Session flow"],
   },
   {
@@ -141,12 +141,12 @@ export default function WorkPage() {
               Work
             </div>
             <h1 className="text-balance text-4xl font-semibold tracking-tighter2 text-white md:text-5xl">
-              Everything I have built and shipped.
+              Everything we have built and shipped.
             </h1>
             <p className="mt-5 max-w-2xl text-pretty text-base text-ink-muted md:text-lg">
               Every one of these started as a real problem for a real
               business. Some grew into standalone products, some run
-              operations every day, and some are tools I needed and could not
+              operations every day, and some are tools we needed and could not
               find. One person designed, built, and shipped all of it.
             </p>
           </div>

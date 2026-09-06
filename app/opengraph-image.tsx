@@ -86,7 +86,7 @@ export default async function Image() {
             flexDirection: "column",
           }}
         >
-          <span>I build the software</span>
+          <span>We build the software</span>
           <span style={{ color: "#9aa1ad" }}>your operation runs on.</span>
         </div>
 

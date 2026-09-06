@@ -17,15 +17,15 @@ export function Contact() {
             Taking projects
           </div>
           <h2 className="text-balance text-3xl font-semibold tracking-tighter2 text-white md:text-5xl">
-            Tell me what you need built.
+            Tell us what you need built.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-ink-muted md:text-lg">
-            Tell me about the project. What you have today, what is missing, and
-            what it needs to do. I will come back with an honest read on scope
-            and whether I am the right person to build it.
+            Tell us about the project. What you have today, what is missing, and
+            what it needs to do. We will come back with an honest read on scope
+            and whether we are the right team to build it.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-dim">
-            <span className="text-ink-dim/70">Or reach me directly</span>
+            <span className="text-ink-dim/70">Or reach us directly</span>
             <a
               href="tel:+18142157925"
               className="transition-colors hover:text-white"

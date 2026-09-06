@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME}. ${SITE_TAGLINE}`,
     description:
-      "Custom software, built and shipped. Booking and payment flows, hardware integrations, internal tools, and AI tooling. One engineer, start to finish.",
+      "Custom software, built and shipped. Booking and payment flows, hardware integrations, internal tools, and AI tooling. Scoped and built by the same people.",
     url: SITE_URL,
     locale: "en_US",
   },
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_NAME}. ${SITE_TAGLINE}`,
     description:
-      "Custom software, built and shipped. One engineer, start to finish.",
+      "Custom software, built and shipped. Scoped and built by the same people.",
   },
   robots: {
     index: true,
@@ -96,7 +96,7 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/icon`,
   description:
-    "Custom software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI tooling. Designed, built, and shipped by one engineer.",
+    "Custom software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI tooling. Scoped and built by the same people.",
   email: "hello@martianindustries.io",
   areaServed: "Worldwide",
   knowsAbout: [
@@ -159,7 +159,7 @@ const founderSchema = {
     "https://simpullsports.com",
   ],
   description:
-    "Matthew Myers is the founder of Martian Industries, a one-person software studio. He designs, builds, and ships production software: booking and payment flows, hardware integrations, operator dashboards, and AI tooling. He ran multi-location operations before building software for them, which shapes how he builds for failure cases.",
+    "Matthew Myers is the founder of Martian Industries, a custom software studio. He designs, builds, and ships production software: booking and payment flows, hardware integrations, operator dashboards, and AI tooling. He ran multi-location operations before building software for them, which shapes how he builds for failure cases.",
 };
 
 export default function RootLayout({

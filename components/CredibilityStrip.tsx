@@ -1,10 +1,10 @@
 import { Container } from "./ui/Container";
 
 const items = [
-  "One engineer, start to finish",
+  "Scoped and built by the same people",
   "Production systems, not prototypes",
   "Operator background, not just code",
-  "You own what I build",
+  "You own what we build",
 ];
 
 export function CredibilityStrip() {
@@ -13,7 +13,7 @@ export function CredibilityStrip() {
       <Container>
         <ul
           className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 py-5 text-center"
-          aria-label="How I work"
+          aria-label="How we work"
         >
           {items.map((item, i) => (
             <li

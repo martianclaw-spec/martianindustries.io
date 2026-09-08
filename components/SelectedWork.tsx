@@ -68,10 +68,9 @@ export function SelectedWork() {
               <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-ink-muted">
                 {lead.body}
               </p>
-            </div>
 
-            {/* Readouts. This is what earns the panel its height. */}
-            <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-7">
+              {/* Readouts. This is what earns the panel its height. */}
+              <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-7">
               {lead.readouts?.map((r) => (
                 <div key={r.label} className="flex flex-col">
                   <dd className="readout text-4xl font-semibold text-white md:text-5xl">
@@ -82,7 +81,8 @@ export function SelectedWork() {
                   </dt>
                 </div>
               ))}
-            </dl>
+              </dl>
+            </div>
 
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-5">
               {lead.meta.map((m) => (

@@ -115,13 +115,24 @@ export function ChatWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-label={open ? "Close chat" : "Ask a question"}
-        className="group fixed bottom-5 right-5 z-50 inline-flex items-center gap-2.5 border border-rust/60 bg-rust px-4 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-white shadow-[0_10px_30px_-12px_rgba(194,85,45,0.8)] transition-transform duration-200 hover:-translate-y-0.5 md:bottom-7 md:right-7"
+        className="group fixed bottom-5 right-5 z-50 inline-flex items-center gap-2.5 border border-rust/60 bg-rust px-3.5 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-white shadow-[0_10px_30px_-12px_rgba(194,85,45,0.8)] transition-transform duration-200 hover:-translate-y-0.5 md:bottom-7 md:right-7"
       >
         <span
           aria-hidden
-          className="h-1.5 w-1.5 animate-breathe bg-white"
+          className="h-1.5 w-1.5 shrink-0 animate-breathe bg-white"
         />
-        {open ? "Close" : "Ask us anything"}
+        {open ? (
+          "Close"
+        ) : (
+          <>
+            Ask
+            {/* The rest of the invitation slides out on hover, so the resting
+                footprint stays small and stops covering page content. */}
+            <span className="inline-block max-w-0 overflow-hidden whitespace-nowrap transition-[max-width] duration-300 ease-out group-hover:max-w-[160px] group-focus-visible:max-w-[160px]">
+              &nbsp;us anything
+            </span>
+          </>
+        )}
       </button>
 
       {/* Panel */}

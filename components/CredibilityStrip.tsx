@@ -3,7 +3,6 @@ import { Container } from "./ui/Container";
 const items = [
   "Scoped and built by the same people",
   "Production systems, not prototypes",
-  "Operator background, not just code",
   "You own what we build",
 ];
 

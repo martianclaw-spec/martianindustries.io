@@ -9,7 +9,12 @@ const work = [
     name: "Sim-Pull",
     role: "Unattended payments + hardware control",
     body: "A guest scans a code on the rig, pays on their phone, and the machine launches itself. Payments, session control, hardware launch, auto-recovery when something freezes, and cross-location leaderboards. Running in three venues on real hardware today.",
-    meta: ["3 venues live", "Payments · Hardware", "Full stack"],
+    meta: ["Payments · Hardware", "Full stack", "Auto-recovery"],
+    readouts: [
+      { k: "3", label: "Sites live" },
+      { k: "6", label: "Rigs running on it" },
+      { k: "0", label: "Staff per launch" },
+    ],
   },
   {
     tag: "Production",
@@ -64,7 +69,22 @@ export function SelectedWork() {
                 {lead.body}
               </p>
             </div>
-            <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-5">
+
+            {/* Readouts. This is what earns the panel its height. */}
+            <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-7">
+              {lead.readouts?.map((r) => (
+                <div key={r.label} className="flex flex-col">
+                  <dd className="readout text-4xl font-semibold text-white md:text-5xl">
+                    {r.k}
+                  </dd>
+                  <dt className="mt-2 font-mono text-[10px] uppercase leading-snug tracking-[0.14em] text-ink-dim">
+                    {r.label}
+                  </dt>
+                </div>
+              ))}
+            </dl>
+
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-5">
               {lead.meta.map((m) => (
                 <li
                   key={m}

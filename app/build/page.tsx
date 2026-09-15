@@ -6,6 +6,7 @@ import { Card, CardLabel } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
+import { AfterLaunch } from "@/components/AfterLaunch";
 import { Backdrop } from "@/components/atmos/Backdrop";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
@@ -65,7 +66,7 @@ const process = [
   {
     step: "04",
     title: "Ship and hand off",
-    body: "Deployed on your infrastructure, your team trained, and a fixed support window after launch. Then you own it: source, deployment, and IP. No forever-licensing on a custom build unless you specifically want managed hosting.",
+    body: "Deployed on your infrastructure, your team trained, and a fixed support window after launch. Then you own it: source, deployment, and IP. No forever-licensing on a custom build unless you choose managed hosting or the after-launch editing service.",
   },
 ];
 
@@ -85,6 +86,10 @@ const buildFaqs: FAQItem[] = [
   {
     q: "Do I own the code you write?",
     a: "Yes. Custom builds are work-for-hire. When the engagement ends you own the source, the deployment, and the project-specific IP. The only exception is any reusable component we contribute back into our own products, which stays under our ownership so we can keep maintaining it across every project that uses it.",
+  },
+  {
+    q: "Can I update the site myself after launch?",
+    a: "Yes, on the sites we ship. You open your own site, click the headline, price or photo you want to change, and see what it says now next to what it will say. Nothing goes live until you confirm it, every change emails you a receipt, and anything can be undone. The design, the pages and anything touching your customers stay with us, so nothing you change can break the site. Anything it cannot do comes to us with your request attached. It is an optional service after launch, and its terms are part of the written proposal.",
   },
   {
     q: "What do you build with?",
@@ -252,6 +257,9 @@ export default function BuildPage() {
           ))}
         </ol>
       </Section>
+
+      {/* After launch: the owner edits their own content */}
+      <AfterLaunch />
 
       {/* Recent builds */}
       <Section id="proof" className="border-t border-line">

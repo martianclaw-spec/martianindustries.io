@@ -9,6 +9,7 @@ import { SolClock } from "./atmos/SolClock";
 const links = [
   { href: "/work", label: "Work" },
   { href: "/build", label: "Services" },
+  { href: "/rover", label: "Rover" },
   { href: "/#process", label: "Process" },
   { href: "/blog", label: "Articles" },
   { href: "/#about", label: "About" },

@@ -25,6 +25,16 @@ Sim-Pull, SimCenter and SimBook are **case studies, not products for sale
 here**. Their pages stay live and indexed; their calls to action point at a
 scoping call, not a demo signup.
 
+**Websites are a full category, the fifth area (decided 2026-09-16).** An
+earlier revision listed "marketing sites" as not a good fit, and the founder
+explicitly overruled that: websites are real paid work, and the first paying
+client of the studio's editing service was a small business website. Do not
+talk the site out of them again. Websites are sold as custom-coded sites the
+client owns, with **Rover** (`/rover`, the owner editing service) afterwards so
+they change their own words, prices, photos and listings. The one honest
+caveat, stated as such: if a simple Squarespace or Wix plan would serve
+someone just as well, say so.
+
 ---
 
 ## Hard content rules

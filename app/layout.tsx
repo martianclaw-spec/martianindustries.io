@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     "booking and payment systems",
     "hardware integration software",
     "internal tools development",
+    "custom website development",
     "operator dashboards",
     "AI agent development",
     "MCP server development",
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME}. ${SITE_TAGLINE}`,
     description:
-      "Custom software, built and shipped. Booking and payment flows, hardware integrations, internal tools, and AI tooling. Scoped and built by the same people.",
+      "Custom software, built and shipped. Booking and payment flows, hardware integrations, internal tools, AI tooling, and websites. Scoped and built by the same people.",
     url: SITE_URL,
     locale: "en_US",
   },
@@ -97,7 +98,7 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/icon`,
   description:
-    "Custom software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI tooling. Scoped and built by the same people.",
+    "Custom software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, AI tooling, and websites. Scoped and built by the same people.",
   email: "hello@martianindustries.io",
   areaServed: "Worldwide",
   knowsAbout: [
@@ -108,6 +109,7 @@ const organizationSchema = {
     "AI agents and automation",
     "Model Context Protocol tool servers",
     "Full stack web application development",
+    "Custom website development",
     "Multi-tenant SaaS architecture",
   ],
   sameAs: ["https://github.com/martianclaw-spec/martianindustries.io"],
@@ -160,7 +162,7 @@ const founderSchema = {
     "https://simpullsports.com",
   ],
   description:
-    "Matthew Myers is the founder of Martian Industries, a custom software studio. He designs, builds, and ships production software: booking and payment flows, hardware integrations, operator dashboards, and AI tooling. He ran multi-location operations before building software for them, which shapes how he builds for failure cases.",
+    "Matthew Myers is the founder of Martian Industries, a custom software studio. He designs, builds, and ships production software: booking and payment flows, hardware integrations, operator dashboards, AI tooling, and websites. He ran multi-location operations before building software for them, which shapes how he builds for failure cases.",
 };
 
 export default function RootLayout({

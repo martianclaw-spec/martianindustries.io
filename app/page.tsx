@@ -24,7 +24,7 @@ const serviceSchema = {
   },
   areaServed: "Worldwide",
   description:
-    "Fixed-scope custom software builds with no handoff between the people who scope the work and the people who build it. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents and automation. Milestone pricing, weekly working demos, full source and IP transfer on completion.",
+    "Fixed-scope custom software builds with no handoff between the people who scope the work and the people who build it. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, AI agents and automation, and websites owners can edit themselves. Milestone pricing, weekly working demos, full source and IP transfer on completion.",
   audience: {
     "@type": "BusinessAudience",
     audienceType:
@@ -49,7 +49,7 @@ const professionalServiceSchema = {
   email: CONTACT_EMAIL,
   telephone: "+1-814-215-7925",
   description:
-    "Software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI tooling. Designed, built, and shipped end to end by the same people who scoped it.",
+    "Software studio. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, AI tooling, and websites. Designed, built, and shipped end to end by the same people who scoped it.",
   serviceArea: { "@type": "Place", name: "Worldwide" },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -91,6 +91,15 @@ const professionalServiceSchema = {
             "Agent workflows, Model Context Protocol tool servers, automated outreach and enrichment, and retrieval over your own systems.",
         },
       },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Websites",
+          description:
+            "Custom-coded business websites, catalogs and event calendars, with domain, business email and search setup, and Rover so the owner can change their own words, prices, photos and listings after launch.",
+        },
+      },
     ],
   },
 };
@@ -98,7 +107,7 @@ const professionalServiceSchema = {
 const homeFaqs: FAQItem[] = [
   {
     q: "What does Martian Industries do?",
-    a: "Martian Industries is the software studio of Matthew Myers. We design, build, and ship production software for founders and operators: booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents that do real work. The people who scope your project build it, from the first call through deployment and handoff.",
+    a: "Martian Industries is the software studio of Matthew Myers. We design, build, and ship production software for founders and operators: booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, AI agents that do real work, and websites you can edit yourself after launch. The people who scope your project build it, from the first call through deployment and handoff.",
   },
   {
     q: "Do you only build for simulator and entertainment venues?",
@@ -110,7 +119,7 @@ const homeFaqs: FAQItem[] = [
   },
   {
     q: "What is not a good fit?",
-    a: "Pure design work with no engineering, staffing a seat on an existing team, marketing sites, and anything that needs a large team starting Monday. We are deliberately small, which is a real constraint, and we will tell you up front when a project needs more than we can give it.",
+    a: "Pure design work with no engineering, staffing a seat on an existing team, a simple site a Squarespace or Wix plan would serve just as well, and anything that needs a large team starting Monday. We are deliberately small, which is a real constraint, and we will tell you up front when a project needs more than we can give it.",
   },
   {
     q: "How much does a project cost?",

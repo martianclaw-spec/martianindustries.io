@@ -66,7 +66,8 @@ export function Hero() {
               <p className="mt-8 max-w-xl border-l-2 border-rust/70 pl-5 text-pretty text-base text-ink-muted md:text-[17px]">
                 Martian Industries is a custom software studio. We design,
                 build, and ship production systems: booking and payment flows,
-                hardware integrations, operator dashboards, and AI tooling. We
+                hardware integrations, operator dashboards, AI tooling, and
+                websites you can edit yourself. We
                 have run the businesses these systems serve, so we build for
                 the messy version, not the demo.
               </p>

@@ -42,6 +42,16 @@ const capabilities = [
       "Retrieval over your own systems",
     ],
   },
+  {
+    code: "C-05",
+    title: "Websites",
+    body: "A real website for your business, written in code rather than dragged together in a page builder. Fast, set up to show up in search, and yours outright. After launch you change your own words, prices, photos and listings with Rover, so small updates never wait on us.",
+    bullets: [
+      "Business sites, catalogs and event calendars",
+      "Domain, business email and search setup",
+      "Rover, so you edit it yourself after launch",
+    ],
+  },
 ];
 
 /**
@@ -56,8 +66,8 @@ export function Capabilities() {
     <Section id="capabilities" className="border-t border-line">
       <SectionHeader
         eyebrow="What we build"
-        title="Four kinds of software we get hired to build."
-        description="Most of our work sits in one of these four buckets, and the interesting projects touch more than one. What we do not care about is your industry: a checkout flow does not know whether it is selling a booking, a subscription, or a ticket."
+        title="Five kinds of work we get hired to build."
+        description="Most of our work sits in one of these five buckets, and the interesting projects touch more than one. What we do not care about is your industry: a checkout flow does not know whether it is selling a booking, a subscription, or a ticket."
       />
 
       <div className="mt-14 border-t border-line md:mt-20">

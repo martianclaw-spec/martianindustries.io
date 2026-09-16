@@ -13,7 +13,7 @@ import { SITE_URL, SITE_NAME } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Custom software development",
   description:
-    "Fixed-scope custom software builds with no handoff after the sale. Booking and payment flows, hardware and third-party integrations, internal tools and dashboards, and AI tooling. Milestone pricing, weekly demos, you own the code.",
+    "Fixed-scope custom software builds with no handoff after the sale. Booking and payment flows, hardware and third-party integrations, internal tools and dashboards, AI tooling, and websites. Milestone pricing, weekly demos, you own the code.",
   alternates: { canonical: "/build" },
   openGraph: {
     title: "Custom software development — Martian Industries",
@@ -66,14 +66,14 @@ const process = [
   {
     step: "04",
     title: "Ship and hand off",
-    body: "Deployed on your infrastructure, your team trained, and a fixed support window after launch. Then you own it: source, deployment, and IP. No forever-licensing on a custom build unless you choose managed hosting or the after-launch editing service.",
+    body: "Deployed on your infrastructure, your team trained, and a fixed support window after launch. Then you own it: source, deployment, and IP. No forever-licensing on a custom build unless you choose managed hosting or Rover, our after-launch editing service.",
   },
 ];
 
 const buildFaqs: FAQItem[] = [
   {
     q: "What kind of software do you build?",
-    a: "Four broad areas: booking, payments and scheduling; hardware and third-party integrations; internal tools and operator dashboards; and AI agents and automation. The common thread is software that has to survive contact with real users and real money, not prototypes and not marketing sites.",
+    a: "Five broad areas: booking, payments and scheduling; hardware and third-party integrations; internal tools and operator dashboards; AI agents and automation; and websites you can edit yourself after launch. The common thread is software that has to survive contact with real users and real money, not throwaway prototypes.",
   },
   {
     q: "What is a typical engagement length and cost?",
@@ -127,7 +127,7 @@ const productSchema = {
   },
   areaServed: "Worldwide",
   description:
-    "Fixed-scope custom software builds with no handoff between the people who scope the work and the people who build it. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, and AI agents and automation. Milestone pricing with full source and IP transfer on completion.",
+    "Fixed-scope custom software builds with no handoff between the people who scope the work and the people who build it. Booking and payment flows, hardware and third-party integrations, internal tools and operator dashboards, AI agents and automation, and websites. Milestone pricing with full source and IP transfer on completion.",
   audience: {
     "@type": "BusinessAudience",
     audienceType:

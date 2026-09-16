@@ -98,7 +98,8 @@ export function Footer() {
             </div>
             <p className="mt-2 max-w-xs text-sm text-ink-muted">
               Custom software, built and shipped. Booking and payment
-              flows, hardware integrations, internal tools, and AI tooling.
+              flows, hardware integrations, internal tools, AI tooling, and
+              websites.
               Scoped and built by the same people.
             </p>
           </div>

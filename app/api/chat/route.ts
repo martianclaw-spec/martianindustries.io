@@ -53,7 +53,7 @@ function clean(body: unknown): Msg[] | null {
 }
 
 const NO_KEY_REPLY =
-  "I am not connected to my language model right now, so I cannot answer freely. What I can tell you: we build booking and payment flows, hardware and third-party integrations, internal tools and dashboards, and AI tooling, and we are not limited to any one industry. Leave your email below, or write to hello@martianindustries.io, and Matthew will reply himself.";
+  "I am not connected to my language model right now, so I cannot answer freely. What I can tell you: we build booking and payment flows, hardware and third-party integrations, internal tools and dashboards, AI tooling, and websites you can edit yourself, and we are not limited to any one industry. Leave your email below, or write to hello@martianindustries.io, and Matthew will reply himself.";
 
 function textStream(s: string) {
   return new Response(

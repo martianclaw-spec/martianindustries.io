@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Fixed-scope custom software builds with no handoff after the sale. Booking and payment flows, hardware and third-party integrations, internal tools and dashboards, AI tooling, and websites. Milestone pricing, weekly demos, you own the code.",
   alternates: { canonical: "/build" },
   openGraph: {
-    title: "Custom software development — Martian Industries",
+    title: "Custom software development by Martian Industries",
     description:
       "Production software designed, built, and shipped by the people who scoped it. Fixed scope, milestone pricing, full IP transfer.",
     url: `${SITE_URL}/build`,
@@ -73,7 +73,7 @@ const process = [
 const buildFaqs: FAQItem[] = [
   {
     q: "What kind of software do you build?",
-    a: "Five broad areas: booking, payments and scheduling; hardware and third-party integrations; internal tools and operator dashboards; AI agents and automation; and websites you can edit yourself after launch. The common thread is software that has to survive contact with real users and real money, not throwaway prototypes.",
+    a: "Five broad areas: booking, payments and scheduling; hardware and third-party integrations; internal tools and operator dashboards; AI agents and automation; and <a href=\"/websites\">websites</a> you can edit yourself after launch. The common thread is software that has to survive contact with real users and real money, not throwaway prototypes.",
   },
   {
     q: "What is a typical engagement length and cost?",

@@ -9,6 +9,7 @@ import { SolClock } from "./atmos/SolClock";
 const links = [
   { href: "/work", label: "Work" },
   { href: "/build", label: "Services" },
+  { href: "/websites", label: "Websites" },
   { href: "/rover", label: "Rover" },
   { href: "/#process", label: "Process" },
   { href: "/blog", label: "Articles" },
@@ -106,7 +107,7 @@ export function Nav() {
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        {/* Backdrop — tap to close */}
+        {/* Backdrop, tap to close */}
         <button
           type="button"
           aria-label="Close menu"

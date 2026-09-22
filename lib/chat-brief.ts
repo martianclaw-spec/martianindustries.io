@@ -26,7 +26,9 @@ Designs, builds and ships production software end to end. Five areas:
    changes their own words, prices, photos and listings. Websites are fully in
    scope; never tell someone the studio does not build them. The only honest
    caveat: if a simple Squarespace or Wix plan would serve them just as well,
-   say so.
+   say so. The studio builds a working preview of the business's new site
+   before any payment, and the owner decides whether to keep it or have it
+   taken down. The page for this is /websites.
 
 ## Industry is not a constraint. This matters most.
 A lot of the shipped work happens to sit in simulator and entertainment venues,

@@ -9,12 +9,12 @@ import { Backdrop } from "@/components/atmos/Backdrop";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Work — everything we have built",
+  title: "Work · everything we have built",
   description:
     "The full portfolio: venue operating systems, booking and payments backends, monitoring platforms with per-machine agents, AI outreach agents, MCP tooling, and consumer web products. Designed and built by the people who scoped it.",
   alternates: { canonical: "/work" },
   openGraph: {
-    title: "Work — Martian Industries",
+    title: "Work · Martian Industries",
     description:
       "Production systems, products, and tools. Designed and built by the people who scoped it.",
     url: `${SITE_URL}/work`,
@@ -106,7 +106,7 @@ const projects: Project[] = [
 const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Work — Martian Industries",
+  name: "Work · Martian Industries",
   url: `${SITE_URL}/work`,
   description:
     "Production systems, products, and tools designed and built by Martian Industries.",

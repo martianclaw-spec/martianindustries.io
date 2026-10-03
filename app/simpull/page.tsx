@@ -12,12 +12,12 @@ import { SITE_URL, SITE_NAME } from "@/lib/site";
 const APP_URL = "https://simpullsports.com";
 
 export const metadata: Metadata = {
-  title: "Sim-Pull — Case study",
+  title: "Sim-Pull · Case study",
   description:
     "A venue operating system built by Martian Industries. Guests scan, pay, and the machine launches itself, unattended. Payments, hardware control, auto-recovery, and cross-location leaderboards. Live in three venues.",
   alternates: { canonical: "/simpull" },
   openGraph: {
-    title: "Sim-Pull — Built by Martian Industries",
+    title: "Sim-Pull · Built by Martian Industries",
     description:
       "Unattended payments and hardware control, built end to end. Guests scan, pay, and the machine launches itself. Live in three venues today.",
     url: `${SITE_URL}/simpull`,
@@ -65,7 +65,7 @@ const simPullFaqs: FAQItem[] = [
   },
   {
     q: "What sims does it work with?",
-    a: "Assetto Corsa today. That is what the majority of commercial sim racing venues currently run. If you are on iRacing or another platform, get in touch anyway — we track demand.",
+    a: "Assetto Corsa today. That is what the majority of commercial sim racing venues currently run. If you are on iRacing or another platform, get in touch anyway, we track demand.",
   },
   {
     q: "How much does it cost?",

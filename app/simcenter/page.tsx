@@ -13,12 +13,12 @@ const APP_URL = "https://simcenter.io/app";
 const MARKETING_URL = "https://simcenter.io";
 
 export const metadata: Metadata = {
-  title: "SimCenter — Case study",
+  title: "SimCenter · Case study",
   description:
-    "SimCenter watches every station in your venue — sim rigs, launch monitors, VR arcades — from the inside. Answers one question continuously: is every station ready to take money?",
+    "SimCenter watches every station in your venue, from sim rigs to launch monitors to VR arcades, from the inside. Answers one question continuously: is every station ready to take money?",
   alternates: { canonical: "/simcenter" },
   openGraph: {
-    title: "SimCenter — Station readiness monitoring",
+    title: "SimCenter · Station readiness monitoring",
     description:
       "Watches every station in your venue from the inside. Answers one question continuously: is every station ready to take money?",
     url: `${SITE_URL}/simcenter`,

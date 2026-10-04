@@ -185,6 +185,8 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <JsonLd data={founderSchema} />
+        {/* Martian Analytics: visitor counts with no cookies, served by Martian Core. */}
+        <script defer data-site="177dd3e6-3bd7-4a5a-8042-2114f262a7f5" data-outbound src="https://core.martianindustries.io/api/a/script.js"></script>
       </head>
       <body className="bg-bg text-ink font-sans antialiased">
         <Nav />

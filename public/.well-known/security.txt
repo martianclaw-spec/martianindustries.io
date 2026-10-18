@@ -1,0 +1,4 @@
+Contact: mailto:security@martianindustries.io
+Expires: 2027-10-18T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://martianindustries.io/.well-known/security.txt

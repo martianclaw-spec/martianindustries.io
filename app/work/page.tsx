@@ -11,12 +11,12 @@ import { SITE_URL, SITE_NAME } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Work · everything we have built",
   description:
-    "The full portfolio: venue operating systems, booking and payments backends, monitoring platforms with per-machine agents, AI outreach agents, MCP tooling, and consumer web products. Designed and built by the people who scoped it.",
+    "Our own backend platform and its modules, an AI social media product with Meta-approved publishing, a collections platform for a car lot, systems that take payment and drive hardware unattended, and client websites owners edit themselves. Designed, built and run by Martian Industries.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: "Work · Martian Industries",
     description:
-      "Production systems, products, and tools. Designed and built by the people who scoped it.",
+      "Our own platform, an AI product, client builds and client websites, all designed and built by Martian Industries.",
     url: `${SITE_URL}/work`,
     type: "website",
   },
@@ -34,51 +34,81 @@ type Project = {
 
 const projects: Project[] = [
   {
-    tag: "Product",
-    name: "Sim-Pull",
-    role: "The operating system for sim racing venues",
-    body: "Guests scan a QR on the rig, pay on their phone, and the rig launches itself. Auto-recovery, cross-rig leaderboards, optional AI coaching. Built inside a live venue and running in three today.",
-    meta: ["Live · 3 venues · 6 rigs", "Assetto Corsa", "$100/rig/mo"],
-    href: "https://simpullsports.com",
-    external: true,
+    tag: "Infrastructure",
+    name: "Martian Core",
+    role: "Our own backend platform, and everything here runs on it",
+    body: "Database, auth, email, secrets and backups behind one plain-English dashboard, built to replace Supabase and Resend when the shelf kept not fitting. Its modules: Watch for uptime monitoring and client status pages; Analytics with no cookies, so client sites need no banner; Audit, which signs in as each role, walks every screen at desktop and phone width and writes the punch list; Deploy, which takes a push and puts the site live on its own domain; and Invoicer. Built for us first, with a product in mind second.",
+    meta: ["Postgres · Node", "Self-hosted", "5 modules", "6 products on it"],
   },
   {
-    tag: "Product",
-    name: "SimCenter",
-    role: "Station readiness monitoring for indoor venues",
-    body: "A per-station agent that watches equipment, software, and network from the inside and answers one question continuously: is every station ready to take money? Sport-agnostic, nothing for IT to open.",
-    meta: ["Multi-tenant SaaS", "Any launch monitor or sim", "Remote commands"],
-    href: "https://simcenter.io",
-    external: true,
-  },
-  {
-    tag: "Product",
-    name: "DayPilot",
-    role: "AI operations system for founders",
-    body: "Cold outreach with research-backed drafting, social content automation, calendar orchestration, and an agent fleet that runs overnight. Built to run Martian's own pipeline before anything else.",
-    meta: ["AI outreach", "Social automation", "Agent orchestration"],
+    tag: "AI product",
+    name: "Joe",
+    role: "The social media manager that runs itself",
+    body: "For small businesses and small software companies. Joe reads the owner's own photos, website and product repo, writes and schedules the week, answers reviews, and runs outreach with a sales feed the owner works from their phone. Facebook and Instagram publishing are approved by Meta. The rule that shapes it: every post shows something real, and the owner approves anything that goes out.",
+    meta: ["Meta-approved publishing", "Owner approves everything", "Outreach + sales feed"],
     href: "https://getjoe.io",
     external: true,
   },
   {
-    tag: "Operations",
-    name: "Hacktivist Sports",
-    role: "3-location simulator operation",
-    body: "Active day-to-day operations across three locations running TrackMan golf bays and sim racing rigs. Booking, check-in, simulator software, integrations, and remote management across locations. Live, ongoing operational work.",
-    meta: ["3 locations", "TrackMan · Sim racing", "Live ops"],
+    tag: "Client build",
+    name: "Dealer collections platform",
+    role: "Who is late, a dialer that walks the list, and a daily debrief",
+    body: "A collections tool for a buy-here-pay-here car lot: late accounts ranked, a power dialer that walks the list, promises and payments recorded as they happen, and a debrief every evening. Live on the lot's real accounts since September. The owner intends to offer it to other dealers through his own network.",
+    meta: ["Live on real accounts", "Calls · Texts · Payments", "Custom build"],
+  },
+  {
+    tag: "Production",
+    name: "Sim-Pull",
+    role: "Unattended payments + hardware control",
+    body: "A guest scans a code on the rig, pays on their phone, and the machine launches itself. Session control, auto-recovery when something freezes, cross-location leaderboards. Built inside a live venue and running in three today.",
+    meta: ["Live · 3 venues · 6 rigs", "Payments · Hardware"],
+    href: "https://simpullsports.com",
+    external: true,
+  },
+  {
+    tag: "Production",
+    name: "SimCenter",
+    role: "Monitoring from inside the machine",
+    body: "A per-station agent that watches equipment, software and network from the inside, on private network segments central scanning cannot see, and answers one question continuously: is every station ready to take money? Two-cycle confirmation before any alert, so an alert always means something.",
+    meta: ["Multi-tenant", "Per-machine agent", "Confirmed alerting"],
+    href: "https://simcenter.io",
+    external: true,
+  },
+  {
+    tag: "Client website",
+    name: "Appraisal Authority",
+    role: "Independent vehicle appraisal",
+    body: "A marketing site for an independent appraiser who steps in when an insurer lowballs a totaled-car payout. The job of the site is one thing: turn a stressed visitor into a lead with the right facts in it, and get that lead to the appraiser's inbox every time.",
+    meta: ["Lead form to inbox", "Custom code", "Owner's domain"],
+    href: "https://appraisalauthority.io",
+    external: true,
+  },
+  {
+    tag: "Client website",
+    name: "Perfectly Imperfect Cozy Creations",
+    role: "A hand-knit blanket and plushie business",
+    body: "A two-level catalog with categories and sub-tabs, an events page whose dates expire on their own, a Finished Pieces page that builds itself from what has sold, a contact form, a printed price list and a QR table sign for craft fairs. The owner changes her own words, prices and photos with Rover.",
+    meta: ["Catalog · Events", "Rover-editable", "Print + QR sign"],
+  },
+  {
+    tag: "Client website",
+    name: "Loft at 708",
+    role: "A banquet hall in central Pennsylvania",
+    body: "The site for an upstairs event space: the room, capacities, how to book, and a contact path that reaches the owner. The first site handed over with Rover, so the owner edits it without us.",
+    meta: ["Rover-editable", "Custom code", "Owner's domain"],
   },
   {
     tag: "Contributor",
-    name: "Simbook",
-    role: "Kiosk and VMS for sim venues",
-    body: "Booking, payments, and scheduling for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN check-in, and a multi-tenant model several levels deep. Independently operated. We contribute as builders on the systems behind it.",
-    meta: ["Independently operated", "Kiosk · Session flow"],
+    name: "SimBook",
+    role: "Booking, payments and scheduling",
+    body: "Booking, payments and scheduling for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN check-in, and a multi-tenant model several levels deep. Independently operated. We contribute as builders on the systems behind it.",
+    meta: ["Independently operated", "Multi-tenant"],
   },
   {
     tag: "Product",
     name: "Palace Picks",
     role: "Phone-first NFL confidence pool",
-    body: "Replaced a hand-kept Excel workbook and a weekly email thread for a 23-man NFL confidence pool. Tested scoring engine, live slates, and a UI built for phones at the bar on Sunday.",
+    body: "Replaced a hand-kept spreadsheet and a weekly email thread for a 23-man NFL confidence pool. Tested scoring engine, live slates, and a UI built for phones at the bar on Sunday.",
     meta: ["23-player pool", "Tested scoring engine"],
     href: "https://palacepicks.com",
     external: true,
@@ -87,7 +117,7 @@ const projects: Project[] = [
     tag: "Product",
     name: "PA Iron Report",
     role: "Heavy-equipment auction intelligence",
-    body: "A weekly digest of heavy-equipment auction activity across Pennsylvania and the east coast: what sold and for how much, what closes next, normalized specs, estimated all-in cost, and a deal score against recent comps.",
+    body: "A weekly digest of heavy-equipment auction activity across Pennsylvania and the east coast: what sold and for how much, what closes next, normalized specs, estimated all-in cost, and a deal score against recent comps. The funnel for a buyer's-agent service.",
     meta: ["Weekly digest", "Comps + deal scoring"],
     href: "https://paironreport.com",
     external: true,
@@ -95,8 +125,8 @@ const projects: Project[] = [
   {
     tag: "Open source",
     name: "venue-ops-mcp",
-    role: "MCP server for venue operations",
-    body: "An open-source MCP server for indoor sports and simulator venue operations. Lets Claude and other MCP clients run real venue workflows through a safe, typed tool surface.",
+    role: "MCP server for operations",
+    body: "An open-source Model Context Protocol server for indoor sports and simulator venue operations. Lets Claude and other MCP clients run real workflows through a safe, typed tool surface.",
     meta: ["Open source", "MCP · Claude"],
     href: "https://github.com/martianclaw-spec/venue-ops-mcp",
     external: true,
@@ -109,7 +139,7 @@ const collectionSchema = {
   name: "Work · Martian Industries",
   url: `${SITE_URL}/work`,
   description:
-    "Production systems, products, and tools designed and built by Martian Industries.",
+    "Our own platform, an AI product, client builds and client websites, designed and built by Martian Industries.",
   isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
   mainEntity: {
     "@type": "ItemList",
@@ -145,9 +175,10 @@ export default function WorkPage() {
             </h1>
             <p className="mt-5 max-w-2xl text-pretty text-base text-ink-muted md:text-lg">
               Every one of these started as a real problem for a real
-              business. Some grew into standalone products, some run
-              operations every day, and some are tools we needed and could not
-              find. One person designed, built, and shipped all of it.
+              business, including our own. The platform at the top is the one
+              we built because nothing on the shelf fit, and everything below
+              it runs on that platform. Client builds sit next to our own
+              products on purpose: same standard, same people.
             </p>
           </div>
         </Container>

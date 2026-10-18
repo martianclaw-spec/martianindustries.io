@@ -111,7 +111,7 @@ const homeFaqs: FAQItem[] = [
   },
   {
     q: "Do you only build for simulator and entertainment venues?",
-    a: "No, and this is worth being clear about. A lot of the shipped work happens to live there because that is the industry we came out of, but nothing about the engineering is specific to it. A booking and payments flow does not care whether it is selling a bay hour, a studio session, a class, or a rental. An unattended kiosk does not care what is behind the door. If you are building a music app, a marketplace, a scheduling tool, or an internal system for something we have never touched, the useful question is whether it has to take money, talk to hardware, run unattended, or replace a spreadsheet. Those are the problems, and they are industry agnostic.",
+    a: "No, and this is worth being clear about. A lot of the shipped work happens to live there because that is the industry we came out of, but nothing about the engineering is specific to it. A booking and payments flow does not care whether it is selling a bay hour, a studio session, a class, or a rental. An unattended kiosk does not care what is behind the door. If you are building a music app, a marketplace, a scheduling tool, or an internal system for something we have never touched, the useful question is whether it has to take money, talk to hardware, run unattended, or replace a spreadsheet. Those are the problems, and they are industry agnostic. Our most recent clients are a car lot, a vehicle appraisal service and a hand-knit blanket maker.",
   },
   {
     q: "What kind of projects are a good fit?",
@@ -147,7 +147,7 @@ const homeFaqs: FAQItem[] = [
   },
   {
     q: "What have you actually shipped?",
-    a: "Systems running in production today: software that takes a payment on a phone and launches physical hardware, running across three locations; a booking and payments backend; a monitoring platform with a per-machine agent reporting from inside private networks; an autonomous AI outreach agent; a Model Context Protocol tool server; and a couple of consumer web products. The full list is on the <a href=\"/work\">work page</a>.",
+    a: "Systems running in production today: our own backend platform with uptime monitoring, cookie-free analytics, a site auditor, a deploy pipeline and invoicing, which every project here runs on; Joe, an AI social media manager with approved Facebook and Instagram publishing; software that takes a payment on a phone and launches physical hardware across three locations; a collections platform for a car lot; a monitoring platform with a per-machine agent; and client websites for a vehicle appraisal service, a banquet hall and a hand-knit blanket maker. The full list is on the <a href=\"/work\">work page</a>.",
   },
   {
     q: "How do I get started?",

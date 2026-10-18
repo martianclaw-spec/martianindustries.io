@@ -10,8 +10,8 @@ const systems = [
   { id: "SIM-PULL", state: "live", label: "3 venues · production" },
   { id: "SIMCENTER", state: "live", label: "Monitoring · production" },
   { id: "SIMBOOK", state: "live", label: "Bookings · production" },
-  { id: "DAYPILOT", state: "live", label: "Outreach · production" },
-  { id: "PALACE", state: "live", label: "Seasonal · live" },
+  { id: "JOE", state: "live", label: "Social · production" },
+  { id: "CORE", state: "live", label: "Backend · production" },
   { id: "VENUE-OPS", state: "warn", label: "MCP server · beta" },
 ];
 
@@ -68,7 +68,7 @@ export function DashboardPanel() {
                 systems
               </span>
               <span className="font-mono text-[11px] text-ink-dim">
-                5 live · 1 building
+                11 live · 1 building
               </span>
             </div>
             <ul className="grid grid-cols-2 gap-2">
@@ -96,8 +96,8 @@ export function DashboardPanel() {
 
           {/* Side metrics */}
           <div className="grid grid-cols-3 gap-2">
-            <Metric label="Shipped" value="8" sub="projects" />
-            <Metric label="Live" value="5" sub="in production" />
+            <Metric label="Shipped" value="12" sub="projects" />
+            <Metric label="Live" value="11" sub="in production" />
             <Metric label="In build" value="1" sub="venue-ops mcp" warn />
           </div>
         </div>

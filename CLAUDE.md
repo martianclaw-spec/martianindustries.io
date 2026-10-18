@@ -25,6 +25,13 @@ Sim-Pull, SimCenter and SimBook are **case studies, not products for sale
 here**. Their pages stay live and indexed; their calls to action point at a
 scoping call, not a demo signup.
 
+**Open decision, Matthew's call (2026-10-17):** the brain records websites
+moving to the sibling brand Martian Builds (builds.martianindustries.io) and the
+`/websites` branch as possibly "the wrong shape"; this file records websites
+as the studio's fifth area. Both are left standing. Do not delete `/websites`
+or the fifth area without his word; do point to Martian Builds for
+fast-turnaround flat-priced sites.
+
 **Websites are a full category, the fifth area (decided 2026-09-16).** An
 earlier revision listed "marketing sites" as not a good fit, and the founder
 explicitly overruled that: websites are real paid work, and the first paying
@@ -39,6 +46,23 @@ someone just as well, say so.
 
 ## Hard content rules
 
+- **Never mention 814 Builds on this site.** It is deliberately anonymous
+  (decided 2026-10-05) and must not be tied to Martian Industries in public.
+  The phone number's 814 area code is fine; the brand name is not.
+- **Clients are described, never named as people, never quoted, and their
+  sales results are never published.** Business names that are already
+  public (Appraisal Authority, Perfectly Imperfect Cozy Creations, Loft at
+  708) may appear. The car lot is described, not named. Owners' names, their
+  emails and any number from a private email stay out.
+- **The product is called Joe** (getjoe.io), not DayPilot. Describe it as the
+  social media manager that runs itself; Facebook and Instagram publishing
+  are Meta-approved. Do not claim it reports post performance or runs ads.
+- **Martian Core is proof, not an offer.** The site describes it as the
+  backend platform we built and run on (Watch, Analytics, Audit, Deploy,
+  Invoicer). Never present it as something for sale, and never publish hosts,
+  IPs or project ids.
+- Hacktivist Sports is no longer listed as our operation; it belongs to the
+  sister company. Sim venue work appears only as case studies.
 - **No em dashes anywhere in copy.** Use a comma, a period, or restructure the
   sentence. Never substitute a hyphen. This applies to every component, page
   and metadata string.
@@ -124,7 +148,9 @@ which sends through Resend. Do not add a second delivery path.
 - `components/ChatWidget.tsx` is a streaming assistant grounded **solely** by
   `lib/chat-brief.ts`. That file is the only place listing what the site may
   claim on the studio's behalf. Anything the assistant is allowed to assert
-  goes there, not into scattered prompt strings.
+  goes there, not into scattered prompt strings. Its proof section follows
+  the same client rules as the site: describe, never name people, never
+  quote, never share numbers.
 - The chat email field appears only after two exchanges, so the conversation
   qualifies before the widget converts. Leads arrive with the transcript.
 - `app/api/chat/route.ts` degrades gracefully with no `ANTHROPIC_API_KEY`: it

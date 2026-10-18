@@ -87,8 +87,8 @@ export function Hero() {
 
             <Reveal delay={290} className="lg:mt-auto">
               <dl className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-line pt-7">
-                <Stat k="8" label="Projects shipped" />
-                <Stat k="3" label="Sites in production" />
+                <Stat k="12" label="Projects shipped" />
+                <Stat k="5" label="Core modules we run on" />
                 <Stat k="0" label="Handoffs to a junior team" />
               </dl>
             </Reveal>

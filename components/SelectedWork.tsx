@@ -5,30 +5,30 @@ import { Brackets } from "./ui/Frame";
 
 const work = [
   {
+    tag: "Infrastructure",
+    name: "Martian Core",
+    role: "Our own backend, and everything runs on it",
+    body: "Database, auth, email, secrets and backups behind one plain-English dashboard, built to replace Supabase and Resend when the shelf kept not fitting. On top of it: Watch for uptime and client status pages, Analytics with no cookies, Audit that walks every screen and writes the punch list, Deploy that takes a push to a live domain, and Invoicer. Every project on this site runs on it, including this site.",
+    meta: ["Postgres · Node", "Self-hosted", "Built for us first"],
+    readouts: [
+      { k: "5", label: "Modules in production" },
+      { k: "6", label: "Products built on it" },
+      { k: "0", label: "Cookies in our analytics" },
+    ],
+  },
+  {
+    tag: "AI",
+    name: "Joe",
+    role: "The social media manager that runs itself",
+    body: "For small businesses and small software companies. Joe reads the owner's own photos, site and product repo, writes and schedules the week, answers reviews, and runs outreach with a sales feed the owner works from their phone. Facebook and Instagram publishing approved by Meta. Every post shows something real; no words-on-a-colour cards, ever.",
+    meta: ["getjoe.io", "Meta-approved publishing", "Owner approves everything"],
+  },
+  {
     tag: "Production",
     name: "Sim-Pull",
     role: "Unattended payments + hardware control",
     body: "A guest scans a code on the rig, pays on their phone, and the machine launches itself. Payments, session control, hardware launch, auto-recovery when something freezes, and cross-location leaderboards. Running in three venues on real hardware today.",
-    meta: ["Payments · Hardware", "Full stack", "Auto-recovery"],
-    readouts: [
-      { k: "3", label: "Sites live" },
-      { k: "6", label: "Rigs running on it" },
-      { k: "0", label: "Staff per launch" },
-    ],
-  },
-  {
-    tag: "Production",
-    name: "SimBook",
-    role: "Booking, payments & scheduling",
-    body: "The money path for a multi-location operation. Checkout, priced time slots, a reservation layer that also covers walk-ins and admin blocks, PIN-based check-in, and a multi-tenant model several levels deep. Independently operated. We contribute as builders on the systems behind it.",
-    meta: ["Independently operated", "Supabase · Edge functions", "Multi-tenant"],
-  },
-  {
-    tag: "AI",
-    name: "DayPilot",
-    role: "Autonomous outreach agent",
-    body: "An AI system that researches prospects, decides who is actually worth contacting, writes the email in a specific voice, and runs the follow-up sequence on its own. Built to sell more than one product, and it qualifies people out as readily as in.",
-    meta: ["getjoe.io", "Agent workflows", "Research · Sequencing"],
+    meta: ["3 venues live", "Payments · Hardware", "Auto-recovery"],
   },
 ];
 
@@ -46,7 +46,7 @@ export function SelectedWork() {
       <SectionHeader
         eyebrow="Selected work"
         title="Shipped, in production, still running."
-        description="Three builds that show the range: a system that takes payment and drives physical hardware unattended, a payments and scheduling backend, and an AI agent that does real work on its own. The industries they happen to sit in are incidental. The engineering problems are the point."
+        description="Three builds that show the range: the backend platform we built because nothing on the shelf fit, an AI product with real platform approvals, and a system that takes payment and drives physical hardware unattended. The industries are incidental. The engineering problems are the point."
       />
 
       <div className="mt-14 grid gap-4 md:mt-20 lg:grid-cols-12">
@@ -139,7 +139,7 @@ export function SelectedWork() {
           className="group inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em] text-ink-dim transition-colors hover:text-white"
         >
           <span aria-hidden className="h-px w-8 bg-rust transition-all duration-300 group-hover:w-14" />
-          See all eight projects
+          See all twelve projects
         </Link>
       </div>
     </Section>

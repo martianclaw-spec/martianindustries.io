@@ -31,10 +31,21 @@ export function About() {
               between software that demos well and software you can actually
               put in front of paying customers.
             </p>
+            <p>
+              We also run on what we build. The database, auth, email, uptime
+              monitoring, analytics, deploy pipeline and invoicing behind every
+              project here are our own, written because the shelf kept not
+              fitting. When we say a system has to survive the bad day, we are
+              describing the stack under our own feet.
+            </p>
             <p className="text-ink">
               Most of our work now is building that kind of system for other
-              people. Booking and payments, hardware integrations, internal
-              tools, and AI that does real work instead of talking about it.
+              people: booking and payments, hardware integrations, internal
+              tools, AI that does real work instead of talking about it, and
+              websites owners can change themselves. Recent clients run a car
+              lot, a vehicle appraisal service, a banquet hall and a hand-knit
+              blanket business. None of them care what framework we used, and
+              that is the point.
             </p>
           </div>
         </div>

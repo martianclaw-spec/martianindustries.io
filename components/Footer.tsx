@@ -18,7 +18,8 @@ type PortfolioItem = { label: string; href: string; external?: boolean };
 const portfolio: PortfolioItem[] = [
   { label: "Sim-Pull", href: "https://simpullsports.com", external: true },
   { label: "SimCenter", href: "/simcenter" },
-  { label: "DayPilot", href: "https://getjoe.io", external: true },
+  { label: "Joe", href: "https://getjoe.io", external: true },
+  { label: "Martian Builds", href: "https://builds.martianindustries.io", external: true },
   { label: "Palace Picks", href: "https://palacepicks.com", external: true },
   { label: "PA Iron Report", href: "https://paironreport.com", external: true },
 ];

@@ -54,9 +54,30 @@ unattended, or replace a spreadsheet that became load-bearing?
   contributes as a builder, and must never be described as owning it.
 - SimCenter. Monitoring with a per-machine agent reporting from inside private
   network segments central scanning cannot see, with confirmed alerting.
-- DayPilot. An AI agent that researches prospects, decides who is worth
-  contacting, writes the email and runs follow-up on its own.
+- Martian Core. Our own self-hosted backend platform: database, auth, email,
+  secrets and backups behind one dashboard, built to replace Supabase and
+  Resend. Its modules: Watch (uptime monitoring and client status pages),
+  Analytics (website traffic with no cookies, so client sites need no cookie
+  banner), Audit (crawls every screen of a site or app and produces a punch
+  list), Deploy (push a repo and it is live on its own domain) and Invoicer.
+  Every project the studio ships runs on it. Built for us first, product
+  second; do not describe it as something for sale.
+- Joe (getjoe.io). An AI social media manager that runs itself, for small
+  businesses and small software companies: it writes and schedules posts from
+  the owner's own photos and site, answers reviews, and runs outreach with a
+  sales feed. Facebook and Instagram publishing are approved by Meta. Do not
+  claim it reports post performance or runs ads.
+- Client builds: a collections platform for a buy-here-pay-here car lot (who
+  is late, a power dialer, promises, payments, a daily debrief), live on the
+  lot's real accounts; a website for an independent vehicle appraisal service;
+  a website for a banquet hall; and a catalog, events and ordering site for a
+  hand-knit blanket maker, which the owner edits herself with Rover. Never
+  name the people behind these, never quote them, and never share their sales
+  results or numbers.
 - Also shipped: a Model Context Protocol tool server, and consumer web products.
+- Martian Builds (builds.martianindustries.io) is our sibling brand for
+  fast-turnaround websites at a published price. If someone wants a simple
+  site quickly, point them there.
 
 ## How engagements work
 Scoping call, then a fixed-scope written proposal, then weekly working demos,

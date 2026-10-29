@@ -83,6 +83,26 @@ export async function POST(request: Request) {
     );
   }
 
+  // The same request also goes to Martian Brain (BRAIN_LEAD_URL), which posts it to
+  // Matt's Telegram at once with a drafted reply and a call-back task. Best effort:
+  // the visitor's answer still depends on the email going out.
+  const brain = process.env.BRAIN_LEAD_URL;
+  const toBrain = brain
+    ? fetch(brain, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          page: "Audit request",
+          message: [company && `Company: ${company}`, budget && `Budget: ${budget}`, message].filter(Boolean).join("\n"),
+        }),
+        signal: AbortSignal.timeout(8000),
+      })
+        .then((r) => (r.ok ? undefined : console.error("[audit] brain refused", r.status)))
+        .catch((e) => console.error("[audit] brain unreachable", e instanceof Error ? e.message : e))
+    : Promise.resolve();
+
   const resend = new Resend(apiKey);
   const from = process.env.RESEND_FROM_EMAIL || FROM_FALLBACK;
 
@@ -125,6 +145,7 @@ export async function POST(request: Request) {
       text,
       html,
     });
+    await toBrain;
 
     if (error) {
       // Full error detail to Vercel logs so it's easy to diagnose from
@@ -164,6 +185,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (err) {
+    await toBrain;
     console.error("Audit route exception:", err);
     return NextResponse.json(
       {

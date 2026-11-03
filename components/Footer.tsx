@@ -155,7 +155,6 @@ export function Footer() {
           <span className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span>&copy; {year} Martian Industries. All rights reserved.</span>
             <Link href="/privacy" className="transition-colors hover:text-white">Privacy</Link>
-            <Link href="/terms" className="transition-colors hover:text-white">Terms</Link>
           </span>
           <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-dim">
             Transmitting from Tharsis Region · 1.6°N 112.4°W

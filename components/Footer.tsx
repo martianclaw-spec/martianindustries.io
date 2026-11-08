@@ -4,7 +4,7 @@ import { Container } from "./ui/Container";
 const footerLinks = [
   { href: "/work", label: "Work" },
   { href: "/build", label: "Services" },
-  { href: "/core", label: "Martian Core" },
+  { href: "https://platform.martianindustries.io", label: "Martian Core" },
   { href: "/#process", label: "Process" },
   { href: "/simpull", label: "Sim-Pull" },
   { href: "/simcenter", label: "SimCenter" },
